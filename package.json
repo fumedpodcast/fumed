@@ -1,0 +1,32 @@
+{
+  "name": "fumed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx @11ty/eleventy",
+    "serve": "export NODE_EXTRA_CA_CERTS=\"$(mkcert -CAROOT)/localhost+2.pem\" | npx @11ty/eleventy --serve --port=8083",
+    "serve-with-log-debug": "DEBUG=Eleventy:Template* npx @11ty/eleventy --serve --port=8083 > ./buildlog.txt",
+    "serve-with-log": "npx @11ty/eleventy --serve --port=8083 | tee ./buildlog.txt"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
+    "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
+    "dotenv": "^16.4.7",
+    "eleventy-plugin-dart-sass": "^1.0.3",
+    "jsdom": "^26.0.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-github-headings": "^2.0.1",
+    "markdown-it-link-attributes": "^4.0.1",
+    "sharp": "^0.33.5",
+    "slugify": "^1.6.6",
+    "transliteration": "^2.3.5",
+    "urlsafe-base64": "^1.0.0",
+    "wpapi": "^1.2.2"
+  }
+}
