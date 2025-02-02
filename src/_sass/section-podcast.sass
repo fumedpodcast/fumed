@@ -1,0 +1,57 @@
+header h1 {
+font-size: 2em
+margin-top: 8px
+margin-bottom: 8px
+
+.header-image nav
+    display: none
+
+.vhs #vhs-header
+    position: sticky
+    display: block
+    float: right
+    z-index: 99
+    margin-top: 20px
+    text-align: center
+
+    & > *
+        font-size: 42px
+        letter-spacing: -1px
+        line-height: 1.4
+        background: transparent
+        color: black
+        background-color: var(--color-bg)
+        box-shadow: 10px 0 0 var(--color-bg), -10px 0 0 var(--color-bg)
+        display: inline
+        -webkit-box-decoration-break: clone
+        -ms-box-decoration-break: clone
+        -o-box-decoration-break: clone
+        box-decoration-break: clone
+        white-space: pre-wrap
+        display: inline
+        position: relative
+        padding: 0
+
+    & > time
+        display: block
+        width: fit-content
+        margin: 1em auto
+        font-size: .8em
+        margin-top: .8em
+
+    & > h2
+        font-size: clamp(26px, 4vw, 66px)
+        font-family: "Garnet Capitals", sans-serif
+
+    & > h3
+        display: block
+        width: fit-content
+        margin: 10px auto
+        font-size: 2vw
+
+section#article img
+    max-width: 100%
+    margin: 1em auto
+
+#byline
+    font-weight: bold

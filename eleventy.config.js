@@ -32,6 +32,8 @@ process.env.BASIC_IMAGE = `${domain_name}/img/nyc_noir.jpg`;
 process.env.PRIMARY_AUTHOR = "Aram Zucker-Scharff";
 
 module.exports = async function (eleventyConfig) {
+	const { I18nPlugin, RenderPlugin, HtmlBasePlugin, EleventyHtmlBasePlugin } =
+		await import("@11ty/eleventy");
 	eleventyConfig.ignores.add("README.md");
 	eleventyConfig.addPassthroughCopy("src/assets/");
 	eleventyConfig.addPassthroughCopy("src/.well-known/");
@@ -40,16 +42,8 @@ module.exports = async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy(".nojekyll");
 	eleventyConfig.addPassthroughCopy("CNAME");
 	eleventyConfig.addPassthroughCopy("src/img/");
-	const configuration = async () => {
-		const {
-			EleventyRenderPlugin,
-			EleventyI18nPlugin,
-			EleventyHtmlBasePlugin,
-		} = await import("@11ty/eleventy");
-
-		return eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-	};
-	await configuration;
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	eleventyConfig.addPlugin(HtmlBasePlugin);
 
 	let imagePath = `./src/assets/favicon.png`;
 	let imageName = "favicon";
