@@ -1,0 +1,164 @@
+{
+	"id": 562,
+	"count": 1,
+	"description": "",
+	"link": "https://publichealthwatch.org/tag/fumed-podcast-episode/",
+	"name": "Fumed Podcast Episode",
+	"slug": "fumed-podcast-episode",
+	"taxonomy": "post_tag",
+	"meta": [],
+	"yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v24.4 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Fumed Podcast Episode Archives - Public Health Watch</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://publichealthwatch.org/tag/fumed-podcast-episode/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Fumed Podcast Episode Archives - Public Health Watch\" />\n<meta property=\"og:url\" content=\"http://publichealthwatch.org/tag/fumed-podcast-episode/\" />\n<meta property=\"og:site_name\" content=\"Public Health Watch\" />\n<meta property=\"og:image\" content=\"https://publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png\" />\n\t<meta property=\"og:image:width\" content=\"939\" />\n\t<meta property=\"og:image:height\" content=\"267\" />\n\t<meta property=\"og:image:type\" content=\"image/png\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@pubhealthwatch\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"CollectionPage\",\"@id\":\"https://publichealthwatch.org/tag/fumed-podcast-episode/\",\"url\":\"https://publichealthwatch.org/tag/fumed-podcast-episode/\",\"name\":\"Fumed Podcast Episode Archives - Public Health Watch\",\"isPartOf\":{\"@id\":\"https://publichealthwatch.org/#website\"},\"breadcrumb\":{\"@id\":\"https://publichealthwatch.org/tag/fumed-podcast-episode/#breadcrumb\"},\"inLanguage\":\"en-US\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://publichealthwatch.org/tag/fumed-podcast-episode/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://publichealthwatch.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Fumed Podcast Episode\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://publichealthwatch.org/#website\",\"url\":\"https://publichealthwatch.org/\",\"name\":\"Public Health Watch\",\"description\":\"Public Health Watch\",\"publisher\":{\"@id\":\"https://publichealthwatch.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://publichealthwatch.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://publichealthwatch.org/#organization\",\"name\":\"Public Health Watch\",\"url\":\"https://publichealthwatch.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://publichealthwatch.org/#/schema/logo/image/\",\"url\":\"https://i0.wp.com/publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png?fit=939%2C267&ssl=1\",\"contentUrl\":\"https://i0.wp.com/publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png?fit=939%2C267&ssl=1\",\"width\":939,\"height\":267,\"caption\":\"Public Health Watch\"},\"image\":{\"@id\":\"https://publichealthwatch.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/pubhealthwatch/\",\"https://x.com/pubhealthwatch\",\"https://www.linkedin.com/company/publichealthwatch/about/?viewAsMember=true\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+	"yoast_head_json": {
+		"title": "Fumed Podcast Episode Archives - Public Health Watch",
+		"robots": {
+			"index": "index",
+			"follow": "follow",
+			"max-snippet": "max-snippet:-1",
+			"max-image-preview": "max-image-preview:large",
+			"max-video-preview": "max-video-preview:-1"
+		},
+		"canonical": "https://publichealthwatch.org/tag/fumed-podcast-episode/",
+		"og_locale": "en_US",
+		"og_type": "article",
+		"og_title": "Fumed Podcast Episode Archives - Public Health Watch",
+		"og_url": "http://publichealthwatch.org/tag/fumed-podcast-episode/",
+		"og_site_name": "Public Health Watch",
+		"og_image": [
+			{
+				"width": 939,
+				"height": 267,
+				"url": "https://publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png",
+				"type": "image/png"
+			}
+		],
+		"twitter_card": "summary_large_image",
+		"twitter_site": "@pubhealthwatch",
+		"schema": {
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "CollectionPage",
+					"@id": "https://publichealthwatch.org/tag/fumed-podcast-episode/",
+					"url": "https://publichealthwatch.org/tag/fumed-podcast-episode/",
+					"name": "Fumed Podcast Episode Archives - Public Health Watch",
+					"isPartOf": {
+						"@id": "https://publichealthwatch.org/#website"
+					},
+					"breadcrumb": {
+						"@id": "https://publichealthwatch.org/tag/fumed-podcast-episode/#breadcrumb"
+					},
+					"inLanguage": "en-US"
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "https://publichealthwatch.org/tag/fumed-podcast-episode/#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://publichealthwatch.org/"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Fumed Podcast Episode"
+						}
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "https://publichealthwatch.org/#website",
+					"url": "https://publichealthwatch.org/",
+					"name": "Public Health Watch",
+					"description": "Public Health Watch",
+					"publisher": {
+						"@id": "https://publichealthwatch.org/#organization"
+					},
+					"potentialAction": [
+						{
+							"@type": "SearchAction",
+							"target": {
+								"@type": "EntryPoint",
+								"urlTemplate": "https://publichealthwatch.org/?s={search_term_string}"
+							},
+							"query-input": {
+								"@type": "PropertyValueSpecification",
+								"valueRequired": true,
+								"valueName": "search_term_string"
+							}
+						}
+					],
+					"inLanguage": "en-US"
+				},
+				{
+					"@type": "Organization",
+					"@id": "https://publichealthwatch.org/#organization",
+					"name": "Public Health Watch",
+					"url": "https://publichealthwatch.org/",
+					"logo": {
+						"@type": "ImageObject",
+						"inLanguage": "en-US",
+						"@id": "https://publichealthwatch.org/#/schema/logo/image/",
+						"url": "https://i0.wp.com/publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png?fit=939%2C267&ssl=1",
+						"contentUrl": "https://i0.wp.com/publichealthwatch.org/wp-content/uploads/2021/08/Blue-Logo-screenshot.png?fit=939%2C267&ssl=1",
+						"width": 939,
+						"height": 267,
+						"caption": "Public Health Watch"
+					},
+					"image": {
+						"@id": "https://publichealthwatch.org/#/schema/logo/image/"
+					},
+					"sameAs": [
+						"https://www.facebook.com/pubhealthwatch/",
+						"https://x.com/pubhealthwatch",
+						"https://www.linkedin.com/company/publichealthwatch/about/?viewAsMember=true"
+					]
+				}
+			]
+		}
+	},
+	"_links": {
+		"self": [
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/tags/562",
+				"targetHints": {
+					"allow": [
+						"GET"
+					]
+				}
+			}
+		],
+		"collection": [
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/tags"
+			}
+		],
+		"about": [
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/taxonomies/post_tag"
+			}
+		],
+		"wp:post_type": [
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/posts?tags=562"
+			},
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/newspack_nl_cpt?tags=562"
+			},
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/newspack_popups_cpt?tags=562"
+			},
+			{
+				"href": "https://publichealthwatch.org/wp-json/wp/v2/newspack_spnsrs_cpt?tags=562"
+			}
+		],
+		"curies": [
+			{
+				"name": "wp",
+				"href": "https://api.w.org/{rel}",
+				"templated": true
+			}
+		]
+	}
+}

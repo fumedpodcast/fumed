@@ -45,6 +45,25 @@ module.exports = async function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 
+	eleventyConfig.setWatchThrottleWaitTime(5000);
+	eleventyConfig.on(
+		"eleventy.before",
+		async ({ dir, runMode, outputMode }) => {
+			// Run me before the build starts
+			console.log("Before Build", dir, runMode, outputMode);
+			const util = require("util");
+			// const exec = util.promisify(require("node:child_process").exec);
+		}
+	);
+	eleventyConfig.on(
+		"eleventy.after",
+		async ({ dir, results, runMode, outputMode }) => {
+			// Run me after the build ends
+			console.log("After Build", dir, runMode, outputMode);
+			console.log("Build Complete");
+		}
+	);
+
 	let imagePath = `./src/assets/favicon.png`;
 	let imageName = "favicon";
 	let promiseSet = [];
@@ -118,7 +137,10 @@ module.exports = async function (eleventyConfig) {
 		);
 	}
 
-	if (!fs.existsSync(`./src/assets/${imageName}-192x192-maskable.png`)) {
+	if (
+		!fs.existsSync(`./src/assets/${imageName}-192x192-maskable.png`) &&
+		fs.existsSync(`./src/assets/favicon-maskable.png`)
+	) {
 		promiseSet.push(
 			new Promise((resolve, reject) => {
 				sharp(`./src/assets/favicon-maskable.png`)
