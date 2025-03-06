@@ -1,0 +1,23 @@
+
+Color prompts: 
+
+- Purple: `#2b1d34`
+- Background White: `#c5b6a2`
+- Foreground Purple: `#413344`
+- Foreground White: `#ecdcbd`
+- Logo Colors Extracted:
+	- `#594C59`
+	- `#322440`
+	- `#1E1526`
+	- `#F2E1C2`
+	- `#BFB0A3`
+	- Color Blind Safe! 
+		- Link color that works? - `#95CFFF`
+		- Brighter color to use - `#A375D1`
+	- Themes:
+		- `#A4958C`, `#564754`, `#7E6E6F`
+		- `#A7978D #D1C1AA #8E817C #4C3D4C #7D706F`
+- Logo Colors Extracted, Bright:
+	- Color Blind Safe! - `#322440 #1E1526 #F2E1C2 #D9C6B0 #8C7F7B`
+
+*/

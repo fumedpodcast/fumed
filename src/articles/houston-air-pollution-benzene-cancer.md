@@ -11,6 +11,7 @@ id: 14936
 link: 'https://publichealthwatch.org/2024/12/12/houston-air-pollution-benzene-cancer/'
 modified: '2025-02-17T19:16:36'
 modified_gmt: '2025-02-18T01:16:36'
+name: Levels of Cancer-Causing Benzene Reached New Heights in Beleaguered Channelview, Texas. Regulators Never Told Residents.
 originObject:
   id: 14936
   date: '2024-12-12T07:00:00'

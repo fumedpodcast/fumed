@@ -17,47 +17,6 @@ html
     -ms-text-size-adjust: 100%
     -webkit-text-size-adjust: 100%
 
-/*
- START Glitch hello-app default styles
-
- The styles in this section do some minimal CSS resets, set default fonts and 
- colors, and handle the layout for our footer and "Remix on Glitch" button. If
- you're new to CSS they may seem a little complicated, but you can scroll down
- to this section's matching END comment to see page-specific styles.
-*/
-
-/* 
- The style rules specify elements by type and by attributes such as class and ID
- Each section indicates an element or elements, then lists the style properties to apply
- See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/*
-
-Color prompts: 
-
-- Purple: `#2b1d34`
-- Background White: `#c5b6a2`
-- Foreground Purple: `#413344`
-- Foreground White: `#ecdcbd`
-- Logo Colors Extracted:
-	- `#594C59`
-	- `#322440`
-	- `#1E1526`
-	- `#F2E1C2`
-	- `#BFB0A3`
-	- Color Blind Safe! 
-		- Link color that works? - `#95CFFF`
-		- Brighter color to use - `#A375D1`
-	- Themes:
-		- `#A4958C`, `#564754`, `#7E6E6F`
-		- `#A7978D #D1C1AA #8E817C #4C3D4C #7D706F`
-- Logo Colors Extracted, Bright:
-	- Color Blind Safe! - `#322440 #1E1526 #F2E1C2 #D9C6B0 #8C7F7B`
-
-*/
-
-/* Our default values set as CSS variables */
 :root
   /* basic colors from logo */
     --dark-grey-purple: #594c59
@@ -106,10 +65,8 @@ Color prompts:
 
 @font-face
     font-family: "Garnet Capitals"
-    src: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751")
-      format("woff2"),
-    url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff?v=1725315130369")
-      format("woff");
+    src: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751") format("woff2")
+    src: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff?v=1725315130369") format("woff")
     font-weight: normal
     font-style: normal
     font-display: swap
@@ -187,16 +144,7 @@ h6
         border: 1 solid var(--color-primary)
 
 .hatched
-    background-image: linear-gradient(
-    45deg,
-    rgba(0, 0, 0, 0.5) 25%,
-    transparent 25%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.5) 75%,
-    transparent 75%,
-    transparent
-  );
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 25%, transparent 25%, transparent 50%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 75%, transparent 75%, transparent)
     background-size: 5px 5px
 
 /* gen via https://grid.layoutit.com/ */
@@ -206,15 +154,11 @@ h6
     grid-template-rows: 0.5fr 1.9fr 0.6fr
     gap: 0px 0px
     grid-auto-flow: row
-    grid-template-areas:
-    "tower-left-tip main-header tower-right-tip"
-    "tower-left main-content tower-right"
-    "footer-full footer-full footer-full";
+    grid-template-areas: "tower-left-tip main-header tower-right-tip" "tower-left main-content tower-right" "footer-full footer-full footer-full"
 
 .main-content
     grid-area: main-content
     padding: 10px
-  /*margin-top: 80px;*/
     max-width: var(--content-max-width)
     margin-top: 2px
     min-width: 300px
@@ -258,7 +202,6 @@ h6
     color: var(--color-text-secondary)
     color: white
     font-weight: bolder
-  /*background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");*/
     background-size: contain
     background-repeat: repeat-x
     background-position: bottom
@@ -304,12 +247,8 @@ nav h1
         top: 0px
         left: 0px
         z-index: -1
-  /* From: https://codepen.io/AgnusDei/pen/NWPbOxL*/
-  /*box-shadow: 2px 3px 20px var(--color-bg), 0 0 12px var(--color-primary) inset;*/
         background: var(--color-bg)
-  /* v2.1 : borders effect with SVG : try to play with scale to change them */
         filter: url(#wavy2)
-  /* v2.2 : Noise added for a vellum paper effect */
         background-image: var(--vellum)
 
     & ul
@@ -331,7 +270,7 @@ nav a:hover,
 h1 a:hover 
         text-decoration: underline var(--dark-grey-purple) wavy
 
-nav li {
+nav li 
         display: inline-block
 
 nav li:not(:last-of-type)::after 
@@ -470,14 +409,12 @@ body
 .tower-right-tip
     background: var(--main-purple)
 
-header h1 {
+header h1 
     font-family: "Garnet Capitals", sans-serif
     font-weight: bold
     text-align: center
     background: var(--main-purple)
     color: var(--eggshell)
-  /* font-size: 130px; */
-  /* font-size: 17vh; */
     font-size: clamp(2rem, 19vw, 26rem)
     margin: 0
 
@@ -527,14 +464,6 @@ header h1 {
         padding-right: 50px
         padding-left: 60px
         width: 100vw
-  /*transition-property: width;
-   transition-duration: 1s
-   transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);*/
-
-    & nav
-  /* position: relative; */
-  /* float: right; */
-  /* margin-right: 10vw; */
 
     & ul li
         vertical-align: middle
