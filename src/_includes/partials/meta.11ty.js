@@ -38,7 +38,7 @@ module.exports = function (data, title, description, tagSet, imgUrls) {
 		{
 			meta: "property",
 			property: "og:site_name",
-			content: `Song Obsessed`,
+			content: `Fumed`,
 		},
 		{
 			meta: "property",
@@ -108,7 +108,7 @@ module.exports = function (data, title, description, tagSet, imgUrls) {
 				url: `${data.site.domain}${data.page.url}`,
 			});
 			jsonLDProperties.push({
-				name: `${data.title ? data.title : "Song Obsessed"}`,
+				name: `${data.title ? data.title : "Fumed"}`,
 			});
 	}
 

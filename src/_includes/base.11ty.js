@@ -39,16 +39,12 @@ module.exports = async function (data, zones) {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1">
-		<link rel="preload" as="style" href="/assets/fraunces/fraunces.css" />
 		<title>${data.title || data.site.title}</title>
 		<meta name="description" content="${meta_description}" />
-		<link href="/assets/fraunces/fraunces.css" rel="stylesheet" hx-preserve="true" media="print" onload="this.media='all'">
 		<link rel="preconnect" href="https://www.youtube.com" hx-preserve="true">
 		<link rel="dns-prefetch" href="https://www.youtube.com" hx-preserve="true">
 		<link rel="preconnect" href="https://open.spotify.com" hx-preserve="true">
 		<link rel="dns-prefetch" href="https://open.spotify.com" hx-preserve="true">
-		<link rel="preload" href="/assets/css/template-song.css"  as="style" hx-preserve="true">
-		<link rel="preload" href="/assets/css/template-song-tags.css" as="style" hx-preserve="true">
 		<link rel="preload" href="/assets/css/template-tags.css" as="style" hx-preserve="true">
 		${metaChunk}
 		<script hx-preserve="true">
@@ -73,7 +69,6 @@ module.exports = async function (data, zones) {
 		<script src="/assets/js/head-support.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="/assets/js/script.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="/service-worker.js" defer type="application/javascript" hx-preserve="true"></script>
-		<script defer data-domain="songobsessed.com" src="https://plausible.io/js/script.js" type="application/javascript"  hx-preserve="true"></script>
 
 		<!-- Favicon Meta -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -84,18 +79,29 @@ module.exports = async function (data, zones) {
 		<meta name="theme-color" content="#1f1836">
 
 		<link rel="canonical" href="${process.env.DOMAIN}${data.page.url}" />
-		<link rel="alternate" type="application/rss+xml" 
-			title="RSS Feed for ${process.env.DOMAIN}" 
-			href="/rss/index.xml" />
 		${templateStyle}
 		${zones.lateHead || ""}
 	</head>
 	<body hx-ext="morph head-support" >
 		<div id="inner-body">
-		${nav(data)}
 			<div id="main-content" hx-history-elt>
-				<header>
-					<h1 class="title">${data.title.trim()}</h1>
+				<header id="main-header-canvas">
+					<div id="main-header-inner">
+						<div id="main-header-canvas-underlay">
+							<video autoplay muted loop id="background-video" poster="/assets/template-imgs/backgroundsmoke.png" preload="auto"
+							>
+								<source src="/assets/template-imgs/background_emissions_loop.mp4" type="video/mp4">
+							</video>
+						</div>
+						<div id="hed-container"><div id="hed">
+							<div class="col">
+								<h1 class="title">${data.title.trim()}</h1>
+							</div>
+							<div class="col">
+							</div>
+						</div>
+						</div>
+					</div>
 				</header>
 				<main class="wrapper" class="template-${zones.template}">
 					${zones.content}
