@@ -1,4 +1,4 @@
-if ("serviceWorker" in navigator) {
+/**if ("serviceWorker" in navigator) {
 	navigator.serviceWorker.register("/service-worker.js");
 }
 
@@ -14,5 +14,4 @@ if (
 ) {
 	window["xplayer-autoplay-switch"].checked = false;
 }
-
-++pageCount;
+ */

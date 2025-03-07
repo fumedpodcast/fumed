@@ -69,6 +69,7 @@ module.exports = async function (data, zones) {
 		<script src="/assets/js/head-support.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="/assets/js/script.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="/service-worker.js" defer type="application/javascript" hx-preserve="true"></script>
+		<script src="https://unpkg.com/scrollama" type="application/javascript" hx-preserve="true"></script>
 
 		<!-- Favicon Meta -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
@@ -79,6 +80,12 @@ module.exports = async function (data, zones) {
 		<meta name="theme-color" content="#1f1836">
 
 		<link rel="canonical" href="${process.env.DOMAIN}${data.page.url}" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="alternate" type="application/rss+xml" 
+		title="RSS Feed for ${process.env.DOMAIN}" 
+		href="https://feeds.castos.com/px68k" />
 		${templateStyle}
 		${zones.lateHead || ""}
 	</head>
@@ -108,16 +115,16 @@ module.exports = async function (data, zones) {
 					
 				</main>
 			</div>
-			${footer(data)}
+			
 		</div>
-		<aside id="stable-container" hx-preserve>
+		<!--<aside id="stable-container" hx-preserve>
 			<div id="media-container">
 				<script>console.log(document.location.href)</script>
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
 		</aside>
-		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
+		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>-->
 	</body>
 </html>`;
 };
