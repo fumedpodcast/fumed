@@ -95,7 +95,7 @@ module.exports = async function (data, zones) {
 				<header id="main-header-canvas">
 					<div id="main-header-inner">
 						<div id="main-header-canvas-underlay">
-							<video autoplay muted loop id="background-video" poster="/assets/template-imgs/backgroundsmoke.png" preload="auto"
+							<video autoplay="true" muted loop id="background-video" poster="/assets/template-imgs/backgroundsmoke.png" preload="auto"
 							>
 								<source src="/assets/template-imgs/background_emissions_loop.mp4" type="video/mp4">
 							</video>
