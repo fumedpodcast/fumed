@@ -88,6 +88,15 @@ module.exports = async function (data, zones) {
 		href="https://feeds.castos.com/px68k" />
 		${templateStyle}
 		${zones.lateHead || ""}
+  		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TPKS9NM4W1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'G-TPKS9NM4W1');
+		</script>
 	</head>
 	<body hx-ext="morph head-support" >
 		<div id="inner-body">
