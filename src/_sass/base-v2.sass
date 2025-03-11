@@ -48,7 +48,7 @@ h3
 
 .georgia-font, p
     font-family: Georgia, serif
-    
+
 a:link, a:visited
     text-decoration: underline
     color: #DBD3C0
@@ -61,7 +61,7 @@ a:link, a:visited
 #main-header-canvas
     aspect-ratio: auto 1920 / 1080
     max-height: 100vh
-    height: clamp(20vh, 80vh, 800px)
+    // height: clamp(20vh, 80vh, 800px)
     position: relative
     margin-bottom: 12px
     overflow: hidden
@@ -69,6 +69,12 @@ a:link, a:visited
     @media (max-width: 890px)
         max-height: 600px
         height: fit-content
+
+    #main-header-inner
+        float: left
+        display: block
+        overflow: hidden
+        position: relative
 
 #main-header-canvas-underlay
     float: left
@@ -97,6 +103,8 @@ a:link, a:visited
     left: 0
     z-index: 1
     overflow: hidden
+    max-height: 100vh
+    aspect-ratio: auto 1920 / 1080
 
 /* header is a two column responsive single row layout */
 #hed
@@ -121,7 +129,7 @@ a:link, a:visited
     padding: 10px
     margin: 0 auto
     display: block
-    width: 75vw
+    width: 96vw
     min-width: 300px
     height: fit-content
 
@@ -227,3 +235,107 @@ figure p
     display: inline
     position: relative
     padding: 0
+
+.logos
+    height: 75px
+    display: flex
+    margin: 15px auto
+    justify-content: space-evenly
+    align-items: center
+    align-content: center
+
+    img
+        max-width: 50%
+        height: inherit
+        float: left
+        margin: 0 auto
+
+        &:first-of-type
+            margin-right: 1rem
+            @media (max-width: 600px)
+                max-width: 75%
+
+        &:last-of-type
+            height: inherit
+            @media (max-width: 600px)
+                max-width: 25%
+                height: auto
+
+.flex-double
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 20px
+    box-sizing: border-box
+    align-items: center
+
+    .flex-double-col
+        box-sizing: border-box
+        text-align: right
+        flex: 1 1 calc(50% - 20px) // Two columns with a gap
+        @media (max-width: 775px)
+            text-align: center
+            flex: 1 1 100% // Single column on mobile
+        h2
+            font-size: clamp(2.5vw, 36px, 6vw)
+            letter-spacing: -1px
+
+        h3
+            font-size: 23px
+            letter-spacing: -1px
+
+            & img.h3-glyph
+                height: clamp(2vw, 18px, 4vw)
+
+    .flex-col-inner
+        max-width: 600px
+        float: right
+
+.spaced-graf
+    margin: 120px 0
+    text-align: center
+
+.right-justify
+    text-align: right !important
+
+.center-justify
+    text-align: center !important
+
+.flex-triple
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    gap: 20px
+    box-sizing: border-box
+    align-items: center
+    margin-top: 30px
+    flex-wrap: nowrap
+    overflow: hidden
+    @media (max-width: 775px)
+        flex-wrap: wrap
+
+.flex-triple-col
+    flex: 1 1 calc(40% - 24px) // Middle column takes more space
+    box-sizing: border-box
+    max-width: 40%
+    overflow: hidden
+    justify-content: cente
+
+    &:first-of-type, &:last-of-type
+        flex: 1 1 calc(30% - 24px) // First and last columns take 1/5th of space
+        max-width: 30%
+
+    h2
+        font-size: 23px
+        letter-spacing: -1px
+
+    @media (max-width: 1200px)
+        text-align: center
+        flex: 1 1 100% // Single column on mobile
+        max-width: 98vw
+        &:first-of-type, &:last-of-type
+            flex: 1 1 100% // Single column on mobile
+            max-width: 98vw
+    img
+        max-width: 33vw
+        height: auto
