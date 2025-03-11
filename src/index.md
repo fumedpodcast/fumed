@@ -13,7 +13,7 @@ layout: "index.11ty.js"
 
 <div id="listen-area">
 
-Listen on: [Apple](https://podcasts.apple.com/us/podcast/fumed/id1799157335), [Spotify](https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ), [YouTube](https://www.youtube.com/watch?v=P9wfPomEd_E)
+Listen on: [Apple](https://podcasts.apple.com/us/podcast/fumed/id1799157335), [Spotify](https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ), [YouTube](https://www.youtube.com/watch?v=P9wfPomEd_E) and anywhere you get your podcasts. 
 
 </div>
 
