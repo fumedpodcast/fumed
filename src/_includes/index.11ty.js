@@ -2,7 +2,64 @@ const base = require("./base.11ty");
 const xplayer = require("./partials/xplayer.11ty");
 var slugify = require("slugify");
 const linkmaker = require("../utils/linkmaker");
+const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
+	let episodes = [
+		{
+			title: "River on Fire",
+			me: "Public Health Watch",
+			id: "1987617",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/1FXuorFLPbmIatmA7dtt5C?si=b38528e92f834be3",
+				description:
+					"It’s the 1980s. Carolyn Stone and Greg Moss have settled into quiet lives in Channelview — an unincorporated community outside Houston, in the heart of the nation’s petrochemical industry. But within a few years, petrochemical plants and chemical barges move in, and air pollution and industrial accidents become routine. When they realize that state lawmakers and regulators aren’t going to protect them, Carolyn and Greg start fighting back themselves. To see pictures of Carolyn and Greg and learn more about Channelview, go to fumedpodcast.com.   CREDITS Host: David Leffler Editor: Susan White Executive Producer: Jordan Gass-Pooré Senior Producer: Salina Arredondo Assistant Producer: Savanna Strott Reporting: David Leffler, Savanna Strott and Salina Arredondo Additional Research: Jana Cholakovska and Jordan Gass-Pooré Sound Engineer: Mark Bush Original Music: Michael Ramos  Jim Morris is the executive director and editor in chief of Public Health Watch",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Fri, 07 Mar 2025 11:00:00 +0000",
+				title: "River on Fire",
+				songtitle: "River on Fire",
+				artists: "Public Health Watch",
+				youtube: "https://youtu.be/JFVKhVePwVY",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/1987617/c1e-zqx0whmq6odid164j-1p43ozjmfn0r-w2epqo.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "https://permalink.castos.com/podcast/64137/episode/1987617",
+				youtubeId: "JFVKhVePwVY",
+			},
+		},
+		{
+			title: "Introducing 'Fumed,' a New Podcast From Public Health Watch",
+			me: "Public Health Watch",
+			id: "1983338",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/1FXuorFLPbmIatmA7dtt5C?si=4fd29d91c0d94fc3",
+				description:
+					"Fumed is an investigative podcast about two stubborn Texans trying to salvage what's left of their working-class community. That’s a problem, though, because they live in East Harris County, where the petrochemical industry calls the shots — and where pushing back can be dangerous. A four-part series from Public Health Watch. To see pictures of Carolyn and Greg and learn more about Channelview, go to fumedpodcast.com.   CREDITS Host: David Leffler Editor: Susan White Executive Producer: Jordan Gass-Pooré Senior Producer: Salina Arredondo Assistant Producer: Savanna Strott Reporting: David Leffler, Savanna Strott and Salina Arredondo Additional Research: Jana Cholakovska and Jordan Gass-Pooré Sound Engineer: Mark Bush Original Music: Michael Ramos  Jim Morris is the executive director and editor in chief of Public Health Watch",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Thu, 27 Feb 2025 23:17:00 +0000",
+				title: "Introducing 'Fumed,' a New Podcast From Public Health Watch",
+				songtitle:
+					"Introducing 'Fumed,' a New Podcast From Public Health Watch",
+				artists: "Public Health Watch",
+				youtube: "https://youtu.be/6T-nDJbMdWY",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/1983338/c1e-wqd3jhrnxvdu58wno-9jn99pzoi58k-rch0e0.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "https://permalink.castos.com/podcast/64137/episode/1983338",
+				youtubeId: "6T-nDJbMdWY",
+			},
+		},
+	];
+
 	let albumImage = await imageCheck(data);
 	let imageAlt =
 		data.featuredImageAlt ||
@@ -35,47 +92,12 @@ module.exports = async function (data) {
 	};
 	var hasSongData = false;
 
-	let simpleHash = (str) => {
-		let hash = 0;
-		for (let i = 0; i < str.length; i++) {
-			const char = str.charCodeAt(i);
-			hash = (hash << 5) - hash + char;
-			hash &= hash; // Convert to 32bit integer
-		}
-		return new Uint32Array([hash])[0].toString(36);
-	};
 	if (data?.spotify && !data.spotifyUri) {
 		// https://community.spotify.com/t5/Desktop-Windows/URI-Codes/td-p/4479486
 		let spotifyUri = data.spotify.split("track/")[1];
 		onPageObject.media.spotifyUri = `spotify:track:${spotifyUri}`;
 	}
-	// onPageObject.media.mediaId = simpleHash(onPageObject.media.title);
-	let tags = data.tags.filter((tag) => {
-		if (
-			![
-				"all",
-				"tags",
-				"songs",
-				"songsPages",
-				"tagList",
-				"deepTagList",
-				"Undefined",
-				"undefined",
-			].includes(tag)
-		) {
-			return true;
-		}
-	});
-	let tagText = tags.map((tag) => {
-		var tagSlug = sluggerBasic(tag);
-		var tagLink = linkmaker(data, `/tag/${tagSlug}`, `${tag}`);
-		return `<span class="genre-tag">${tagLink}</span>`;
-	});
-	let artistText = data.artists.map((tag) => {
-		var tagSlug = slugger(tag);
-		var tagLink = linkmaker(data, `/artist/${tagSlug}`, `${tag}`);
-		return `${tagLink}`;
-	});
+
 	let linksSet = "";
 	if (data.youtube) {
 		linksSet += `<a href="${data.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a> | `;
@@ -120,7 +142,7 @@ module.exports = async function (data) {
 		<!--<img src="/assets/favicon-512x512.png" />-->
 		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/29T7H5f0WixFh8v1wPwQfZ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		<div id="listen-area">
-			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and anywhere you get your podcasts.</p>
+			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and <a target="_blank" href="https://feeds.castos.com/px68k">anywhere you get your podcasts</a>.</p>
 		</div>
 		<div class="flex-double">
 			<div class="flex-double-col">

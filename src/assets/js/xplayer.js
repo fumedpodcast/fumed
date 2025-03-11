@@ -1101,6 +1101,40 @@ if (typeof PlayerElement === "undefined") {
 			this.songDataStore[mediaId].mediaId = mediaId;
 		}
 
+		pushSongDataFromPage(mediaId, mediaObj) {
+			this.setAttribute("xp-last-added", mediaId);
+			this.songsAdded.add(mediaId);
+			this.songDataStore[mediaId] = mediaObj;
+			this.songDataStore[mediaId].siteUrl = window.location.href;
+			this.songDataStore[mediaId].mediaId = mediaId;
+		}
+
+		handlePushedPlayingChange(mediaObj) {
+			if (mediaObj && mediaObj.id) {
+				console.log("Playing requested set to", mediaId);
+				this.pushSongDataFromPage(mediaObj.id, mediaObj);
+				// this.songDataStore[val] = window[this.dataPath].song;
+				if (!this.shouldAddToPlaylist() && !!!advancing) {
+					console.log(
+						"Song Data store state now ",
+						this.songDataStore
+					);
+					this.setPlaylistPlaying(mediaId);
+					// This will destroy the binding to `this` unless it
+					// is explicitly bound.
+					this.routeToCorrectPlayAPI(mediaId, this.autoPlay);
+				} else {
+					console.log("Playing moved to playlist for", mediaId);
+					this.addToPlaylist(mediaId);
+				}
+				this.playlistCheck();
+			} else {
+				// this.removeAttribute('disabled');
+				console.log("Playlist item not given");
+				this.playlistCheck();
+			}
+		}
+
 		handlePlayingChange(mediaId, advancing) {
 			if (mediaId) {
 				console.log("Playing requested set to", mediaId);
