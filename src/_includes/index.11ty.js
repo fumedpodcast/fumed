@@ -1,5 +1,113 @@
 const base = require("./base.11ty");
+const xplayer = require("./partials/xplayer.11ty");
+var slugify = require("slugify");
+const linkmaker = require("../utils/linkmaker");
 module.exports = async function (data) {
+	let albumImage = await imageCheck(data);
+	let imageAlt =
+		data.featuredImageAlt ||
+		`Cover of album that contains ${data.songtitle}`;
+	var onPageObject = {
+		site: data.site,
+		metadata: data.metadata,
+		me: data.me,
+		media: {
+			description: data.description,
+			tags: data.tags,
+			date: data.date,
+			title: data.title,
+			songtitle: data.songtitle,
+			artists: data.artists,
+			youtube: data.youtube,
+			spotify: data.spotify,
+			spotifyUri: data.spotifyUri,
+			soundcloud: data.soundcloud,
+			audiofile: data.audiofile
+				? `/assets/media/${data.audiofile}`
+				: false,
+			lastfm: data.lastfm,
+			album: data.album,
+			playlists: data.playlists,
+			featuredImage: albumImage,
+			podbean: data.podbean,
+			youtubeId: "",
+		},
+	};
+	var hasSongData = false;
+
+	let simpleHash = (str) => {
+		let hash = 0;
+		for (let i = 0; i < str.length; i++) {
+			const char = str.charCodeAt(i);
+			hash = (hash << 5) - hash + char;
+			hash &= hash; // Convert to 32bit integer
+		}
+		return new Uint32Array([hash])[0].toString(36);
+	};
+	if (data?.spotify && !data.spotifyUri) {
+		// https://community.spotify.com/t5/Desktop-Windows/URI-Codes/td-p/4479486
+		let spotifyUri = data.spotify.split("track/")[1];
+		onPageObject.media.spotifyUri = `spotify:track:${spotifyUri}`;
+	}
+	// onPageObject.media.mediaId = simpleHash(onPageObject.media.title);
+	let tags = data.tags.filter((tag) => {
+		if (
+			![
+				"all",
+				"tags",
+				"songs",
+				"songsPages",
+				"tagList",
+				"deepTagList",
+				"Undefined",
+				"undefined",
+			].includes(tag)
+		) {
+			return true;
+		}
+	});
+	let tagText = tags.map((tag) => {
+		var tagSlug = sluggerBasic(tag);
+		var tagLink = linkmaker(data, `/tag/${tagSlug}`, `${tag}`);
+		return `<span class="genre-tag">${tagLink}</span>`;
+	});
+	let artistText = data.artists.map((tag) => {
+		var tagSlug = slugger(tag);
+		var tagLink = linkmaker(data, `/artist/${tagSlug}`, `${tag}`);
+		return `${tagLink}`;
+	});
+	let linksSet = "";
+	if (data.youtube) {
+		linksSet += `<a href="${data.youtube}" target="_blank" rel="noopener noreferrer">YouTube</a> | `;
+	}
+	if (data.spotify) {
+		linksSet += `<a href="${data.spotify}" target="_blank" rel="noopener noreferrer">Spotify</a> | `;
+	}
+	if (data.lastfm) {
+		linksSet += `<a href="${data.lastfm}" target="_blank" rel="noopener noreferrer">Last.fm</a> | `;
+	}
+	// console.log("date", data.date.toString());
+	if (data.youtube) {
+		let finalString = data.youtube.replaceAll(
+			"www.youtube.com/watch?v=",
+			"www.youtube-nocookie.com/embed/"
+		);
+		finalString = finalString.replaceAll(
+			"youtu.be/",
+			//"www.youtube-nocookie.com/watch?v="
+			"www.youtube-nocookie.com/embed/"
+		);
+		let videoId = finalString.split("embed/")[1];
+		let finalVideoId = videoId.split("?")[0];
+		// console.log("videoId", finalVideoId);
+		onPageObject.media.youtubeId = finalVideoId;
+	}
+	["spotifyUri", "youtubeId", "audiofile"].forEach((key) => {
+		if (onPageObject.media[key]) {
+			hasSongData = true;
+		}
+	});
+
 	// console.log("layout data", data);
 	let meta_description = data?.description || data.site?.description || "";
 	let insert = {
@@ -54,21 +162,10 @@ module.exports = async function (data) {
 			</div>
 	  	</div>
 
-<!--
-		<section>
-			
-			<img src="/assets/imgs/boats-thru-fence.JPG">
-			
-			
-			<img src="/assets/imgs/drone-view.jpg">
-			<img src="/assets/imgs/carolyn.jpg">
-			
-			<img src="/assets/imgs/greg.jpg">
-		</section>-->
+		
 		<br>
 
-	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
-	<script src="/assets/goscroll.js"></script>	
+		${hasSongData ? xplayer(onPageObject) : ""}
 		<hr>`,
 	};
 	return base(data, insert);

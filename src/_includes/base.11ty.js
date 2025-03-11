@@ -126,14 +126,14 @@ module.exports = async function (data, zones) {
 			</div>
 			
 		</div>
-		<!--<aside id="stable-container" hx-preserve>
+		<aside id="stable-container" hx-preserve>
 			<div id="media-container">
 				<script>console.log(document.location.href)</script>
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
 		</aside>
-		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>-->
+		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
 	</body>
 </html>`;
 };
