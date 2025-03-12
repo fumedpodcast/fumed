@@ -223,12 +223,16 @@ if (typeof PlayerElement === "undefined") {
 				console.log("Control box click", e.target.id);
 				this.changePlayerMode(e.target.id);
 			});
-			window["xplayer-autoplay-switch"].addEventListener("click", (e) => {
-				var autoPlaySetting = e.target.checked;
-				console.log("Autoplay switch click", autoPlaySetting);
-				this.autoPlay = autoPlaySetting;
-				this.setRetainedSetting("autoPlay", this.autoPlay);
-			});
+			window["xplayer-autoplay-switch"] &&
+				window["xplayer-autoplay-switch"].addEventListener(
+					"click",
+					(e) => {
+						var autoPlaySetting = e.target.checked;
+						console.log("Autoplay switch click", autoPlaySetting);
+						this.autoPlay = autoPlaySetting;
+						this.setRetainedSetting("autoPlay", this.autoPlay);
+					}
+				);
 		}
 
 		disconnectedCallback() {
@@ -1111,8 +1115,10 @@ if (typeof PlayerElement === "undefined") {
 
 		handlePushedPlayingChange(mediaObj) {
 			if (mediaObj && mediaObj.id) {
-				console.log("Playing requested set to", mediaId);
-				this.pushSongDataFromPage(mediaObj.id, mediaObj);
+				console.log("Playing requested set to", mediaObj.id);
+				let mediaId = mediaObj.id;
+				let advancing = true;
+				this.pushSongDataFromPage(mediaObj.id, mediaObj.media);
 				// this.songDataStore[val] = window[this.dataPath].song;
 				if (!this.shouldAddToPlaylist() && !!!advancing) {
 					console.log(

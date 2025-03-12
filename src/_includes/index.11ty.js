@@ -18,7 +18,7 @@ module.exports = async function (data) {
 				date: "Fri, 07 Mar 2025 11:00:00 +0000",
 				title: "River on Fire",
 				songtitle: "River on Fire",
-				artists: "Public Health Watch",
+				artists: ["Public Health Watch"],
 				youtube: "https://youtu.be/JFVKhVePwVY",
 				soundcloud: false,
 				audiofile:
@@ -45,7 +45,7 @@ module.exports = async function (data) {
 				title: "Introducing 'Fumed,' a New Podcast From Public Health Watch",
 				songtitle:
 					"Introducing 'Fumed,' a New Podcast From Public Health Watch",
-				artists: "Public Health Watch",
+				artists: ["Public Health Watch"],
 				youtube: "https://youtu.be/6T-nDJbMdWY",
 				soundcloud: false,
 				audiofile:
@@ -139,6 +139,9 @@ module.exports = async function (data) {
 			<img  src="/assets/template-imgs/TPR_Logo_RGB.png">
 		</div>
 		<br>
+		<div id="player-landing">
+		
+		</div>
 		<!--<img src="/assets/favicon-512x512.png" />-->
 		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/29T7H5f0WixFh8v1wPwQfZ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		<div id="listen-area">
@@ -158,11 +161,11 @@ module.exports = async function (data) {
 		</div>
 		<div class="spaced-graf"><p>This season, two stubborn Texans try to salvage what’s left of their working-class community. That’s a problem, though, because they live in East Harris County, where the petrochemical industry calls the shots — and where pushing back can be dangerous.</p></div>
 		<div class="flex-double">
-			<div class="flex-double-col right-justify">
+			<div class="flex-double-col center-justify">
 				<div class="flex-col-inner">
 					<h2>CHANNELVIEW, TX</h2>
 					<h3> <img class="h3-glyph" src="/assets/template-imgs/map_pin_tan.svg"> 15 MINUTES EAST OF HOUSTON</h3>
-					<p class="spaced-graf right-justify">Set in Channelview, Texas, in the heart of the nation's petrochemical industry, Fumed follows Carolyn Stone and Greg Moss as they risk everything to fight for their community’s future.</p>
+					<p class="spaced-graf center-justify">Set in Channelview, Texas, in the heart of the nation's petrochemical industry, Fumed follows Carolyn Stone and Greg Moss as they risk everything to fight for their community’s future.</p>
 				</div>
 			</div>
 			<div class="flex-double-col">
@@ -184,11 +187,23 @@ module.exports = async function (data) {
 			</div>
 	  	</div>
 
-		
+		<script>
+			window.episodes = ${JSON.stringify(episodes)};
+			document.addEventListener('DOMContentLoaded', (event) => {
+				
+				// Move episodes into the right position
+				// TKTK
+				// Activate the player
+				xplayer.handlePushedPlayingChange(window.episodes[0])
+				xplayer.handlePushedPlayingChange(window.episodes[1])
+				xplayer.makeMediaAdvance(window.episodes[0].id)
+			});
+		</script>
 		<br>
 
-		${hasSongData ? xplayer(onPageObject) : ""}
+		
 		<hr>`,
 	};
 	return base(data, insert);
 };
+// ${hasSongData ? xplayer(onPageObject) : ""}

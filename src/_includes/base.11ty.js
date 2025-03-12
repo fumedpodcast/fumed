@@ -128,7 +128,7 @@ module.exports = async function (data, zones) {
 		</div>
 		<aside id="stable-container" hx-preserve>
 			<div id="media-container">
-				<script>console.log(document.location.href)</script>
+				<script>console.log("stable-container", document.location.href)</script>
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
