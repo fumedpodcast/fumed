@@ -1,4 +1,213 @@
 @use 'variables'
 
-#xplayer
-    height: 400px
+#player-landing #stable-container
+    margin: 0
+    width: 100%
+    height: 170px
+    display: block
+
+    #media-container
+        width: 90%
+        height: 100%
+        margin: 10px auto
+        display: block
+
+    .stretch-footer
+        display: none
+
+    #xplayer
+        text-align: right
+        border: 0
+        background: var(--color-primary)
+        width: 100%
+        height: 100%
+        transition: opacity 1s, display 5s allow-discrete
+        display: none
+        opacity: 0
+        &.player-active
+            opacity: 1
+            display: block
+
+    @starting-style
+        #xplayer.player-active
+            opacity: 0
+
+    #xplayer-wrapper
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        padding: 6px
+        gap: 16px
+        height: 100%
+
+    #xplayer-playlist
+        overflow: hidden
+        max-height: 200px
+        overflow-y: auto
+
+    #xplayer-playlist p
+        font-size: 8px
+
+    .playlist-item
+        border-radius: 5px
+        font-size: 23px
+        line-height: 31px
+        font-family: sans-serif
+
+    #xplayer-currently
+        color: var(--color-text-main)
+        padding: .35em
+        display: inline-block
+
+    #xplayer-currently .playlist-item
+        display: inline-block
+
+    #xplayer-playlist-next .playlist-item
+        display: block
+        color: var(--color-text-main)
+        padding: 0.05em 0.25em
+        border-radius: 5px
+        max-width: max-content
+
+    #xplayer-playbox-wrapper
+        width: 100%
+        height: 100%
+        flex-grow: 1
+        overflow: hidden
+        text-align: center
+    #xplayer-playbox
+        width: 100%
+        height: 100%
+
+    [xp-playertype="spotify"] #xplayer-playbox
+        width: 390px
+        height: 152px
+        margin: 26px auto
+
+    #xplayer-playlist
+        text-align: justify
+        flex-grow: 3
+        p
+            text-align: left
+
+    .playlist-link-chip
+        display: inline-block
+        margin-left: 8px
+
+    a.xplayer-songlink
+        font-size: .7em
+        margin-top: 2px
+        text-decoration: none
+        vertical-align: middle
+
+    .playlist-chip
+        cursor: pointer
+        &:not(.playlist-link-chip)
+            background: var(--accent-overlap)
+            color: var(--back-fill)
+            padding: 0.05em 0.25em
+            margin-left: 8px
+            border-radius: 5px
+            max-width: max-content
+            vertical-align: middle
+        &.playlist-next-chip
+            font-weight: 900
+
+    .xplayer-image
+        display: none
+
+    #xplayer-image-wrapper
+        display: none
+
+    [xp-playertype="native"]
+        #xplayer-playbox
+            display: none
+        #xplayer-image-wrapper
+            display: inline-flex
+            text-align: center
+            position: relative
+            justify-content: center
+            overflow: hidden
+            height: 70%
+            width: 70%
+            margin: 0 auto
+        .xplayer-image
+            display: inline-block
+            object-fit: contain
+            position: relative
+            width: 100%
+        #xplayer-native-playbox
+            display: block
+            margin: 0 auto
+
+    #xplayer-controlbox
+        position: absolute
+        bottom: 0px
+        right: 25px
+        background-color: var(--color-accent)
+        color: var(--color-text-main)
+        width: max-content
+        padding: 6px
+        padding-bottom: 4px
+        @media (max-width: 670px)
+            bottom: 8px
+            border: 1px solid var(--color-text-main)
+        div.xplayer-control
+            color: var(--color-text-main)
+            text-decoration: none
+            padding: 0px 5px
+            vertical-align: top
+            display: inline-block
+            cursor: pointer
+
+    #xplayer.xp-index
+        position: relative
+        background-color: var(--color-accent)
+        border-radius: 25px
+        #xplayer-wrapper
+            height: 100%
+        #xplayer-playbox-wrapper
+            max-width: 30%
+            max-height: 100%
+            flex-grow: 0
+            position: relative
+        #xplayer-image-wrapper
+            text-align: center
+            position: relative
+            justify-content: center
+            overflow: hidden
+            height: 100%
+            width: 100%
+        #xplayer-playbox
+            position: absolute
+            left: -9999px
+            top: -9999px
+        .xplayer-image
+            display: inline-block
+            object-fit: scale-down
+            position: relative
+            max-height: 512px
+            max-width: 512px
+            height: 100%
+            width: 100%
+            aspect-ratio: 1 / 1
+        #xplayer-playlist
+            flex-grow: 8
+            max-height: 100%
+            flex-basis: min-content
+        #xplayer-image-wrapper
+            display: inline-block
+        #xplayer-play
+            font-size: 4vw
+        .playlist-link-chip
+            display: none
+        .next-up-prompt
+            display: none
+        .currently-playing-prompt
+            display: none
+        #xplayer-playlist-next
+            display: none
+        .xplayer-control:not(:first-of-type)
+            display: none
+        .playlist-item *:not(.current-episode-link)
+            display: none

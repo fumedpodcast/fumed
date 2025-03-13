@@ -143,7 +143,6 @@ module.exports = async function (data) {
 		
 		</div>
 		<!--<img src="/assets/favicon-512x512.png" />-->
-		<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/29T7H5f0WixFh8v1wPwQfZ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 		<div id="listen-area">
 			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and <a target="_blank" href="https://feeds.castos.com/px68k">anywhere you get your podcasts</a>.</p>
 		</div>
@@ -193,10 +192,16 @@ module.exports = async function (data) {
 				
 				// Move episodes into the right position
 				// TKTK
+				window["player-landing"].append(window["stable-container"]);
+				window.xplayer.classList.remove("min");
+				document.body.classList.remove("xp-min");
+				window.xplayer.setPlayerState("xp-index");
+				document.body.classList.add("xp-index");
+				window.xplayer.classList.add("xp-index");
 				// Activate the player
 				xplayer.handlePushedPlayingChange(window.episodes[0])
-				xplayer.handlePushedPlayingChange(window.episodes[1])
-				xplayer.makeMediaAdvance(window.episodes[0].id)
+				// xplayer.handlePushedPlayingChange(window.episodes[1])
+				xplayer.makeMediaAdvance(window.episodes[0].id, false)
 			});
 		</script>
 		<br>

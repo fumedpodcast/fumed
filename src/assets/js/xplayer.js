@@ -14,13 +14,14 @@ if (typeof PlayerElement === "undefined") {
 		constructor() {
 			// Always call super first in constructor
 			super();
+			this.connectedOnce = false;
 			console.group("XPlayer");
 			this.playerEmptyStateClass = "player-empty";
 			this.playerActiveClass = "player-active";
 			this.playerActivated = false;
 			this.player = false;
 			this.spotifyController = false;
-			this.autoPlay = true;
+			this.autoPlay = false;
 			this.internalPlaylist = [];
 			this.playcheck = false;
 			this.manualPause = false;
@@ -94,6 +95,9 @@ if (typeof PlayerElement === "undefined") {
 		}
 
 		connectedCallback() {
+			if (this.connectedOnce) {
+				return;
+			}
 			console.log("Custom element added to page.");
 			document.body.addEventListener(
 				"htmx:afterOnLoad",
@@ -121,7 +125,7 @@ if (typeof PlayerElement === "undefined") {
 			this.playboxWrapper.appendChild(this.playbox);
 			this.playlistbox = document.createElement("div");
 			this.playlistbox.id = "xplayer-playlist";
-			this.playlistbox.innerHTML = `<p>Currently Playing: <span id="xplayer-currently"> ... </span></p><p>Next Up:</p>`;
+			this.playlistbox.innerHTML = `<p class="currently-playing-p"><span class="currently-playing-prompt">Currently Playing:</span> <span id="xplayer-currently"> ... </span></p><p class="next-up-prompt">Next Up:</p>`;
 			this.playlistqueue = document.createElement("div");
 			this.playlistqueue.id = "xplayer-playlist-next";
 			this.playlistbox.appendChild(this.playlistqueue);
@@ -152,14 +156,14 @@ if (typeof PlayerElement === "undefined") {
 			} else if (window["xplayer-autoplay-switch"]) {
 				this.autoPlay = window["xplayer-autoplay-switch"].checked;
 			} else {
-				this.autoPlay = true;
+				this.autoPlay = false;
 			}
 			this.setRetainedSetting("autoPlay", this.autoPlay);
 			var event = new Event("xplaylist-ready");
 			document.dispatchEvent(event);
 			this.dispatchEvent(event);
 			var playMode = this.getRetainedSetting("autoPlay");
-			this.autoPlay = playMode ? true : playMode;
+			this.autoPlay = playMode ? false : playMode;
 			if (window["xplayer-setup"]) {
 				console.log("setup first YT player");
 				let activate = function () {
@@ -233,6 +237,7 @@ if (typeof PlayerElement === "undefined") {
 						this.setRetainedSetting("autoPlay", this.autoPlay);
 					}
 				);
+			this.connectedOnce = true;
 		}
 
 		disconnectedCallback() {
@@ -372,7 +377,7 @@ if (typeof PlayerElement === "undefined") {
 			if (active) {
 				artistHtml = `<span class="current-series-link">${artistHtml}</span>`;
 			}
-			innerCode += ` by ${artistHtml}`;
+			innerCode += `<span class="by"> by </span>${artistHtml}`;
 			innerCode += `   <span class="playlist-link-chip playlist-chip">${this.linkMaker(
 				mediaObj.siteUrl
 			)}</span>`;
@@ -486,6 +491,7 @@ if (typeof PlayerElement === "undefined") {
 				var onPlayerReady = (event) => {
 					//event.target.playVideo();
 					if (this.playerActivated || this.autoPlay) {
+						console.log("Autoplay onPlayerReady");
 						this.setMediaState("playing");
 					}
 				};
@@ -823,7 +829,7 @@ if (typeof PlayerElement === "undefined") {
 			}
 		}
 
-		makeMediaAdvance(specificMediaId) {
+		makeMediaAdvance(specificMediaId, autoplay) {
 			// Advance the player to next media item.
 			console.log("Advance to next media item.");
 			console.log(
@@ -851,7 +857,10 @@ if (typeof PlayerElement === "undefined") {
 				this.removePlaylistTag(nextMedia);
 				//var nextMediaObj = this.songDataStore[nextMedia];
 				this.setPlaylistPlaying(nextMedia);
-				this.routeToCorrectPlayAPI(nextMedia, true);
+				this.routeToCorrectPlayAPI(
+					nextMedia,
+					autoplay ? autoplay : false
+				);
 			} else if (
 				typeof specificMediaId != "undefined" &&
 				specificMediaId &&
@@ -863,7 +872,10 @@ if (typeof PlayerElement === "undefined") {
 					specificMediaId
 				);
 				this.setPlaylistPlaying(specificMediaId);
-				this.routeToCorrectPlayAPI(specificMediaId, true);
+				this.routeToCorrectPlayAPI(
+					specificMediaId,
+					autoplay ? autoplay : false
+				);
 			}
 		}
 
