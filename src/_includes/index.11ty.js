@@ -56,7 +56,7 @@ module.exports = async function (data) {
 				featuredImage: "/assets/favicon-512x512.png",
 				castos: "https://permalink.castos.com/podcast/64137/episode/1987617",
 				youtubeId: "JFVKhVePwVY",
-				pretitle: "Episode 2",
+				pretitle: "Episode 1",
 			},
 		},
 		{
@@ -84,7 +84,7 @@ module.exports = async function (data) {
 				featuredImage: "/assets/favicon-512x512.png",
 				castos: "https://permalink.castos.com/podcast/64137/episode/1983338",
 				youtubeId: "6T-nDJbMdWY",
-				pretitle: "Episode 2",
+				pretitle: "Trailer",
 			},
 		},
 	];
