@@ -138,6 +138,8 @@ if (typeof PlayerElement === "undefined") {
 			this.controlbox.innerHTML = this.ctrlBox();
 			this.wrapper.appendChild(this.controlbox);
 
+			this.wrapper.appendChild(this.sliderHtml());
+
 			var playerMode = this.getRetainedSetting("playerMode");
 			if (playerMode == "min") {
 				this.changePlayerMode("xplayer-shrink");
@@ -247,6 +249,13 @@ if (typeof PlayerElement === "undefined") {
 		adoptedCallback() {
 			console.log("Custom element moved to new page.");
 			console.log("");
+		}
+
+		sliderHtml() {
+			let slider = document.createElement("div");
+			slider.classList.add("xp-slide");
+			slider.innerHTML = /*html*/ `<div class="xp-range">`;
+			return slider;
 		}
 
 		// https://gist.github.com/jlevy/c246006675becc446360a798e2b2d781
@@ -615,7 +624,7 @@ if (typeof PlayerElement === "undefined") {
 			}
 			let audioElement = new Audio(mediaId);
 			audioElement.id = "xplayer-native-playbox";
-			audioElement.controls = true;
+			audioElement.controls = false;
 			audioElement.controlslist = "nodownload";
 			this.player = audioElement;
 			this.playboxWrapper.appendChild(audioElement);
@@ -637,6 +646,18 @@ if (typeof PlayerElement === "undefined") {
 				this.makeMediaAdvance();
 			};
 			audioElement.addEventListener("ended", advancePlay.bind(this));
+			audioElement.addEventListener("timeupdate", function () {
+				var currentTime = audioElement.currentTime;
+				var duration = audioElement.duration;
+				var start = 0.01;
+				var completed = (currentTime + 0.25) / duration;
+				var visibleComplete = completed > 0.01 ? completed : start;
+				document.querySelector(".xp-range").style.width =
+					visibleComplete * 100 + "%";
+				document
+					.querySelector(".xp-range")
+					.setAttribute("xp-progress-percent", completed);
+			});
 			this.playerActivated = true;
 			// https://stackoverflow.com/questions/1307165/unloading-removing-content-from-an-iframe
 			// const element = document.getElementById("xplayer-playbox");
