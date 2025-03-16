@@ -30,6 +30,7 @@ module.exports = async function (data) {
 				castos: "https://permalink.castos.com/podcast/64137/episode/1992308",
 				youtubeId: "QDt5kRlGVUM",
 				pretitle: "Episode 2",
+				preferredAPI: "native",
 			},
 		},
 		{
@@ -57,6 +58,7 @@ module.exports = async function (data) {
 				castos: "https://permalink.castos.com/podcast/64137/episode/1987617",
 				youtubeId: "JFVKhVePwVY",
 				pretitle: "Episode 1",
+				preferredAPI: "native",
 			},
 		},
 		{
@@ -85,6 +87,7 @@ module.exports = async function (data) {
 				castos: "https://permalink.castos.com/podcast/64137/episode/1983338",
 				youtubeId: "6T-nDJbMdWY",
 				pretitle: "Trailer",
+				preferredAPI: "native",
 			},
 		},
 	];
@@ -233,6 +236,7 @@ module.exports = async function (data) {
 
 					// Activate the player
 					xplayer.handlePushedPlayingChange(window.episodes[0])
+					//xplayer.setAttribute('xp-playertype', 'native');
 					xplayer.handlePushedPlayingChange(window.episodes[1])
 					xplayer.handlePushedPlayingChange(window.episodes[2])
 					// xplayer.handlePushedPlayingChange(window.episodes[1])
@@ -246,12 +250,13 @@ module.exports = async function (data) {
 				}, 15000);
 				window.onYouTubeIframeAPIReady = () => {
 					console.log('[xplay] ytapi activation');
-					activation();
+					//activation();
 				};
 				document.addEventListener("ytapi-ready", () => {
 					console.log('[xplay] script loaded trigger');
 					// activation();
 				});
+				activation();
 
 				var pinPlayer = function() {
 					const stableContainer = document.querySelector('#stable-container');
