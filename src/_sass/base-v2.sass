@@ -243,23 +243,37 @@ figure p
     justify-content: space-evenly
     align-items: center
     align-content: center
+    overflow: hidden
 
-    img
+    div
+        margin: auto
+        overflow: hidden
+        object-fit: contain
         max-width: 50%
         height: inherit
-        float: left
-        margin: 0 auto
+
+        a
+            display: inline
+            object-fit: contain
+            width: inherit
+            height: inherit
 
         &:first-of-type
             margin-right: 1rem
             @media (max-width: 600px)
-                max-width: 75%
+                max-width: 70%
 
         &:last-of-type
             height: inherit
             @media (max-width: 600px)
                 max-width: 25%
                 height: auto
+    img
+        height: inherit
+        float: left
+        margin: auto
+        max-height: 489px
+        object-fit: contain
 
 .flex-double
     display: flex
@@ -271,7 +285,7 @@ figure p
 
     .flex-double-col
         box-sizing: border-box
-        text-align: right
+        text-align: center
         flex: 1 1 calc(50% - 20px) // Two columns with a gap
         @media (max-width: 775px)
             text-align: center
@@ -319,7 +333,7 @@ figure p
     box-sizing: border-box
     max-width: 40%
     overflow: hidden
-    justify-content: cente
+    justify-content: center
 
     &:first-of-type, &:last-of-type
         flex: 1 1 calc(30% - 24px) // First and last columns take 1/5th of space
@@ -339,3 +353,8 @@ figure p
     img
         max-width: 33vw
         height: auto
+
+.desktop-align-start
+    align-items: flex-start
+    @media (max-width: 775px)
+        align-items: center

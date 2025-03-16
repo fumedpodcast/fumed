@@ -45,7 +45,7 @@ module.exports = async function (data, zones) {
 		<link rel="dns-prefetch" href="https://www.youtube.com" hx-preserve="true">
 		<link rel="preconnect" href="https://open.spotify.com" hx-preserve="true">
 		<link rel="dns-prefetch" href="https://open.spotify.com" hx-preserve="true">
-		<link rel="preload" href="/assets/css/template-tags.css" as="style" hx-preserve="true">
+		
 		${metaChunk}
 		<script hx-preserve="true">
 		if("classList" in document.documentElement) {
@@ -60,7 +60,7 @@ module.exports = async function (data, zones) {
 		${zones.earlyHead || ""}
 		<link rel="stylesheet" href="/assets/css/style.css"  hx-preserve="true">
 		<script src="/assets/js/htmx.min.js" type="application/javascript" hx-preserve="true"></script>
-		<script src="https://www.youtube.com/iframe_api" async onload="(function(){var event = new Event('ytapi-ready'); document.dispatchEvent(event);})()" hx-preserve="true"></script>
+		<script src="https://www.youtube.com/iframe_api" async onload="(function(){ window.YTReady = true; var event = new Event('ytapi-ready'); document.dispatchEvent(event);})()" hx-preserve="true"></script>
 		<script src="https://open.spotify.com/embed/iframe-api/v1" async onload="(function(){
 			var event = new Event('spotify-api-ready'); 
 			document.dispatchEvent(event);
@@ -75,7 +75,7 @@ module.exports = async function (data, zones) {
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
+		<link  hx-preserve="true" rel="manifest" href="/site.webmanifest">
 		<meta name="msapplication-TileColor" content="#1f1836">
 		<meta name="theme-color" content="#1f1836">
 
@@ -83,13 +83,13 @@ module.exports = async function (data, zones) {
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-		<link rel="alternate" type="application/rss+xml" 
+		<link  hx-preserve="true" rel="alternate" type="application/rss+xml" 
 		title="RSS Feed for ${process.env.DOMAIN}" 
 		href="https://feeds.castos.com/px68k" />
 		${templateStyle}
 		${zones.lateHead || ""}
   		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TPKS9NM4W1"></script>
+		<script  hx-preserve="true" async src="https://www.googletagmanager.com/gtag/js?id=G-TPKS9NM4W1"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
@@ -126,14 +126,14 @@ module.exports = async function (data, zones) {
 			</div>
 			
 		</div>
-		<!--<aside id="stable-container" hx-preserve>
+		<aside id="stable-container" hx-preserve>
 			<div id="media-container">
-				<script>console.log(document.location.href)</script>
+				<script>console.log("stable-container", document.location.href)</script>
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
 		</aside>
-		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>-->
+		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
 	</body>
 </html>`;
 };
