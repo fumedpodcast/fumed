@@ -218,20 +218,23 @@ module.exports = async function (data) {
 		<script>
 			window.episodes = ${JSON.stringify(episodes)};
 			document.addEventListener('DOMContentLoaded', (event) => {
+				window["player-landing"].append(window["stable-container"]);
+				window.xplayer.classList.remove("min");
+				document.body.classList.remove("xp-min");
+				window.xplayer.setPlayerState("xp-index");
+				document.body.classList.add("xp-index");
+				window.xplayer.classList.add("xp-index");
 
 				let activation = () => {
 
 					clearTimeout(window.YTactivationTimeout);
 					// Move episodes into the right position
 					// TKTK
-					window["player-landing"].append(window["stable-container"]);
-					window.xplayer.classList.remove("min");
-					document.body.classList.remove("xp-min");
-					window.xplayer.setPlayerState("xp-index");
-					document.body.classList.add("xp-index");
-					window.xplayer.classList.add("xp-index");
+
 					// Activate the player
 					xplayer.handlePushedPlayingChange(window.episodes[0])
+					xplayer.handlePushedPlayingChange(window.episodes[1])
+					xplayer.handlePushedPlayingChange(window.episodes[2])
 					// xplayer.handlePushedPlayingChange(window.episodes[1])
 					xplayer.makeMediaAdvance(window.episodes[0].id, false)
 					console.log('heard "ytapi-ready" event');
@@ -240,10 +243,14 @@ module.exports = async function (data) {
 				window.YTactivationTimeout = setTimeout(() => {
 						console.log("[xplay] yt timeout activation");
 						activation();
-				}, 5000);
+				}, 15000);
+				window.onYouTubeIframeAPIReady = () => {
+					console.log('[xplay] ytapi activation');
+					activation();
+				};
 				document.addEventListener("ytapi-ready", () => {
 					console.log('[xplay] script loaded trigger');
-					activation();
+					// activation();
 				});
 
 				var pinPlayer = function() {
