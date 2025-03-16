@@ -45,7 +45,7 @@ module.exports = async function (data, zones) {
 		<link rel="dns-prefetch" href="https://www.youtube.com" hx-preserve="true">
 		<link rel="preconnect" href="https://open.spotify.com" hx-preserve="true">
 		<link rel="dns-prefetch" href="https://open.spotify.com" hx-preserve="true">
-		<link rel="preload" href="/assets/css/template-tags.css" as="style" hx-preserve="true">
+		
 		${metaChunk}
 		<script hx-preserve="true">
 		if("classList" in document.documentElement) {
@@ -60,7 +60,7 @@ module.exports = async function (data, zones) {
 		${zones.earlyHead || ""}
 		<link rel="stylesheet" href="/assets/css/style.css"  hx-preserve="true">
 		<script src="/assets/js/htmx.min.js" type="application/javascript" hx-preserve="true"></script>
-		<script src="https://www.youtube.com/iframe_api" async onload="(function(){var event = new Event('ytapi-ready'); document.dispatchEvent(event);})()" hx-preserve="true"></script>
+		<script src="https://www.youtube.com/iframe_api" async onload="(function(){ window.YTReady = true; var event = new Event('ytapi-ready'); document.dispatchEvent(event);})()" hx-preserve="true"></script>
 		<script src="https://open.spotify.com/embed/iframe-api/v1" async onload="(function(){
 			var event = new Event('spotify-api-ready'); 
 			document.dispatchEvent(event);

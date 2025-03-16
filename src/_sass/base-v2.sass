@@ -244,23 +244,29 @@ figure p
     align-items: center
     align-content: center
 
-    img
+    div
+        margin: auto
+        overflow: hidden
+        max-width: 100px
         max-width: 50%
-        height: inherit
-        float: left
-        margin: 0 auto
-        max-height: fit-content
 
         &:first-of-type
             margin-right: 1rem
             @media (max-width: 600px)
-                max-width: 75%
+                max-width: 70%
 
         &:last-of-type
             height: inherit
             @media (max-width: 600px)
                 max-width: 25%
                 height: auto
+    img
+
+        height: inherit
+        float: left
+        margin: auto
+        max-height: 489px
+        object-fit: contain
 
 .flex-double
     display: flex

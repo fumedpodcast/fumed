@@ -135,8 +135,8 @@ module.exports = async function (data) {
 	let insert = {
 		content: /*html*/ `
 		<div class="logos">
-			<img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png">
-			<img  src="/assets/template-imgs/TPR_Logo_RGB.png">
+			<div><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></div>
+			<div><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></div>
 		</div>
 		<br>
 		<div id="player-landing">
@@ -189,19 +189,33 @@ module.exports = async function (data) {
 		<script>
 			window.episodes = ${JSON.stringify(episodes)};
 			document.addEventListener('DOMContentLoaded', (event) => {
-				
-				// Move episodes into the right position
-				// TKTK
-				window["player-landing"].append(window["stable-container"]);
-				window.xplayer.classList.remove("min");
-				document.body.classList.remove("xp-min");
-				window.xplayer.setPlayerState("xp-index");
-				document.body.classList.add("xp-index");
-				window.xplayer.classList.add("xp-index");
-				// Activate the player
-				xplayer.handlePushedPlayingChange(window.episodes[0])
-				// xplayer.handlePushedPlayingChange(window.episodes[1])
-				xplayer.makeMediaAdvance(window.episodes[0].id, false)
+
+				let activation = () => {
+
+					clearTimeout(window.YTactivationTimeout);
+					// Move episodes into the right position
+					// TKTK
+					window["player-landing"].append(window["stable-container"]);
+					window.xplayer.classList.remove("min");
+					document.body.classList.remove("xp-min");
+					window.xplayer.setPlayerState("xp-index");
+					document.body.classList.add("xp-index");
+					window.xplayer.classList.add("xp-index");
+					// Activate the player
+					xplayer.handlePushedPlayingChange(window.episodes[0])
+					// xplayer.handlePushedPlayingChange(window.episodes[1])
+					xplayer.makeMediaAdvance(window.episodes[0].id, false)
+					console.log('heard "ytapi-ready" event');
+					
+				}				
+				window.YTactivationTimeout = setTimeout(() => {
+						console.log("[xplay] yt timeout activation");
+						activation();
+				}, 5000);
+				document.addEventListener("ytapi-ready", () => {
+					console.log('[xplay] script loaded trigger');
+					activation();
+				})
 			});
 		</script>
 		<br>
