@@ -243,12 +243,20 @@ figure p
     justify-content: space-evenly
     align-items: center
     align-content: center
+    overflow: hidden
 
     div
         margin: auto
         overflow: hidden
-        max-width: 100px
+        object-fit: contain
         max-width: 50%
+        height: inherit
+
+        a
+            display: inline
+            object-fit: contain
+            width: inherit
+            height: inherit
 
         &:first-of-type
             margin-right: 1rem
@@ -260,7 +268,7 @@ figure p
             @media (max-width: 600px)
                 max-width: 25%
                 height: auto
-    img, a
+    img
         height: inherit
         float: left
         margin: auto
