@@ -6,6 +6,33 @@ const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
 	let episodes = [
 		{
+			title: "Birth of the Activists",
+			me: "Public Health Watch",
+			id: "1992308",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/4ZKtMt27BtGQUOsIE6hawu?si=e9b336d58eb6443e",
+				description:
+					"Carolyn’s neighborhood becomes ground zero for Channeview’s rapid industrialization. A fire engulfs a nearby chemical storage facility, and a barge company builds its headquarters across the street from her house. Greg uses drones to keep tabs on the chemical barges that are moving into his neighborhood, close to a Superfund site filled with cancer-causing dioxin. To see pictures of Carolyn and Greg and learn more about Channelview, go to fumedpodcast.com.   CREDITS Host: David Leffler Editor: Susan White Executive Producer: Jordan Gass-Pooré Senior Producer: Salina Arredondo Assistant Producer: Savanna Strott Reporting: David Leffler, Savanna Strott and Salina Arredondo Additional Research: Jana Cholakovska and Jordan Gass-Pooré Sound Engineer: Mark Bush Original Music: Michael Ramos  Jim Morris is the executive director and editor in chief of Public Health Watch",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Fri, 14 Mar 2025 11:00:00 +0000",
+				title: "Birth of the Activists",
+				songtitle: "Birth of the Activists",
+				artists: ["Public Health Watch"],
+				youtube: "https://youtu.be/QDt5kRlGVUM",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/1992308/c1e-mpm6oiqw099b3g67n-mkxdj1dnf6o8-zvu7ox.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "https://permalink.castos.com/podcast/64137/episode/1992308",
+				youtubeId: "QDt5kRlGVUM",
+				pretitle: "Episode 2",
+			},
+		},
+		{
 			title: "River on Fire",
 			me: "Public Health Watch",
 			id: "1987617",
@@ -29,6 +56,7 @@ module.exports = async function (data) {
 				featuredImage: "/assets/favicon-512x512.png",
 				castos: "https://permalink.castos.com/podcast/64137/episode/1987617",
 				youtubeId: "JFVKhVePwVY",
+				pretitle: "Episode 2",
 			},
 		},
 		{
@@ -56,6 +84,7 @@ module.exports = async function (data) {
 				featuredImage: "/assets/favicon-512x512.png",
 				castos: "https://permalink.castos.com/podcast/64137/episode/1983338",
 				youtubeId: "6T-nDJbMdWY",
+				pretitle: "Episode 2",
 			},
 		},
 	];
@@ -135,8 +164,8 @@ module.exports = async function (data) {
 	let insert = {
 		content: /*html*/ `
 		<div class="logos">
-			<div><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></div>
-			<div><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></div>
+			<div><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
+			<div><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
 		</div>
 		<br>
 		<div id="player-landing">
@@ -159,12 +188,12 @@ module.exports = async function (data) {
 			</div>
 		</div>
 		<div class="spaced-graf"><p>This season, two stubborn Texans try to salvage what’s left of their working-class community. That’s a problem, though, because they live in East Harris County, where the petrochemical industry calls the shots — and where pushing back can be dangerous.</p></div>
-		<div class="flex-double">
+		<div class="flex-double desktop-align-start">
 			<div class="flex-double-col center-justify">
 				<div class="flex-col-inner">
 					<h2>CHANNELVIEW, TX</h2>
 					<h3> <img class="h3-glyph" src="/assets/template-imgs/map_pin_tan.svg"> 15 MINUTES EAST OF HOUSTON</h3>
-					<p class="spaced-graf center-justify">Set in Channelview, Texas, in the heart of the nation's petrochemical industry, Fumed follows Carolyn Stone and Greg Moss as they risk everything to fight for their community’s future.</p>
+					<p class="center-justify">Set in Channelview, Texas, in the heart of the nation's petrochemical industry, Fumed follows Carolyn Stone and Greg Moss as they risk everything to fight for their community’s future.</p>
 				</div>
 			</div>
 			<div class="flex-double-col">
