@@ -386,7 +386,7 @@ if (typeof PlayerElement === "undefined") {
 			if (active) {
 				artistHtml = `<span class="current-series-link">${artistHtml}</span>`;
 			}
-			innerCode += `<span class="by"> by </span>${artistHtml}`;
+			// innerCode += `<span class="by"> by </span>${artistHtml}`;
 			innerCode += `   <span class="playlist-link-chip playlist-chip">${this.linkMaker(
 				mediaObj.siteUrl
 			)}</span>`;
@@ -875,6 +875,11 @@ if (typeof PlayerElement === "undefined") {
 					" with API ",
 					this.songDataStore[nextMedia].preferredAPI
 				);
+				this.wrapper.getElementsByClassName(
+					"currently-playing-prompt"
+				)[0].innerText =
+					(this.songDataStore[nextMedia].pretitle || "Now Playing") +
+					":";
 				this.removePlaylistTag(nextMedia);
 				//var nextMediaObj = this.songDataStore[nextMedia];
 				this.setPlaylistPlaying(nextMedia);

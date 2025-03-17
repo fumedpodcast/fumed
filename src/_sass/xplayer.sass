@@ -3,7 +3,7 @@
 .xp-slide
     width: 50%
     position: absolute
-    bottom: 28px
+    bottom: 22px
     left: 32%
     background: white
     height: 25px
@@ -16,6 +16,19 @@
 
 #stable-container:not(#player-landing #stable-container)
     margin: 0
+
+    .xp-range
+        height: 10px
+    .xp-slide
+        width: 75%
+        position: absolute
+        bottom: 64px
+        left: 17%
+        background: #fff
+        height: 10px
+
+    .currently-playing-prompt
+        display: inline-block
 
     #media-container
         float: right
@@ -30,11 +43,12 @@
         background: linear-gradient(180deg, #ff2eff 0%, #ff2f86 25%, #00fff2 85%)
         width: 100%
         height: 10px
-        display: block
+        display: none
         position: fixed
         bottom: 0
 
     #xplayer
+        font-family: sans-serif
         text-align: right
         border: var(--accent) 8px inset
         border-style: groove
@@ -46,6 +60,12 @@
         &.player-active
             opacity: 1
             display: block
+
+    span, p
+        font-family: sans-serif
+
+    .next-up-prompt
+        margin: .5em 0
 
     @starting-style
         #xplayer.player-active
@@ -155,12 +175,13 @@
             margin: 0 auto
 
     #xplayer-controlbox
-        position: fixed
-        bottom: -7px
-        right: 25px
+        position: absolute
+        bottom: 5px
+        right: 34px
         background-color: var(--accent-overlap)
         color: var(--back-fill)
         width: max-content
+
         @media (max-width: 670px)
             bottom: 8px
             border: 1px solid var(--back-fill)
@@ -171,6 +192,10 @@
             vertical-align: top
             display: inline-block
             cursor: pointer
+            &#xplayer-enlarge, &#xplayer-shrink
+                display: none
+            &#xplayer-pause
+                display: none
 
     #xplayer.large
         #xplayer-wrapper
