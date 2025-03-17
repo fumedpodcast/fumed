@@ -60,6 +60,8 @@
         font-size: 23px
         line-height: 31px
         font-family: sans-serif
+        @media (max-width: 383px)
+            font-size: 20px
 
     #xplayer-currently
         color: var(--color-text-main)
@@ -162,6 +164,14 @@
         @media (max-width: 670px)
             bottom: 23px
             border: 1px solid var(--color-text-main)
+
+        @media (max-width: 456px)
+            bottom: 16px
+
+        @media (max-width: 383px)
+            bottom: 19px
+            right: 12px
+
         div.xplayer-control
             color: var(--color-text-main)
             text-decoration: none
@@ -220,9 +230,21 @@
             font-family: sans-serif
             width: fit-content
             padding-left: 0.1em
+            @media (max-width: 456px)
+                font-size: 18px
+
+            @media (max-width: 383px)
+                font-size: 16px
         #xplayer-playlist-next
             display: none
+            &.open
+                display: block
+                background: var(--color-accent)
+                position: absolute
+                bottom: -64px
+                right: 60px
+                border-radius: 0 0px 10px 10px
         .xplayer-control:not(:first-of-type)
             display: none
-        .playlist-item *:not(.current-episode-link)
+        .currently-playing-p .playlist-item *:not(.current-episode-link)
             display: none
