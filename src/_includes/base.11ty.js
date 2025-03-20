@@ -47,7 +47,8 @@ module.exports = async function (data, zones) {
 		<link rel="dns-prefetch" href="https://www.youtube.com" hx-preserve="true">
 		<link rel="preconnect" href="https://open.spotify.com" hx-preserve="true">
 		<link rel="dns-prefetch" href="https://open.spotify.com" hx-preserve="true">
-		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin hx-preserve="true">
 		${metaChunk}
 		<script hx-preserve="true">
 		if("classList" in document.documentElement) {
@@ -72,7 +73,7 @@ module.exports = async function (data, zones) {
 		<script src="/assets/js/script.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="/service-worker.js" defer type="application/javascript" hx-preserve="true"></script>
 		<script src="https://unpkg.com/scrollama" async type="application/javascript" hx-preserve="true"></script>
-
+		<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" hx-preserve="true" rel="stylesheet">
 		<!-- Favicon Meta -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
