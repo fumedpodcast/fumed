@@ -86,7 +86,7 @@ module.exports = async function (data) {
 				featuredImage: "/assets/favicon-512x512.png",
 				castos: "https://permalink.castos.com/podcast/64137/episode/1983338",
 				youtubeId: "6T-nDJbMdWY",
-				pretitle: "Trailer",
+				pretitle: "",
 				preferredAPI: "native",
 			},
 		},
@@ -166,18 +166,21 @@ module.exports = async function (data) {
 	let meta_description = data?.description || data.site?.description || "";
 	let insert = {
 		content: /*html*/ `
-		<div class="logos">
-			<div><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
-			<div><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
-		</div>
+		<div id="top-logo"><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
 		<br>
 		<div id="player-landing">
 		
 		</div>
 		<!--<img src="/assets/favicon-512x512.png" />-->
 		<div id="listen-area">
-			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and <a target="_blank" href="https://feeds.castos.com/px68k">anywhere you get your podcasts</a>.</p>
+			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and anywhere you get your podcasts.</p>
 		</div>
+		<p class="center-justify">Featured On:</p>
+		<div class="logos">
+			<div><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
+			<div><a target="_blank" href="https://www.npr.org/podcasts/1267542067/fumed"><img src="/assets/template-imgs/NPR_Logo_Color_CMYK.jpg"></a></div>
+		</div>
+		<br /><br />
 		<div class="flex-double">
 			<div class="flex-double-col">
 				<div class="flex-col-inner">

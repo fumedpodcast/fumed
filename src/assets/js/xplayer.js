@@ -125,10 +125,14 @@ if (typeof PlayerElement === "undefined") {
 			this.playboxWrapper.appendChild(this.playbox);
 			this.playlistbox = document.createElement("div");
 			this.playlistbox.id = "xplayer-playlist";
-			this.playlistbox.innerHTML = `<p class="currently-playing-p"><span class="currently-playing-prompt">Currently Playing:</span> <span id="xplayer-currently"> ... </span></p><p class="next-up-prompt">Next Up:</p>`;
+			this.playlistbox.innerHTML = `<p class="currently-playing-p"><span class="currently-playing-prompt">Currently Playing:</span> <span id="xplayer-currently"> ... </span></p>`;
 			this.playlistqueue = document.createElement("div");
 			this.playlistqueue.id = "xplayer-playlist-next";
-			this.playlistbox.appendChild(this.playlistqueue);
+			this.playlistNextArea = document.createElement("div");
+			this.playlistNextArea.id = "xplayer-playlist-next-area";
+			this.playlistNextArea.innerHTML = `<p class="next-up-prompt">Next Up:</p>`;
+			this.playlistNextArea.appendChild(this.playlistqueue);
+			this.playlistbox.appendChild(this.playlistNextArea);
 			this.appendChild(this.wrapper);
 			this.wrapper.appendChild(this.playboxWrapper);
 			this.wrapper.appendChild(this.playlistbox);
@@ -139,6 +143,11 @@ if (typeof PlayerElement === "undefined") {
 			this.wrapper.appendChild(this.controlbox);
 
 			this.wrapper.appendChild(this.sliderHtml());
+
+			this.wrapper.appendChild(this.expanderMaker());
+			this.growingNextBox = document.createElement("div");
+			this.growingNextBox.id = "xplayer-nextbox";
+			this.wrapper.appendChild(this.growingNextBox);
 
 			var playerMode = this.getRetainedSetting("playerMode");
 			if (playerMode == "min") {
@@ -374,10 +383,36 @@ if (typeof PlayerElement === "undefined") {
 			return `<a href="${url}" class="xplayer-songlink" hx-boost="true" hx-swap="outerHTML show:top" hx-target="#main-content" hx-push-url="true" hx-select="#main-content">🔗</a>`;
 		}
 
+		expanderMaker() {
+			var eb = document.createElement("button");
+			eb.id = "expander-button";
+			eb.setAttribute("aria-label", "Expand to see additional episodes");
+			eb.innerText = "+";
+			eb.addEventListener("click", (e) => {
+				this.wrapper.classList.toggle("xplayer-expanded");
+				if (this.wrapper.classList.contains("xplayer-expanded")) {
+					e.target.innerText = "-";
+					window["xplayer-nextbox"].append(
+						window["xplayer-playlist-next"]
+					);
+				} else {
+					window["xplayer-playlist"].append(
+						window["xplayer-playlist-next"]
+					);
+					e.target.innerText = "+";
+				}
+			});
+			return eb;
+		}
+
 		mediaEntryMaker(mediaId, active) {
 			var mediaObj = this.songDataStore[mediaId];
 			var newItem = document.createElement("div");
-			var innerCode = `${mediaObj.songtitle}`;
+			var pretitle =
+				mediaObj.pretitle && mediaObj.pretitle.length > 0
+					? `<span class="pretitle">${mediaObj.pretitle}: </span>`
+					: "";
+			var innerCode = `${pretitle}${mediaObj.songtitle}`;
 			if (active) {
 				this.playboxImageWrapper.innerHTML = this.imgMaker(mediaId);
 				innerCode = `<span class="current-episode-link">${innerCode}</span>`;
@@ -877,9 +912,7 @@ if (typeof PlayerElement === "undefined") {
 				);
 				this.wrapper.getElementsByClassName(
 					"currently-playing-prompt"
-				)[0].innerText =
-					(this.songDataStore[nextMedia].pretitle || "Now Playing") +
-					":";
+				)[0].innerText = "Latest" + ":";
 				this.removePlaylistTag(nextMedia);
 				//var nextMediaObj = this.songDataStore[nextMedia];
 				this.setPlaylistPlaying(nextMedia);

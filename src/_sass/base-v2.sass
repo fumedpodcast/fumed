@@ -49,7 +49,7 @@ h3
 .georgia-font
     font-family: Georgia, serif
 
-.sora-font-light-300, p
+.sora-font-light-300, p, .playlist-item, .current-episode-link
     font-family: "Sora", sans-serif
     font-optical-sizing: auto
     font-weight: 300
@@ -242,6 +242,15 @@ figure p
     position: relative
     padding: 0
 
+#top-logo
+    max-width: 50%
+    margin: 0 auto
+    @media (max-width: 775px)
+        max-width: 75%
+
+    img
+        object-fit: contain
+
 .logos
     height: 75px
     display: flex
@@ -364,3 +373,7 @@ figure p
     align-items: flex-start
     @media (max-width: 775px)
         align-items: center
+
+@media (max-width: 520px)
+    #xplayer-currently
+        max-width: 72%
