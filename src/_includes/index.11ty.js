@@ -5,6 +5,34 @@ const linkmaker = require("../utils/linkmaker");
 const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
 	let episodes = [
+	{
+			title: "Battle Cry",
+			me: "Public Health Watch",
+			id: "1997035",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/19xtzeFdNJnryY4YgUYPvh?si=e540e854c811449c",
+				description:
+					"Greg is rescued from his home when Hurricane Harvey hits Channelview. The floodwaters gash a temporary cap that covers the Superfund site, unleashing chemicals into the river. Carolyn and Greg join forces to create the Channelview Health and Improvement Coalition. Greg campaigns publicly — and successfully — against a barge company’s plan to dig up tons of river sludge to make way for more barges.",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Fri, 21 Mar 2025 10:00:00 +0000",
+				title: "Battle Cry",
+				songtitle: "Battle Cry",
+				artists: ["Public Health Watch"],
+				youtube: "https://youtu.be/PRttP9OaiWQ",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/1997035/c1e-835jgfo7pr6uprkzj-34n1g0nrs6rq-c5ohbe.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "https://permalink.castos.com/podcast/64137/episode/1997035",
+				youtubeId: "PRttP9OaiWQ",
+				pretitle: "Episode 3",
+				preferredAPI: "native",
+			},
+		},		
 		{
 			title: "Birth of the Activists",
 			me: "Public Health Watch",
