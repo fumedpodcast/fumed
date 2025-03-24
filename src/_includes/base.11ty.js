@@ -122,7 +122,7 @@ module.exports = async function (data, zones) {
 						</div>
 					</div>
 				</header>
-				<main class="wrapper" class="template-${zones.template}">
+				<main class="wrapper template-${zones.template}">
 					${zones.content}
 					
 				</main>

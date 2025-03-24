@@ -5,7 +5,7 @@ const linkmaker = require("../utils/linkmaker");
 const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
 	let episodes = [
-	{
+		{
 			title: "Battle Cry",
 			me: "Public Health Watch",
 			id: "1997035",
@@ -32,7 +32,7 @@ module.exports = async function (data) {
 				pretitle: "Episode 3",
 				preferredAPI: "native",
 			},
-		},		
+		},
 		{
 			title: "Birth of the Activists",
 			me: "Public Health Watch",
@@ -193,6 +193,7 @@ module.exports = async function (data) {
 	// console.log("layout data", data);
 	let meta_description = data?.description || data.site?.description || "";
 	let insert = {
+		template: "index",
 		content: /*html*/ `
 		<div id="top-logo"><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
 		<br>
@@ -334,6 +335,38 @@ module.exports = async function (data) {
 		</script>
 		<br>
 
+		<div id="map-block">
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>Channelview</h3>
+					Channelview, Texas, was once a quiet refuge for people trying to avoid the more industrialized areas in east Harris County. But then barges moved in, searching for places to park near the Houston Ship Channel’s petrochemical plants. 
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/large_map_final_0306.png"
+				alt="Large Map that shows the location of Channelview, Texas, and the surrounding industrial zones"
+				lazy />
+			</figure>	
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>River Bottom</h3>
+					Greg Moss thought the I-10 bridge would protect his North Channelview neighborhood, known as the River Bottom, from becoming a parking lot for chemical barges. But barges — and the dredging needed to make space for them — have arrived, despite the dangers posed by a nearby Superfund Site. 
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/north_map_final_0306.png"
+				alt="Greg's neighborhood."
+				lazy />
+			</figure>	
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>South Channelview</h3>
+					Since Carolyn Stone moved to South Channelview in 1988, barge companies have bought up most of the riverfront property. K-Solv, a barge-cleaning and chemical distribution company, has had two fires. A TCEQ air monitor has recorded high concentrations of benzene, a carcinogen, in the area since 2008.  
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/south_map_final_305.png"
+				alt="Carolyn Stone's neighborhood."
+				lazy />
+			</figure>								
+		</div>
 		
 		<hr>`,
 	};
