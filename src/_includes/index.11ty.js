@@ -195,7 +195,12 @@ module.exports = async function (data) {
 	let insert = {
 		template: "index",
 		content: /*html*/ `
-		<div id="top-logo"><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
+		<div class="overlap-top logos">
+			<div class="logo-container"><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
+			<div></div><div></div><div></div>
+			<div class="logo-container"><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
+		</div>
+
 		<br>
 		<div id="player-landing">
 		
