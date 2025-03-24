@@ -209,11 +209,6 @@ module.exports = async function (data) {
 		<div id="listen-area">
 			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and anywhere you get your podcasts.</p>
 		</div>
-		<p class="center-justify">Featured On:</p>
-		<div class="logos">
-			<div><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
-			<div><a target="_blank" href="https://www.npr.org/podcasts/1267542067/fumed"><img src="/assets/template-imgs/NPR_Logo_Color_CMYK.jpg"></a></div>
-		</div>
 		<br /><br />
 		<div class="flex-double">
 			<div class="flex-double-col">
