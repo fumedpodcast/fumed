@@ -6,6 +6,34 @@ const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
 	let episodes = [
 		{
+			title: "Locked and Loaded",
+			me: "Public Health Watch",
+			id: "2001633",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/34cEsqQLrVYMIii7LUm6on?si=b314d54f9eba4b3e",
+				description:
+					"Greg’s house is burned down and his video camera shows the face of the suspected arsonist — a man he doesn’t know. Greg thinks the barge company he’s been monitoring is behind the fire, but he has no proof. Greg carries a gun wherever he goes, and Carolyn and her husband make sure their guns are always nearby. Neither she nor Greg can afford to move away from the dangers that surround them — so for now, they’ll keep fighting to preserve what remains of the community they love.",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Fri, 28 Mar 2025 10:00:00 +0000",
+				title: "Locked and Loaded",
+				songtitle: "Locked and Loaded",
+				artists: ["Public Health Watch"],
+				youtube: "https://youtu.be/UtjJHe-z7HQ",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/2001633/c1e-835jgfo76rziprkzj-xxwdpz5xix7z-vqjjnk.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "hhttps://permalink.castos.com/podcast/64137/episode/2001633",
+				youtubeId: "UtjJHe-z7HQ",
+				pretitle: "Episode 4",
+				preferredAPI: "native",
+			},
+		},
+		{
 			title: "Battle Cry",
 			me: "Public Health Watch",
 			id: "1997035",
@@ -267,10 +295,9 @@ module.exports = async function (data) {
 					// TKTK
 
 					// Activate the player
-					xplayer.handlePushedPlayingChange(window.episodes[0])
-					//xplayer.setAttribute('xp-playertype', 'native');
-					xplayer.handlePushedPlayingChange(window.episodes[1])
-					xplayer.handlePushedPlayingChange(window.episodes[2])
+					window.episodes.forEach((episode) => { 
+						xplayer.handlePushedPlayingChange(episode);
+					});
 					// xplayer.handlePushedPlayingChange(window.episodes[1])
 					xplayer.makeMediaAdvance(window.episodes[0].id, false)
 					console.log('heard "ytapi-ready" event');
