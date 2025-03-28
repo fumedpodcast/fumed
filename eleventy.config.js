@@ -27,7 +27,8 @@ let site = scheme + domain_name;
 process.env.DOMAIN = site;
 process.env.DOMAIN_NAME = domain_name;
 process.env.SITE_NAME = "Fumed";
-process.env.DESCRIPTION = "Fumed is about the people who live in the shadows of America’s chemical plants and oil refineries.";
+process.env.DESCRIPTION =
+	"Fumed is about the people who live in the shadows of America’s chemical plants and oil refineries.";
 process.env.BASIC_IMAGE = `${domain_name}/img/nyc_noir.jpg`;
 process.env.PRIMARY_AUTHOR = "Fumed Podcast";
 

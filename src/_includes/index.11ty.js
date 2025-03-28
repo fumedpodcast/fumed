@@ -257,85 +257,103 @@ module.exports = async function (data) {
 
 		<script>
 			window.episodes = ${JSON.stringify(episodes)};
-			document.addEventListener('DOMContentLoaded', (event) => {
-				window["player-landing"].append(window["stable-container"]);
-				window.xplayer.classList.remove("min");
-				document.body.classList.remove("xp-min");
-				window.xplayer.setPlayerState("xp-index");
-				document.body.classList.add("xp-index");
-				window.xplayer.classList.add("xp-index");
+			var pinPlayer = function() {
+				console.log('[xpo] pinPlayer');
+				const stableContainer = document.querySelector('#stable-container');
+				const playerLanding = document.querySelector('#player-landing');
+				if (!playerLanding) return;
 
-				let activation = () => {
-
-					clearTimeout(window.YTactivationTimeout);
-					// Move episodes into the right position
-					// TKTK
-
-					// Activate the player
-					xplayer.handlePushedPlayingChange(window.episodes[0])
-					//xplayer.setAttribute('xp-playertype', 'native');
-					xplayer.handlePushedPlayingChange(window.episodes[1])
-					xplayer.handlePushedPlayingChange(window.episodes[2])
-					// xplayer.handlePushedPlayingChange(window.episodes[1])
-					xplayer.makeMediaAdvance(window.episodes[0].id, false)
-					console.log('heard "ytapi-ready" event');
-					
-				}				
-				window.YTactivationTimeout = setTimeout(() => {
-						console.log("[xplay] yt timeout activation");
-						activation();
-				}, 15000);
-				window.onYouTubeIframeAPIReady = () => {
-					console.log('[xplay] ytapi activation');
-					//activation();
-				};
-				document.addEventListener("ytapi-ready", () => {
-					console.log('[xplay] script loaded trigger');
-					// activation();
-				});
-				activation();
-
-				var pinPlayer = function() {
-					const stableContainer = document.querySelector('#stable-container');
-					const playerLanding = document.querySelector('#player-landing');
-
-					if (!playerLanding) return;
-
-					const observer = new IntersectionObserver(
-						(entries) => {
-							entries.forEach(entry => {
-								if (entry.isIntersecting) {
-									window.enteredViewport = false;
-									console.log('[xpo] Container is back', entry, entry.target, 'first child', window["player-landing"].firstElementChild);
-									window.enteredViewport = true;
-									if (window["player-landing"].firstElementChild == null || window["player-landing"].firstElementChild.id != "stable-container"){
-										console.log('[xpo] player-landing is without stable-container', entry, entry.target);
-										stableContainer.classList.remove('docked');
-										window["player-landing"].append(window["stable-container"]);
-									}
-								} else if (entry.isVisible) {
-									console.log('[xpo] Container entered viewport', entry);
-									window.enteredViewport = true;
-								} else if (window.enteredViewport && entry.intersectionRect.top === 0) {
-									console.log('[xpo] Container is out of view from having been in view', entry, entry.target, 'intersection', entry.intersectionRect);
-									window.enteredViewport = false;
-									// Add any actions you want to take when container hits top
-									stableContainer.classList.add('docked');
-									document.body.append(window["stable-container"]);
-								} else {
-									console.log('[xpo] Container entered viewport', 'is visible', entry.isVisible, 'is intersecting', entry.isIntersecting, 'entry', entry);
+				const observer = new IntersectionObserver(
+					(entries) => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								window.enteredViewport = false;
+								console.log('[xpo] Container is back', entry, entry.target, 'first child', window["player-landing"].firstElementChild);
+								window.enteredViewport = true;
+								if (window["player-landing"].firstElementChild == null || window["player-landing"].firstElementChild.id != "stable-container"){
+									console.log('[xpo] player-landing is without stable-container', entry, entry.target);
+									stableContainer.classList.remove('docked');
+									window["player-landing"].append(window["stable-container"]);
 								}
-							});
-						},
-						{
-							rootMargin: '0px 0px 0px 0px',
-							threshold: [1]
-						}
-					);
+							} else if (entry.isVisible) {
+								console.log('[xpo] Container entered viewport', entry);
+								window.enteredViewport = true;
+							} else if (window.enteredViewport && entry.intersectionRect.top === 0) {
+								console.log('[xpo] Container is out of view from having been in view', entry, entry.target, 'intersection', entry.intersectionRect);
+								window.enteredViewport = false;
+								// Add any actions you want to take when container hits top
+								stableContainer.classList.add('docked');
+								document.body.append(window["stable-container"]);
+							} else {
+								console.log('[xpo] Container entered viewport', 'is visible', entry.isVisible, 'is intersecting', entry.isIntersecting, 'entry', entry);
+							}
+						});
+					},
+					{
+						rootMargin: '0px 0px 0px 0px',
+						threshold: [1]
+					}
+				);
 
-					observer.observe(playerLanding);
+				observer.observe(playerLanding);
+				window.xplayerObserver = observer;
+			}
+			htmx.on("htmx:load", function(evt) {
+				
+
+				if (window.xplayerObserver){
+					window.xplayerObserver.disconnect();
 				}
-				pinPlayer();
+				if (location.pathname == "/") {
+					console.log("[xplay] HTMX Load Index");
+					console.log('[xplay] DOMContentLoaded');
+					window["player-landing"].append(window["stable-container"]);
+					window.xplayer.classList.remove("min");
+					document.body.classList.remove("xp-min");
+					window.xplayer.setPlayerState("xp-index");
+					document.body.classList.add("xp-index");
+					window.xplayer.classList.add("xp-index");
+
+					let activation = () => {
+						if (window.xplayer.classList.contains("index-activated") || location.pathname !== "/"){
+							return;
+						}
+						window.xplayer.classList.add("index-activated")
+						console.log('[xplay] activation');
+						clearTimeout(window.YTactivationTimeout);
+						// Move episodes into the right position
+						// TKTK
+
+						// Activate the player
+						xplayer.handlePushedPlayingChange(window.episodes[0])
+						//xplayer.setAttribute('xp-playertype', 'native');
+						xplayer.handlePushedPlayingChange(window.episodes[1])
+						xplayer.handlePushedPlayingChange(window.episodes[2])
+						xplayer.handlePushedPlayingChange(window.episodes[3])
+						// xplayer.handlePushedPlayingChange(window.episodes[1])
+						xplayer.makeMediaAdvance(window.episodes[0].id, false)
+						console.log('heard "ytapi-ready" event');
+						
+					}				
+					window.YTactivationTimeout = setTimeout(() => {
+							console.log("[xplay] yt timeout activation");
+							activation();
+					}, 15000);
+					window.onYouTubeIframeAPIReady = () => {
+						console.log('[xplay] ytapi activation');
+						//activation();
+					};
+					document.addEventListener("ytapi-ready", () => {
+						console.log('[xplay] script loaded trigger');
+						// activation();
+					});
+					activation();
+					pinPlayer();
+				}
+			})
+			document.addEventListener('DOMContentLoaded', (event) => {
+				//if (window.xplayerIndexSetup){ return; }
+
 			});
 		</script>
 		<br>

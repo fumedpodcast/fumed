@@ -103,31 +103,7 @@ module.exports = async function (data, zones) {
 	</head>
 	<body hx-ext="morph head-support" >
 		<div id="inner-body">
-			<script>
-				function opennav(e){
-					console.log(e.parentNode.parentNode); e.parentNode.parentNode.classList.toggle('open');
-				}
-			</script>
-			<nav id="top-nav">
-				<div id="nav-icon" onclick="opennav(this)">
-					<img src="/assets/menu-icon.svg" width="25px" height="25px" alt="menu icon">
-				</div>
-				<div id="nav-menu-items">
-					<ul>
-						<li>
-							<a href="https://songobsessed.com/songs/" hx-boost="true" hx-swap="outerHTML show:top" hx-target="#main-content" hx-push-url="true" hx-select="#main-content" class="htmx-made-link">About</a>
-						</li>
-						<li>
-							<h2>
-								<a href="https://fumedpodcast.com" hx-boost="true" hx-swap="outerHTML show:top" hx-target="#main-content" hx-push-url="true" hx-select="#main-content" class="site-name">Fumed</a>
-							</h2>
-						</li>
-						<li>
-							<a href="https://publichealthwatch.org/donate/" target="_blank">Donate</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+			${nav(data)}
 			<div id="main-content" hx-history-elt>
 				<header id="main-header-canvas">
 					<div id="main-header-inner">
@@ -160,8 +136,40 @@ module.exports = async function (data, zones) {
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
+
 		</aside>
 		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
+		<script type="application/javascript" hx-preserve="true">
+				if (!window.xplayerNavigationChecks) {
+					console.log("xplayerNavigationChecks")
+					const stableContainer = document.querySelector('#stable-container');
+					const playerLanding = document.querySelector('#player-landing');
+					htmx.on("htmx:beforeSwap", function(evt) {
+						console.log("HTMX beforeSwap")
+						
+						if (!stableContainer.classList.contains('docked')) {
+							stableContainer.classList.add('docked');
+							document.body.append(window["stable-container"]);
+							if (!window.xplayer.getMediaState()) {
+								xplayer.classList.add('display-off');
+							}
+						}
+					});
+					htmx.on("htmx:load", function(evt) {
+						console.log("HTMX Load")
+						
+						if (location.pathname == "/" && stableContainer.classList.contains('docked')) {
+							console.log("HTMX Load return player to position")
+							stableContainer.classList.remove('docked');
+							window["player-landing"].append(window["stable-container"]);
+							xplayer.classList.remove('display-off');
+						}
+					});
+
+					window.xplayerNavigationChecks = true;
+				}
+		</script>
+		
 	</body>
 </html>`;
 };
