@@ -333,6 +333,9 @@ module.exports = async function (data) {
 
 					let activation = () => {
 						if (window.xplayer.classList.contains("index-activated") || location.pathname !== "/"){
+							console.log("[xplay] index-activated indicates the player is already set up");
+
+							clearTimeout(window.YTactivationTimeout);
 							return;
 						}
 						window.xplayer.classList.add("index-activated")

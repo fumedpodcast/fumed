@@ -150,8 +150,7 @@ module.exports = async function (data, zones) {
 					console.log("xplayerNavigationChecks")
 					const stableContainer = document.querySelector('#stable-container');
 					const playerLanding = document.querySelector('#player-landing');
-					htmx.on("htmx:beforeSwap", function(evt) {
-						console.log("HTMX beforeSwap")
+					const swapHandler = function(){
 						
 						if (!stableContainer.classList.contains('docked')) {
 							stableContainer.classList.add('docked');
@@ -160,7 +159,33 @@ module.exports = async function (data, zones) {
 								xplayer.classList.add('display-off');
 							}
 						}
+					}
+					htmx.on("htmx:beforeSwap", function(evt) {
+						console.log("HTMX beforeSwap")
+						swapHandler();
 					});
+					htmx.on("htmx:historyRestore", function(evt) {
+						console.log("HTMX historyRestore")
+						// swapHandler();
+						//debugger;
+					})
+					addEventListener("popstate", (event) => {
+						console.log("HTMX popstate")
+						swapHandler();
+					});
+					htmx.on("htmx:beforeSend", function(evt) {
+						console.log("HTMX beforeSend")
+					})
+					htmx.on("htmx:beforeHistorySave", function(evt) {
+						console.log("HTMX beforeHistorySave")
+					})
+					htmx.on("htmx:beforeTransition", function(evt) {
+						console.log("HTMX beforeTransition")
+					})					
+					
+					htmx.on("htmx:loadStart", function(evt) {
+						console.log("HTMX loadStart")
+					})
 					htmx.on("htmx:load", function(evt) {
 						console.log("HTMX Load")
 						
