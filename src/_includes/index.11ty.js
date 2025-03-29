@@ -6,6 +6,34 @@ const imageCheck = require("../utils/linkmaker");
 module.exports = async function (data) {
 	let episodes = [
 		{
+			title: "Locked and Loaded",
+			me: "Public Health Watch",
+			id: "2001633",
+			media: {
+				spotify:
+					"https://open.spotify.com/episode/34cEsqQLrVYMIii7LUm6on?si=b314d54f9eba4b3e",
+				description:
+					"Greg’s house is burned down and his video camera shows the face of the suspected arsonist — a man he doesn’t know. Greg thinks the barge company he’s been monitoring is behind the fire, but he has no proof. Greg carries a gun wherever he goes, and Carolyn and her husband make sure their guns are always nearby. Neither she nor Greg can afford to move away from the dangers that surround them — so for now, they’ll keep fighting to preserve what remains of the community they love.",
+				tags: ["True Crime", "Society & Culture", "Science"],
+				date: "Fri, 28 Mar 2025 10:00:00 +0000",
+				title: "Locked and Loaded",
+				songtitle: "Locked and Loaded",
+				artists: ["Public Health Watch"],
+				youtube: "https://youtu.be/UtjJHe-z7HQ",
+				soundcloud: false,
+				audiofile:
+					"https://episodes.castos.com/67be50e3a92ae3-98602971/2001633/c1e-835jgfo76rziprkzj-xxwdpz5xix7z-vqjjnk.mp3",
+				lastfm: false,
+				album: "Fumed",
+				playlists: "Fumed: Season 1",
+				featuredImage: "/assets/favicon-512x512.png",
+				castos: "hhttps://permalink.castos.com/podcast/64137/episode/2001633",
+				youtubeId: "UtjJHe-z7HQ",
+				pretitle: "Episode 4",
+				preferredAPI: "native",
+			},
+		},
+		{
 			title: "Battle Cry",
 			me: "Public Health Watch",
 			id: "1997035",
@@ -203,11 +231,6 @@ module.exports = async function (data) {
 		<div id="listen-area">
 			<p>Listen on: <a href="https://podcasts.apple.com/us/podcast/fumed/id1799157335" class="external-link" target="_blank">Apple</a>, <a href="https://open.spotify.com/show/29T7H5f0WixFh8v1wPwQfZ" class="external-link" target="_blank">Spotify</a>, <a href="https://www.youtube.com/playlist?list=PL3z-aBCgSmxijTw10G4N7BkQIaDRSUaC7" class="external-link" target="_blank">YouTube</a> and anywhere you get your podcasts.</p>
 		</div>
-		<p class="center-justify">Featured On:</p>
-		<div class="logos">
-			<div><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
-			<div><a target="_blank" href="https://www.npr.org/podcasts/1267542067/fumed"><img src="/assets/template-imgs/NPR_Logo_Color_CMYK.jpg"></a></div>
-		</div>
 		<br /><br />
 		<div class="flex-double">
 			<div class="flex-double-col">
@@ -256,38 +279,28 @@ module.exports = async function (data) {
 				const stableContainer = document.querySelector('#stable-container');
 				const playerLanding = document.querySelector('#player-landing');
 				if (!playerLanding) return;
-
-				const observer = new IntersectionObserver(
-					(entries) => {
-						entries.forEach(entry => {
-							if (entry.isIntersecting) {
-								window.enteredViewport = false;
-								console.log('[xpo] Container is back', entry, entry.target, 'first child', window["player-landing"].firstElementChild);
-								window.enteredViewport = true;
-								if (window["player-landing"].firstElementChild == null || window["player-landing"].firstElementChild.id != "stable-container"){
-									console.log('[xpo] player-landing is without stable-container', entry, entry.target);
-									stableContainer.classList.remove('docked');
-									window["player-landing"].append(window["stable-container"]);
-								}
-							} else if (entry.isVisible) {
-								console.log('[xpo] Container entered viewport', entry);
-								window.enteredViewport = true;
-							} else if (window.enteredViewport && entry.intersectionRect.top === 0) {
-								console.log('[xpo] Container is out of view from having been in view', entry, entry.target, 'intersection', entry.intersectionRect);
-								window.enteredViewport = false;
-								// Add any actions you want to take when container hits top
-								stableContainer.classList.add('docked');
-								document.body.append(window["stable-container"]);
-							} else {
-								console.log('[xpo] Container entered viewport', 'is visible', entry.isVisible, 'is intersecting', entry.isIntersecting, 'entry', entry);
-							}
-						});
-					},
-					{
-						rootMargin: '0px 0px 0px 0px',
-						threshold: [1]
-					}
-				);
+					// Activate the player
+					window.episodes.forEach((episode) => { 
+						xplayer.handlePushedPlayingChange(episode);
+					});
+					// xplayer.handlePushedPlayingChange(window.episodes[1])
+					xplayer.makeMediaAdvance(window.episodes[0].id, false)
+					console.log('heard "ytapi-ready" event');
+					
+				}				
+				window.YTactivationTimeout = setTimeout(() => {
+						console.log("[xplay] yt timeout activation");
+						activation();
+				}, 15000);
+				window.onYouTubeIframeAPIReady = () => {
+					console.log('[xplay] ytapi activation');
+					//activation();
+				};
+				document.addEventListener("ytapi-ready", () => {
+					console.log('[xplay] script loaded trigger');
+					// activation();
+				});
+				activation();
 
 				observer.observe(playerLanding);
 				window.xplayerObserver = observer;
