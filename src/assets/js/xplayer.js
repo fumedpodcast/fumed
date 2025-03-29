@@ -14,11 +14,6 @@ if (typeof PlayerElement === "undefined") {
 		constructor() {
 			// Always call super first in constructor
 			super();
-			console.log("xplayer constructor");
-			if (this.connectedOnce) {
-				console.log("xplayer already connected");
-				//return;
-			}
 			this.connectedOnce = false;
 			console.group("XPlayer");
 			this.playerEmptyStateClass = "player-empty";
@@ -103,8 +98,7 @@ if (typeof PlayerElement === "undefined") {
 			if (this.connectedOnce) {
 				return;
 			}
-			console.log("Custom element connected to page.");
-			window.xplayerAvailable = true;
+			console.log("Custom element added to page.");
 			document.body.addEventListener(
 				"htmx:afterOnLoad",
 				function (evt) {
@@ -259,7 +253,6 @@ if (typeof PlayerElement === "undefined") {
 
 		disconnectedCallback() {
 			console.log("Custom element removed from page.");
-			window.xplayerAvailable = false;
 		}
 
 		adoptedCallback() {
@@ -1012,7 +1005,6 @@ if (typeof PlayerElement === "undefined") {
 		htmxSwapCallback() {
 			console.log("Custom element has seen an htmx swap.");
 			if (window["xplayer-setup"]) {
-				console.log("xplayer-setup running in htmxSwapCallback");
 				// var autoplay = false;
 				// var mediaId =
 				//	window["xplayer-setup"].attributes["data-video-id"].value;
@@ -1042,7 +1034,6 @@ if (typeof PlayerElement === "undefined") {
 			var state = this.getAttribute("xp-media-state");
 			if (!["paused", "playing"].includes(state)) {
 				console.error("Unexpected player state", state);
-				state = false;
 			}
 			return state;
 		}

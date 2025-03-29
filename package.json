@@ -9,7 +9,6 @@
     "serve": "export NODE_EXTRA_CA_CERTS=\"$(mkcert -CAROOT)/localhost+2.pem\" | npx @11ty/eleventy --serve --port=8083",
     "serve-with-log-debug": "DEBUG=Eleventy:Template* npx @11ty/eleventy --serve --port=8083 > ./buildlog.txt",
     "serve-with-log": "npx @11ty/eleventy --serve --port=8083 | tee ./buildlog.txt",
-    "serve:basic-dev": "npx @11ty/eleventy --serve --port=8083 | tee ./buildlog.txt",
     "build-sources": "node -e 'var w = require(\"./__build-tools/retrieve-json.js\"); w.retrieve().then(() => console.log(\"complete retrieval\"))' > ./buildlog.txt"
   },
   "author": "",

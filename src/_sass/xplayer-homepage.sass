@@ -1,14 +1,9 @@
 @use 'variables'
 
-.display-off
-    top: -9999px !important
-    position: absolute !important
-
 .xplayer-songlink, .current-series-link, .by
     display: none
 
-#xplayer .xplayer-expanded .playlist-chip:not(.playlist-link-chip)
-    color: var(--color-text-main)
+.playlist-chip
     @media (max-width: 456px)
         &.playlist-next-chip:before
             content: '\A'
