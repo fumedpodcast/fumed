@@ -1,43 +1,4 @@
 .template-index
-    .overlap-top
-        margin-top: -120px
-        z-index: 10
-        position: relative
-        overflow: visible
-        @media (max-width: 625px)
-            justify-content: space-around
-        div
-            width: 15%
-        div:nth-of-type(2), div:nth-of-type(4)
-            @media (max-width: 800px)
-                width: 0
-                display: none
-                margin: 0
-                padding: 0
-        div:nth-of-type(3)
-            @media (max-width: 626px)
-                width: 0
-                display: none
-                margin: 0
-                padding: 0
-        .logo-container
-            border-radius: 10%
-            overflow: visible
-            @media (max-width: 626px)
-                margin: 0
-        img
-            width: 85%
-        .logo-container:first-of-type
-            width: 40%
-            @media (max-width: 625px)
-                width: 60%
-            img
-                filter: drop-shadow(1px 1px 10px #000) drop-shadow(-1px -1px 10px #000)
-        .logo-container:last-of-type
-            @media (max-width: 625px)
-                width: 35%
-            img
-                filter: drop-shadow(1px 1px 10px #ffffffa6) drop-shadow(-1px -1px 10px #ffffffa6)
     #map-block
         width: clamp(75%, 300px, 100%)
         max-width: 500px
