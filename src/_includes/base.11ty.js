@@ -103,6 +103,7 @@ module.exports = async function (data, zones) {
 	</head>
 	<body hx-ext="morph head-support" >
 		<div id="inner-body">
+			${nav(data)}
 			<div id="main-content" hx-history-elt>
 				<header id="main-header-canvas">
 					<div id="main-header-inner">
@@ -123,6 +124,12 @@ module.exports = async function (data, zones) {
 					</div>
 				</header>
 				<main class="wrapper template-${zones.template}">
+					<div class="overlap-top logos">
+						<div class="logo-container"><a target="_blank" href="https://publichealthwatch.org"><img src="/assets/template-imgs/PHW_white_transparent_watermark_PHW.png"></a></div>
+						<div></div><div></div><div></div>
+						<div class="logo-container"><a target="_blank" href="https://www.tpr.org/"><img  src="/assets/template-imgs/TPR_Logo_RGB.png"></a></div>
+					</div>
+					<br>
 					${zones.content}
 					
 				</main>
@@ -135,8 +142,40 @@ module.exports = async function (data, zones) {
 				<div class="stretch-footer"></div>
 				<x-player id="xplayer"></x-player>
 			</div>
+
 		</aside>
 		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
+		<script type="application/javascript" hx-preserve="true">
+				if (!window.xplayerNavigationChecks) {
+					console.log("xplayerNavigationChecks")
+					const stableContainer = document.querySelector('#stable-container');
+					const playerLanding = document.querySelector('#player-landing');
+					htmx.on("htmx:beforeSwap", function(evt) {
+						console.log("HTMX beforeSwap")
+						
+						if (!stableContainer.classList.contains('docked')) {
+							stableContainer.classList.add('docked');
+							document.body.append(window["stable-container"]);
+							if (!window.xplayer.getMediaState()) {
+								xplayer.classList.add('display-off');
+							}
+						}
+					});
+					htmx.on("htmx:load", function(evt) {
+						console.log("HTMX Load")
+						
+						if (location.pathname == "/" && stableContainer.classList.contains('docked')) {
+							console.log("HTMX Load return player to position")
+							stableContainer.classList.remove('docked');
+							window["player-landing"].append(window["stable-container"]);
+							xplayer.classList.remove('display-off');
+						}
+					});
+
+					window.xplayerNavigationChecks = true;
+				}
+		</script>
+		
 	</body>
 </html>`;
 };

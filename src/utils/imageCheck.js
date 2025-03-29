@@ -35,31 +35,7 @@ module.exports = async function (data, size) {
 		let promiseResult = await Promise.all(promiseArray);
 		finalImage = `/img/${imageName}`;
 	} else {
-		// Default image used under creative commons from https://www.metmuseum.org/art/collection/search/501692
-		if (!fs.existsSync(`./src/img/glass-horn-240.jpg`)) {
-			let imagePath = `./src/img/glass-horn.jpg`;
-			promiseArray.push(
-				await sharp(imagePath)
-					.resize(240)
-					.jpeg({ mozjpeg: true })
-					.toFile(`./src/img/glass-horn-240.jpg`)
-					.then((data) => {})
-					.catch((err) => {})
-			);
-		}
-		if (!fs.existsSync(`./src/img/glass-horn-640.jpg`)) {
-			let imagePath = `./src/img/glass-horn.jpg`;
-			promiseArray.push(
-				await sharp(imagePath)
-					.resize(640)
-					.jpeg({ mozjpeg: true })
-					.toFile(`./src/img/glass-horn-640.jpg`)
-					.then((data) => {})
-					.catch((err) => {})
-			);
-		}
-		let promiseResult = await Promise.all(promiseArray);
-		finalImage = `/img/glass-horn`;
+		return false;
 	}
 	if (size === "small") {
 		finalImage += `-240.jpg`;
