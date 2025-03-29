@@ -114,7 +114,7 @@ module.exports = async function (data) {
 		template: "about",
 		content: /*html*/ `	
 		<div id="about">
-
+			<!-- layout modified from https://www.unionthefilm.com/?mc_cid=b65ba21708&mc_eid=68d00999ee#watch -->
 			<div id="headshot-grid">
 				${headshotImages()}
 			</div>

@@ -77,26 +77,24 @@ nav
                 background-color: var(--back-fill)
                 height: auto
 
-#nav-menu-items
-    margin-top: 8px
-    margin-right: 0
-
-nav h2
-    color: #E0EA9F
-    a, a:link, a:visited
-        text-decoration: none
-    @media (max-width: variables.$large-mobile)
-        margin-bottom: 0
+    h2
+        color: #E0EA9F
+        a, a:link, a:visited
+            text-decoration: none
+        @media (max-width: variables.$large-mobile)
+            margin-bottom: 0
 
 #nav-menu-items
     display: inline-block
     margin: 0 auto
     width: 100%
-    @media (max-width: variables.$large-mobile)
+    @media (max-width: variables.$mobile-width)
         display: block
         width: 80%
         margin-top: 0
         padding-left: 20px
+        width: 100%
+        padding-left: 0
 
 #nav-icon
     display: none
@@ -109,8 +107,9 @@ nav h2
     overflow: hidden
     cursor: pointer
     filter: invert(1)
-    @media (max-width: variables.$large-mobile)
+    @media (max-width: variables.$mobile-width)
         display: inline-block
+        display: none
 
 /* The switch - the box around the slider */
 .switch
