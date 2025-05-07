@@ -48,13 +48,13 @@ module.exports = async function (data) {
 			alt: "Jim Morris",
 		},
 		{
-			image: false,
+			image: "/assets/imgs/headshots/Mark_BushHeadshot.png",
 			bio: "Mark Bush is a professional audio engineer, sound designer, musician, and composer with a diverse background in audio production and music performance.",
 			name: "Mark Bush",
 			alt: "Mark Bush",
 		},
 		{
-			image: false,
+			image: "/assets/imgs/headshots/Michael_RamosHeadshot.png",
 			bio: "Michael Ramos is a Grammy-winning musician, producer, and composer.",
 			name: "Michael Ramos",
 			alt: "Michael Ramos",
