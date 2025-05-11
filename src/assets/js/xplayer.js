@@ -894,6 +894,7 @@ if (typeof PlayerElement === "undefined") {
 
 		makeMediaAdvance(specificMediaId, autoplay) {
 			// Advance the player to next media item.
+			// Note that this function assumes that the media has been played or loaded at least once.
 			console.log("Advance to next media item.");
 			console.log(
 				"Song Data store state at makeMediaAdvance now ",

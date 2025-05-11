@@ -5,7 +5,7 @@ module.exports = async function (data) {
 	function generateXPlayerActivationScript(episode) {
 		let slug = slugify(episode.title, { lower: true });
 		return /*html*/ `
-			<button class="xplayer-activation listen-button">
+			<button class="xplayer-activation listen-button" onclick="xplayer.makeMediaAdvance('${episode.id}')">
 				<span class="text">Listen</span> <span class="play-icon">▶</span>
 			</button>
 		`;
