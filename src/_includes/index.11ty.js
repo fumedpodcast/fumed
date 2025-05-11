@@ -163,10 +163,6 @@ module.exports = async function (data) {
 				lazy />
 			</figure>								
 		</div>
-		
-		<hr>`,
-		endOfBody: /*html*/ `
-		
 		<script>
 			// window.episodes = ${JSON.stringify(episodes)};
 			var pinPlayer = function() {
@@ -231,7 +227,7 @@ module.exports = async function (data) {
 
 			});
 		</script>
-		`,
+		<hr>`,
 	};
 	return base(data, insert);
 };

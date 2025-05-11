@@ -151,7 +151,9 @@ module.exports = async function (data, zones) {
 			htmx.on("htmx:load", function(evt) {
 				if (!window.xplayer.classList.contains("xp-index")){
 					// window["stable-container"].style.display = "none"
-					xplayer.classList.add('display-off');
+					if (location.pathname !== "/") {
+						xplayer.classList.add('display-off');
+					}
 					console.log("[xplay] HTMX Load xp-index setup");
 					window.xplayer.classList.remove("min");
 					document.body.classList.remove("xp-min");
