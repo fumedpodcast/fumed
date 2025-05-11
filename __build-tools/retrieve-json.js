@@ -11,6 +11,37 @@ require("dotenv").config();
 
 **/
 
+const processArticleToObject = (wpPost, tagObject) => {
+	if (wpPost.status !== "publish") {
+		return false;
+	}
+	return {
+		id: wpPost.id,
+		title: wpPost.title.rendered,
+		link: wpPost.link,
+		excerpt: wpPost.excerpt.rendered,
+		date_local: wpPost.date,
+		date_gmt: wpPost.date_gmt,
+		date: wpPost.date_gmt,
+		modified: wpPost.modified,
+		modified_gmt: wpPost.modified_gmt,
+		content: "\n" + wpPost.content.rendered,
+		slug: wpPost.slug,
+		yoast_head_rendered: wpPost.yoast_head,
+		yoast_head_json: wpPost.yoast_head_json,
+		byline: wpPost.yoast_head_json.author,
+		originObject: wpPost,
+		originTagObject: tagObject ? tagObject.tag : {},
+	};
+};
+
+const retrieveSingleArticle = async (postId, folder) => {
+	console.log("Retrieving JSON from Public Health Watch...");
+	let postResponse = await wp.posts().id(postId).get();
+	console.log("Get post", postResponse);
+	return postResponse;
+};
+
 const retrieveTaggedPosts = async (tagId) => {
 	console.log("Retrieving JSON from Public Health Watch...");
 	let tagResponse = await wp.tags().id(tagId).get();
@@ -42,29 +73,9 @@ const retrieveTaggedPosts = async (tagId) => {
 const processTaggedPosts = async (tagId, folder) => {
 	console.log("Processing Tagged Posts with ID", tagId);
 	const tagObject = await retrieveTaggedPosts(tagId);
-	const postObjects = tagObject.posts.map((post) => {
-		if (post.status !== "publish") {
-			return false;
-		}
-		return {
-			id: post.id,
-			title: post.title.rendered,
-			link: post.link,
-			excerpt: post.excerpt.rendered,
-			date_local: post.date,
-			date_gmt: post.date_gmt,
-			date: post.date_gmt,
-			modified: post.modified,
-			modified_gmt: post.modified_gmt,
-			content: "\n" + post.content.rendered,
-			slug: post.slug,
-			yoast_head_rendered: post.yoast_head,
-			yoast_head_json: post.yoast_head_json,
-			byline: post.yoast_head_json.author,
-			originObject: post,
-			originTagObject: tagObject.tag,
-		};
-	});
+	const postObjects = tagObject.posts.map((post) =>
+		processArticleToObject(post, tagObject)
+	);
 	const writeResults = postObjects.map((postObject) => {
 		// @TODO write 11tydata.json files instead of markdown
 		return processObjectToMarkdown(
@@ -78,6 +89,22 @@ const processTaggedPosts = async (tagId, folder) => {
 	return postObjects;
 };
 
+const retrieveArticle = async () => {
+	const folder = "articles";
+	const result = await retrieveSingleArticle(16524, folder);
+	const objectPost = processArticleToObject(result);
+	const finalResult = processObjectToMarkdown(
+		"title",
+		"content",
+		`./src/${folder}`,
+		objectPost
+	);
+	console.log("Wrote Episode Results", finalResult);
+	return {
+		results: [finalResult],
+	};
+};
+
 const retrieve = async () => {
 	const result = await processTaggedPosts(562, "episodes");
 	const resultTwo = await processTaggedPosts(563, "articles");
@@ -86,4 +113,4 @@ const retrieve = async () => {
 	};
 };
 
-module.exports = { retrieve };
+module.exports = { retrieve, retrieveArticle };
