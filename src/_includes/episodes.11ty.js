@@ -5,7 +5,7 @@ module.exports = async function (data) {
 	function generateXPlayerActivationScript(episode) {
 		let slug = slugify(episode.title, { lower: true });
 		return /*html*/ `
-			<button class="xplayer-activation listen-button" onclick="xplayer.makeMediaAdvance('${episode.id}')">
+			<button class="xplayer-activation listen-button" onclick="xplayerPlayAndDisplay('${episode.id}')">
 				<span class="text">Listen</span> <span class="play-icon">▶</span>
 			</button>
 		`;
@@ -58,7 +58,11 @@ module.exports = async function (data) {
 		</div>
 		<hr />
 		<script>
-	
+			window.xplayerPlayAndDisplay = function (episode) {
+				// window["stable-container"].style.display = "block"
+				xplayer.classList.remove('display-off');
+				xplayer.makeMediaAdvance(episode);
+			}
 		</script>
 		`,
 	};

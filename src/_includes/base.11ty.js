@@ -6,6 +6,7 @@ const footer = require("./partials/footer.11ty");
 
 module.exports = async function (data, zones) {
 	// console.log("layout data", data);
+	let episodes = data.episodes;
 	let getHashTagsFromText = function (text = "") {
 		let words = {};
 		let splits = text.split(/(\#[A-Za-z][^\s\.\'\"\!\,\?\;\}\{]*)/g);
@@ -145,6 +146,72 @@ module.exports = async function (data, zones) {
 
 		</aside>
 		<script src="/assets/js/xplayer.js" defer type="application/javascript" hx-preserve="true"></script>
+		<script>
+			window.episodes = ${JSON.stringify(episodes)};
+			htmx.on("htmx:load", function(evt) {
+				if (!window.xplayer.classList.contains("xp-index")){
+					// window["stable-container"].style.display = "none"
+					xplayer.classList.add('display-off');
+					console.log("[xplay] HTMX Load xp-index setup");
+					window.xplayer.classList.remove("min");
+					document.body.classList.remove("xp-min");
+					window.xplayer.setPlayerState("xp-index");
+					document.body.classList.add("xp-index");
+					window.xplayer.classList.add("xp-index");
+
+					let activation = () => {
+						if (window.xplayer.classList.contains("index-activated")){
+							console.log("[xplay] index-activated indicates the player is already set up");
+
+							clearTimeout(window.YTactivationTimeout);
+							return;
+						}
+						window.xplayer.classList.add("index-activated")
+						console.log('[xplay] activation');
+						clearTimeout(window.YTactivationTimeout);
+						// Move episodes into the right position
+						// TKTK
+						// Activate the player
+						window.episodes.forEach((episode) => { 
+							xplayer.handlePushedPlayingChange(episode);
+						});
+						// xplayer.handlePushedPlayingChange(window.episodes[1])
+						xplayer.makeMediaAdvance(window.episodes[0].id, false)
+						console.log('heard "ytapi-ready" event');
+
+						// Activate the player
+						//xplayer.handlePushedPlayingChange(window.episodes[0])
+						//xplayer.setAttribute('xp-playertype', 'native');
+						//xplayer.handlePushedPlayingChange(window.episodes[1])
+						//xplayer.handlePushedPlayingChange(window.episodes[2])
+						//xplayer.handlePushedPlayingChange(window.episodes[3])
+						// xplayer.handlePushedPlayingChange(window.episodes[1])
+						//xplayer.makeMediaAdvance(window.episodes[0].id, false)
+						//console.log('heard "ytapi-ready" event');
+						
+					}				
+					window.YTactivationTimeout = setTimeout(() => {
+							console.log("[xplay] yt timeout activation");
+							activation();
+					}, 15000);
+					window.onYouTubeIframeAPIReady = () => {
+						console.log('[xplay] ytapi activation');
+						//activation();
+					};
+					document.addEventListener("ytapi-ready", () => {
+						console.log('[xplay] script loaded trigger');
+						// activation();
+					});
+					if (location.pathname !== "/") {
+						console.log("[xplay] add docked to stable-container");
+						window["stable-container"].classList.add('docked');
+					} else {
+						console.log("[xplay] do not add docked to stable-container");
+					}
+					activation();
+				}
+			});
+		</script>
 		<script type="application/javascript" hx-preserve="true">
 				if (!window.xplayerNavigationChecks) {
 					console.log("xplayerNavigationChecks")
@@ -157,6 +224,7 @@ module.exports = async function (data, zones) {
 							document.body.append(window["stable-container"]);
 							if (!window.xplayer.getMediaState()) {
 								xplayer.classList.add('display-off');
+								// window["stable-container"].style.display = "none"
 							}
 						}
 					}
@@ -194,13 +262,14 @@ module.exports = async function (data, zones) {
 							stableContainer.classList.remove('docked');
 							window["player-landing"].append(window["stable-container"]);
 							xplayer.classList.remove('display-off');
+							// window["stable-container"].style.display = "block"
 						}
 					});
 
 					window.xplayerNavigationChecks = true;
 				}
 		</script>
-		
+		${zones.endOfBody || ""}
 	</body>
 </html>`;
 };

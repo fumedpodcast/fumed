@@ -129,9 +129,46 @@ module.exports = async function (data) {
 				<img src="/assets/imgs/greg.jpg">
 			</div>
 	  	</div>
+		<br>
 
+		<div id="map-block">
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>Channelview</h3>
+					Channelview, Texas, was once a quiet refuge for people trying to avoid the more industrialized areas in east Harris County. But then barges moved in, searching for places to park near the Houston Ship Channel’s petrochemical plants. 
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/large_map_final_0306.png"
+				alt="Large Map that shows the location of Channelview, Texas, and the surrounding industrial zones"
+				lazy />
+			</figure>	
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>River Bottom</h3>
+					Greg Moss thought the I-10 bridge would protect his North Channelview neighborhood, known as the River Bottom, from becoming a parking lot for chemical barges. But barges — and the dredging needed to make space for them — have arrived, despite the dangers posed by a nearby Superfund Site. 
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/north_map_final_0306.png"
+				alt="Greg's neighborhood."
+				lazy />
+			</figure>	
+			<figure>
+				<figcaption class="sora-font-light-300">
+					<h3>South Channelview</h3>
+					Since Carolyn Stone moved to South Channelview in 1988, barge companies have bought up most of the riverfront property. K-Solv, a barge-cleaning and chemical distribution company, has had two fires. A TCEQ air monitor has recorded high concentrations of benzene, a carcinogen, in the area since 2008.  
+				</figcaption>
+				<img
+				src="/assets/imgs/maps/south_map_final_305.png"
+				alt="Carolyn Stone's neighborhood."
+				lazy />
+			</figure>								
+		</div>
+		
+		<hr>`,
+		endOfBody: /*html*/ `
+		
 		<script>
-			window.episodes = ${JSON.stringify(episodes)};
+			// window.episodes = ${JSON.stringify(episodes)};
 			var pinPlayer = function() {
 				console.log('[xpo] pinPlayer');
 				const stableContainer = document.querySelector('#stable-container');
@@ -175,7 +212,9 @@ module.exports = async function (data) {
 			}
 			htmx.on("htmx:load", function(evt) {
 				
-
+				//window["stable-container"].style.display = "block"
+				xplayer.classList.remove('display-off');
+				console.log('[xplay] Index HTMX Load', evt);
 				if (window.xplayerObserver){
 					window.xplayerObserver.disconnect();
 				}
@@ -183,56 +222,7 @@ module.exports = async function (data) {
 					console.log("[xplay] HTMX Load Index");
 					console.log('[xplay] DOMContentLoaded');
 					window["player-landing"].append(window["stable-container"]);
-					window.xplayer.classList.remove("min");
-					document.body.classList.remove("xp-min");
-					window.xplayer.setPlayerState("xp-index");
-					document.body.classList.add("xp-index");
-					window.xplayer.classList.add("xp-index");
-
-					let activation = () => {
-						if (window.xplayer.classList.contains("index-activated") || location.pathname !== "/"){
-							console.log("[xplay] index-activated indicates the player is already set up");
-
-							clearTimeout(window.YTactivationTimeout);
-							return;
-						}
-						window.xplayer.classList.add("index-activated")
-						console.log('[xplay] activation');
-						clearTimeout(window.YTactivationTimeout);
-						// Move episodes into the right position
-						// TKTK
-						// Activate the player
-						window.episodes.forEach((episode) => { 
-							xplayer.handlePushedPlayingChange(episode);
-						});
-						// xplayer.handlePushedPlayingChange(window.episodes[1])
-						xplayer.makeMediaAdvance(window.episodes[0].id, false)
-						console.log('heard "ytapi-ready" event');
-
-						// Activate the player
-						//xplayer.handlePushedPlayingChange(window.episodes[0])
-						//xplayer.setAttribute('xp-playertype', 'native');
-						//xplayer.handlePushedPlayingChange(window.episodes[1])
-						//xplayer.handlePushedPlayingChange(window.episodes[2])
-						//xplayer.handlePushedPlayingChange(window.episodes[3])
-						// xplayer.handlePushedPlayingChange(window.episodes[1])
-						//xplayer.makeMediaAdvance(window.episodes[0].id, false)
-						//console.log('heard "ytapi-ready" event');
-						
-					}				
-					window.YTactivationTimeout = setTimeout(() => {
-							console.log("[xplay] yt timeout activation");
-							activation();
-					}, 15000);
-					window.onYouTubeIframeAPIReady = () => {
-						console.log('[xplay] ytapi activation');
-						//activation();
-					};
-					document.addEventListener("ytapi-ready", () => {
-						console.log('[xplay] script loaded trigger');
-						// activation();
-					});
-					activation();
+					
 					pinPlayer();
 				}
 			})
@@ -241,42 +231,7 @@ module.exports = async function (data) {
 
 			});
 		</script>
-		<br>
-
-		<div id="map-block">
-			<figure>
-				<figcaption class="sora-font-light-300">
-					<h3>Channelview</h3>
-					Channelview, Texas, was once a quiet refuge for people trying to avoid the more industrialized areas in east Harris County. But then barges moved in, searching for places to park near the Houston Ship Channel’s petrochemical plants. 
-				</figcaption>
-				<img
-				src="/assets/imgs/maps/large_map_final_0306.png"
-				alt="Large Map that shows the location of Channelview, Texas, and the surrounding industrial zones"
-				lazy />
-			</figure>	
-			<figure>
-				<figcaption class="sora-font-light-300">
-					<h3>River Bottom</h3>
-					Greg Moss thought the I-10 bridge would protect his North Channelview neighborhood, known as the River Bottom, from becoming a parking lot for chemical barges. But barges — and the dredging needed to make space for them — have arrived, despite the dangers posed by a nearby Superfund Site. 
-				</figcaption>
-				<img
-				src="/assets/imgs/maps/north_map_final_0306.png"
-				alt="Greg's neighborhood."
-				lazy />
-			</figure>	
-			<figure>
-				<figcaption class="sora-font-light-300">
-					<h3>South Channelview</h3>
-					Since Carolyn Stone moved to South Channelview in 1988, barge companies have bought up most of the riverfront property. K-Solv, a barge-cleaning and chemical distribution company, has had two fires. A TCEQ air monitor has recorded high concentrations of benzene, a carcinogen, in the area since 2008.  
-				</figcaption>
-				<img
-				src="/assets/imgs/maps/south_map_final_305.png"
-				alt="Carolyn Stone's neighborhood."
-				lazy />
-			</figure>								
-		</div>
-		
-		<hr>`,
+		`,
 	};
 	return base(data, insert);
 };
