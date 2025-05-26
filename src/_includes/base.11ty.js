@@ -35,6 +35,11 @@ module.exports = async function (data, zones) {
 	if (zones.template) {
 		templateStyle = `<link rel="stylesheet" href="/assets/css/template-${zones.template}.css">`;
 	}
+	console.log("canonical", zones.canonical);
+	let canonical = zones?.canonical
+		? zones.canonical
+		: `${process.env.DOMAIN}${data.page.url}`;
+
 	return /*html*/ `<!doctype html>
 <html lang="en">
 	<head>
@@ -50,6 +55,7 @@ module.exports = async function (data, zones) {
 		<link rel="dns-prefetch" href="https://open.spotify.com" hx-preserve="true">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin hx-preserve="true">
+		<link rel="preconnect" href="https://publichealthwatch.org/" crossorigin hx-preserve="true">
 		${metaChunk}
 		<script hx-preserve="true">
 		if("classList" in document.documentElement) {
@@ -83,7 +89,7 @@ module.exports = async function (data, zones) {
 		<meta name="msapplication-TileColor" content="#1f1836">
 		<meta name="theme-color" content="#1f1836">
 
-		<link rel="canonical" href="${process.env.DOMAIN}${data.page.url}" />
+		<link rel="canonical" href="${canonical}" />
 		<link rel="preconnect" href="https://fonts.googleapis.com"  hx-preserve="true">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"  hx-preserve="true" rel="stylesheet">
