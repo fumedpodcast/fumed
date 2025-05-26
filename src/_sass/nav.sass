@@ -58,7 +58,11 @@ nav
         align-items: center
         width: calc(100% - 40px)
         margin: 0 auto
-
+        font-size: 16px
+        @media (max-width: variables.$large-mobile)
+            width: 150px
+            margin: 40px 32px -2px
+            display: block
         &:not(:last-of-type)::after
             content: " "
             padding: 0 4px
@@ -68,11 +72,13 @@ nav
             @media (max-width: variables.$large-mobile)
                 &
                     padding: 0 4px
-    &:hover, &.open, &:active
+    &.open
         @media (max-width: variables.$large-mobile)
             overflow: visible
             height: auto
-            padding-bottom: 10px
+            z-index: 1000
+            li
+                margin: 18px 0
             #top-nav-inner
                 background-color: var(--back-fill)
                 height: auto
@@ -81,6 +87,11 @@ nav
         color: #E0EA9F
         a, a:link, a:visited
             text-decoration: none
+        @media (max-width: variables.$mobile-width)
+            display: block
+            position: absolute
+            top: 4px
+            left: 38px
         @media (max-width: variables.$large-mobile)
             margin-bottom: 0
 
@@ -109,7 +120,7 @@ nav
     filter: invert(1)
     @media (max-width: variables.$mobile-width)
         display: inline-block
-        display: none
+        margin-bottom: 4px
 
 /* The switch - the box around the slider */
 .switch

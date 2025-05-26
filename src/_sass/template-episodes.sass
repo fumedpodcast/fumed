@@ -1,0 +1,47 @@
+$episode-max-width: 766px
+
+.episode-list-item
+    display: block
+    width: 100%
+    border-color: var(--color-accent)
+    border-bottom-width: 2px
+    border-style: solid
+    .episode-list-item__inner
+        display: block
+        width: 100%
+        max-width: $episode-max-width
+        margin: 15px auto
+        .episode-list-item__date
+            font-size: .9em
+        h3
+            font-style: normal
+            font-size: 40px
+        .listen-button
+            border: 3px solid #000
+            font-weight: 700
+            box-sizing: border-box
+            color: #000
+            font-style: normal
+            font-weight: 500
+            font-size: 1.125rem
+            line-height: 1.5rem
+            text-transform: uppercase
+            text-decoration: none
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: row
+            background: #fff
+            text-align: center
+            height: 3rem
+            width: 10rem
+            cursor: pointer
+            span
+                display: block
+            span.text
+                color: #000
+                flex-grow: 4
+            span.play-icon
+                color: #000
+                flex-grow: 1
+                padding-top: 2px

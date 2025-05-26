@@ -1,8 +1,8 @@
 {
 	"layout": "article.11ty.js",
-	"description": "An article about Fumed topics.",
+	"description": "Article about Fumed topics.",
 	"tags": [
-		"article"
+		"articles"
 	],
 	"date": "Last Modified"
 }

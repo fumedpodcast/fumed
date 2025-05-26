@@ -4,8 +4,11 @@ module.exports = function (data) {
 	return /*html*/ `
 <script>
 	function opennav(e){
-		console.log(e.parentNode.parentNode); e.parentNode.parentNode.classList.toggle('open');
+		window["top-nav"].classList.toggle('open');
 	}
+	window.addEventListener("scroll", () => {
+		window["top-nav"].classList.remove('open');
+	});
 </script>
 
 <nav id="top-nav">
@@ -18,10 +21,16 @@ module.exports = function (data) {
 				${linkmaker(data, "/about/", "About")}
 			</li>
 			<li>
+				${linkmaker(data, "/listen/", "Listen")}
+			</li>
+			<li>
 				<h2>
 					${linkmaker(data, "", data.site.title, "site-name")}
 				</h2>
 			</li>
+			<li>
+				${linkmaker(data, "/read/", "Read")}
+			</li>			
 			<li>
 				<a href="https://publichealthwatch.org/donate/" target="_blank">Donate</a>
 			</li>
