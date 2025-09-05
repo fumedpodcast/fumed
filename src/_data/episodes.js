@@ -2,7 +2,7 @@ require("dotenv").config();
 
 let data = [
 	{
-		title: "Locked and Loaded",
+		title: "Episode 4: Locked and Loaded",
 		me: "Public Health Watch",
 		id: "2001633",
 		media: {
@@ -30,7 +30,7 @@ let data = [
 		},
 	},
 	{
-		title: "Battle Cry",
+		title: "Episode 3: Battle Cry",
 		me: "Public Health Watch",
 		id: "1997035",
 		media: {
@@ -58,7 +58,7 @@ let data = [
 		},
 	},
 	{
-		title: "Birth of the Activists",
+		title: "Episode 2: Birth of the Activists",
 		me: "Public Health Watch",
 		id: "1992308",
 		media: {
@@ -86,7 +86,7 @@ let data = [
 		},
 	},
 	{
-		title: "River on Fire",
+		title: "Episode 1: River on Fire",
 		me: "Public Health Watch",
 		id: "1987617",
 		media: {
