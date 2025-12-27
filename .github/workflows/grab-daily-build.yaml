@@ -19,5 +19,5 @@ jobs:
       - name: Commit and push changes
         uses: devops-infra/action-commit-push@v1.0.3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_BUILD_KEY }}
           commit_message: "chore: Daily update of Site"
