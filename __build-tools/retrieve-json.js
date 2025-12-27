@@ -108,6 +108,7 @@ const retrieveArticle = async () => {
 const retrieve = async () => {
 	const result = await processTaggedPosts(562, "episodes");
 	const resultTwo = await processTaggedPosts(563, "articles");
+	console.log("Got Article Results", resultTwo);
 	return {
 		results: [result],
 	};
