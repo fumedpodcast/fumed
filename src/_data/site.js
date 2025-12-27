@@ -27,6 +27,7 @@ let data = {
 	domain: process.env.DOMAIN,
 	defaultImage: process.env.DOMAIN + "/assets/favicon.png",
 	serviceWorkerVer: `${randomVer()}-${Date.now()}`,
+	playOrder: "ascending", // ascending or descending
 };
 
 data.avatar = `/img/twitter-avy.png`;
