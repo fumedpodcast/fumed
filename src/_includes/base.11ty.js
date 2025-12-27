@@ -35,7 +35,7 @@ module.exports = async function (data, zones) {
 	if (zones.template) {
 		templateStyle = `<link rel="stylesheet" href="/assets/css/template-${zones.template}.css">`;
 	}
-	console.log("canonical", zones.canonical);
+	// console.log("canonical", zones.canonical);
 	let canonical = zones?.canonical
 		? zones.canonical
 		: `${process.env.DOMAIN}${data.page.url}`;
