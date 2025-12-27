@@ -31,6 +31,24 @@ module.exports = async function (data) {
 				let slug = slugify(article.data.title || "Untitled", {
 					lower: true,
 				});
+				let imgHTML = "";
+				console.log(
+					"article data for image check",
+					article.data.yoast_head_json
+				);
+				if (
+					article.data.yoast_head_json &&
+					article.data.yoast_head_json?.og_image.length &&
+					article.data.yoast_head_json.og_image[0].url
+				) {
+					console.log(
+						"article image data",
+						article.data.yoast_head_json.og_image[0]
+					);
+					imgHTML = /*html*/ `<div class="article-list-item__image">
+								<img src="${article.data.yoast_head_json.og_image[0].url}"
+							</div>`;
+				}
 				//console.log("article", article);
 				//debugger;
 				html += /*html*/ `
@@ -46,22 +64,26 @@ module.exports = async function (data) {
 							<h3><a href="${article.data.link}" target="_blank">${
 					article.data.title || "Untitled"
 				}</a></h3>
-							${article.content || "No article body available."}
+							${imgHTML}
+							<div class="article-list-item__excerpt">
+								${article.data.excerpt || "No article body available."}
+							</div>
 						</div>
 					</div>
-				</div>`;
+				</div>
+				<hr />`;
 			}
 		}
 		return html;
 	}
 
-	let canonicalRePass =
+	/**let canonicalRePass =
 		data.pagination.items[0]?.data?.originObject?.yoast_head_json
 			?.canonical || false;
-	console.log("canonical final pass", canonicalRePass);
+	console.log("canonical final pass", canonicalRePass);**/
 	let insert = {
 		template: "articles",
-		canonical: canonicalRePass,
+		// canonical: canonicalRePass,
 		content: /*html*/ `	
 		<div id="articles">
 			<div id="article-list">

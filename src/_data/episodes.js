@@ -1,5 +1,7 @@
 require("dotenv").config();
-
+let siteDataFunc = require("./site.js");
+let siteData = siteDataFunc();
+console.log("site data in episodes.js", siteData);
 let data = [
 	{
 		title: "Episode 4: Locked and Loaded",
@@ -143,5 +145,10 @@ let data = [
 		},
 	},
 ];
+
+if (siteData.playOrder === "ascending") {
+	console.log("reversing episode order for ascending playOrder");
+	data = data.slice().reverse();
+}
 
 module.exports = data;
