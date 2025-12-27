@@ -1,0 +1,23 @@
+name: Get Daily Build
+on:
+  schedule:
+    - cron: "0 4 * * *" # Runs daily at 04:00 UTC / 11pm EST
+  workflow_dispatch:
+
+jobs:
+  grab-daily-site-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 21
+      - name: Install Dependencies
+        run: npm install
+      - name: Grab Daily Update
+        run: npm run build-all-from-source
+      - name: Commit and push changes
+        uses: devops-infra/action-commit-push@v1.0.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: "chore: Daily update of Site"
