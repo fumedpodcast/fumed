@@ -25,6 +25,9 @@ jobs:
       RECREATE_IMGS: false
       EXT_DOMAIN: ${{ vars.EXT_DOMAIN }}
     steps:
+      - name: Show variables
+        run: |
+          echo "URL for site variable: $EXT_DOMAIN"
       - uses: actions/checkout@v3
         with:
           submodules: true
