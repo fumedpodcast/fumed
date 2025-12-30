@@ -32,10 +32,7 @@ module.exports = async function (data) {
 					lower: true,
 				});
 				let imgHTML = "";
-				console.log(
-					"article data for image check",
-					article.data.yoast_head_json
-				);
+
 				if (
 					article.data.yoast_head_json &&
 					article.data.yoast_head_json?.og_image.length &&
