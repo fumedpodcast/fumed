@@ -97,6 +97,10 @@ These are GitHub Actions for building the site on commit to main and for retriev
 
 `README.md` is this file. 
 
+## Setting the site domain in GitHub Pages
+
+It is controlled by a variable in the GitHub project settings. You can set it [here](https://github.com/fumedpodcast/fumed/settings/secrets/actions). The value is set and editable in the `EXT_DOMAIN` key. 
+
 ~~I will pull the articles based on tag applied~~
 ~~Order the homepage plays in the opposite order? I will set a variable to make it easy to flip back and forth. Default to start with trailer or eps or 1 - will show how.~~
 RSS parser for episodes - good to have
