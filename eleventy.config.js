@@ -10,7 +10,7 @@ const fs = require("fs");
 
 require("dotenv").config();
 
-let domain_name = "fumedpodcast.com";
+let domain_name = process.env?.EXT_DOMAIN || "fumedpodcast.com";
 let throwOnUndefinedSetting = false;
 
 let scheme = "https://";
