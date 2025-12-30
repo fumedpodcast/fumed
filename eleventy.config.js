@@ -23,7 +23,7 @@ if (process.env.IS_LOCAL) {
 }
 
 let site = scheme + domain_name;
-
+console.log("Building for site URL:", site);
 process.env.DOMAIN = site;
 process.env.DOMAIN_NAME = domain_name;
 process.env.SITE_NAME = "Fumed";
