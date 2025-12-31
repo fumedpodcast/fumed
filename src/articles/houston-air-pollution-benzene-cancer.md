@@ -352,12 +352,12 @@ originObject:
       - embeddable: true
         href: 'https://publichealthwatch.org/wp-json/wp/v2/comments?post=14936'
     version-history:
-      - count: 70
+      - count: 71
         href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/14936/revisions'
     predecessor-version:
-      - id: 15080
+      - id: 20701
         href: >-
-          https://publichealthwatch.org/wp-json/wp/v2/posts/14936/revisions/15080
+          https://publichealthwatch.org/wp-json/wp/v2/posts/14936/revisions/20701
     'wp:featuredmedia':
       - embeddable: true
         href: 'https://publichealthwatch.org/wp-json/wp/v2/media/14956'
@@ -382,35 +382,34 @@ originObject:
         href: 'https://api.w.org/{rel}'
         templated: true
 originTagObject:
-  id: 563
-  count: 1
+  id: 594
+  count: 7
   description: ''
-  link: 'https://publichealthwatch.org/tag/channelview/'
-  name: Channelview
-  slug: channelview
+  link: 'https://publichealthwatch.org/tag/fumedpage/'
+  name: Fumedpage
+  slug: fumedpage
   taxonomy: post_tag
   meta: []
   yoast_head: >-
     <!-- This site is optimized with the Yoast SEO plugin v26.6 -
     https://yoast.com/wordpress/plugins/seo/ -->
 
-    <title>Channelview Archives - Public Health Watch</title>
+    <title>Fumedpage Archives - Public Health Watch</title>
 
     <meta name="robots" content="index, follow, max-snippet:-1,
     max-image-preview:large, max-video-preview:-1" />
 
-    <link rel="canonical" href="https://publichealthwatch.org/tag/channelview/"
-    />
+    <link rel="canonical" href="https://publichealthwatch.org/tag/fumedpage/" />
 
     <meta property="og:locale" content="en_US" />
 
     <meta property="og:type" content="article" />
 
-    <meta property="og:title" content="Channelview Archives - Public Health
-    Watch" />
+    <meta property="og:title" content="Fumedpage Archives - Public Health Watch"
+    />
 
     <meta property="og:url"
-    content="https://publichealthwatch.org/tag/channelview/" />
+    content="https://publichealthwatch.org/tag/fumedpage/" />
 
     <meta property="og:site_name" content="Public Health Watch" />
 
@@ -419,9 +418,9 @@ originTagObject:
     <meta name="twitter:site" content="@pubhealthwatch" />
 
     <script type="application/ld+json"
-    class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://publichealthwatch.org/tag/channelview/","url":"https://publichealthwatch.org/tag/channelview/","name":"Channelview
+    class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"https://publichealthwatch.org/tag/fumedpage/","url":"https://publichealthwatch.org/tag/fumedpage/","name":"Fumedpage
     Archives - Public Health
-    Watch","isPartOf":{"@id":"https://publichealthwatch.org/#website"},"breadcrumb":{"@id":"https://publichealthwatch.org/tag/channelview/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://publichealthwatch.org/tag/channelview/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://publichealthwatch.org/"},{"@type":"ListItem","position":2,"name":"Channelview"}]},{"@type":"WebSite","@id":"https://publichealthwatch.org/#website","url":"https://publichealthwatch.org/","name":"Public
+    Watch","isPartOf":{"@id":"https://publichealthwatch.org/#website"},"breadcrumb":{"@id":"https://publichealthwatch.org/tag/fumedpage/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://publichealthwatch.org/tag/fumedpage/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://publichealthwatch.org/"},{"@type":"ListItem","position":2,"name":"Fumedpage"}]},{"@type":"WebSite","@id":"https://publichealthwatch.org/#website","url":"https://publichealthwatch.org/","name":"Public
     Health Watch","description":"Public Health
     Watch","publisher":{"@id":"https://publichealthwatch.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://publichealthwatch.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://publichealthwatch.org/#organization","name":"Public
     Health
@@ -431,18 +430,18 @@ originTagObject:
 
     <!-- / Yoast SEO plugin. -->
   yoast_head_json:
-    title: Channelview Archives - Public Health Watch
+    title: Fumedpage Archives - Public Health Watch
     robots:
       index: index
       follow: follow
       max-snippet: 'max-snippet:-1'
       max-image-preview: 'max-image-preview:large'
       max-video-preview: 'max-video-preview:-1'
-    canonical: 'https://publichealthwatch.org/tag/channelview/'
+    canonical: 'https://publichealthwatch.org/tag/fumedpage/'
     og_locale: en_US
     og_type: article
-    og_title: Channelview Archives - Public Health Watch
-    og_url: 'https://publichealthwatch.org/tag/channelview/'
+    og_title: Fumedpage Archives - Public Health Watch
+    og_url: 'https://publichealthwatch.org/tag/fumedpage/'
     og_site_name: Public Health Watch
     twitter_card: summary_large_image
     twitter_site: '@pubhealthwatch'
@@ -450,16 +449,16 @@ originTagObject:
       '@context': 'https://schema.org'
       '@graph':
         - '@type': CollectionPage
-          '@id': 'https://publichealthwatch.org/tag/channelview/'
-          url: 'https://publichealthwatch.org/tag/channelview/'
-          name: Channelview Archives - Public Health Watch
+          '@id': 'https://publichealthwatch.org/tag/fumedpage/'
+          url: 'https://publichealthwatch.org/tag/fumedpage/'
+          name: Fumedpage Archives - Public Health Watch
           isPartOf:
             '@id': 'https://publichealthwatch.org/#website'
           breadcrumb:
-            '@id': 'https://publichealthwatch.org/tag/channelview/#breadcrumb'
+            '@id': 'https://publichealthwatch.org/tag/fumedpage/#breadcrumb'
           inLanguage: en-US
         - '@type': BreadcrumbList
-          '@id': 'https://publichealthwatch.org/tag/channelview/#breadcrumb'
+          '@id': 'https://publichealthwatch.org/tag/fumedpage/#breadcrumb'
           itemListElement:
             - '@type': ListItem
               position: 1
@@ -467,7 +466,7 @@ originTagObject:
               item: 'https://publichealthwatch.org/'
             - '@type': ListItem
               position: 2
-              name: Channelview
+              name: Fumedpage
         - '@type': WebSite
           '@id': 'https://publichealthwatch.org/#website'
           url: 'https://publichealthwatch.org/'
@@ -509,7 +508,7 @@ originTagObject:
               https://www.linkedin.com/company/publichealthwatch/about/?viewAsMember=true
   _links:
     self:
-      - href: 'https://publichealthwatch.org/wp-json/wp/v2/tags/563'
+      - href: 'https://publichealthwatch.org/wp-json/wp/v2/tags/594'
         targetHints:
           allow:
             - GET
@@ -518,14 +517,14 @@ originTagObject:
     about:
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/taxonomies/post_tag'
     'wp:post_type':
-      - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts?tags=563'
-      - href: 'https://publichealthwatch.org/wp-json/wp/v2/newspack_nl_cpt?tags=563'
+      - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts?tags=594'
+      - href: 'https://publichealthwatch.org/wp-json/wp/v2/newspack_nl_cpt?tags=594'
       - href: >-
-          https://publichealthwatch.org/wp-json/wp/v2/np_memberships_gate?tags=563
+          https://publichealthwatch.org/wp-json/wp/v2/np_memberships_gate?tags=594
       - href: >-
-          https://publichealthwatch.org/wp-json/wp/v2/newspack_popups_cpt?tags=563
+          https://publichealthwatch.org/wp-json/wp/v2/newspack_popups_cpt?tags=594
       - href: >-
-          https://publichealthwatch.org/wp-json/wp/v2/newspack_spnsrs_cpt?tags=563
+          https://publichealthwatch.org/wp-json/wp/v2/newspack_spnsrs_cpt?tags=594
     curies:
       - name: wp
         href: 'https://api.w.org/{rel}'

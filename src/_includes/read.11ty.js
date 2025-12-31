@@ -24,13 +24,11 @@ module.exports = async function (data) {
 		if (!articles || articles.length === 0) {
 			return "<p>No articles found.</p>";
 		}
-
+		// sort articles by `article.date` with the newest date first
+		articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 		for (let article of articles) {
 			// Make sure article data exists and has the expected structure
 			if (article && article.data) {
-				let slug = slugify(article.data.title || "Untitled", {
-					lower: true,
-				});
 				let imgHTML = "";
 
 				if (

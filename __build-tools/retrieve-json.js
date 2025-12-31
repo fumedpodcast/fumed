@@ -62,11 +62,11 @@ const retrieveTaggedPosts = async (tagId) => {
 			.catch((err) => console.error(err));
 	});
 	const posts = await fetchResponse;
-	console.log(
+	/**console.log(
 		"Get posts with the tag",
 		posts,
 		posts[0].yoast_head_json.author
-	);
+	);**/
 	return { tag: tagResponseObject, posts };
 };
 
@@ -85,7 +85,7 @@ const processTaggedPosts = async (tagId, folder) => {
 			postObject
 		);
 	});
-	console.log("Write Episode Results", writeResults);
+	// console.log("Write Episode Results", writeResults);
 	return postObjects;
 };
 
@@ -106,9 +106,20 @@ const retrieveArticle = async () => {
 };
 
 const retrieve = async () => {
+	// Delete all markdown files in the `src/articles/` folder
+	const folder = "articles";
+	const files = fs.readdirSync(`./src/${folder}`);
+	for (const file of files) {
+		if (file.endsWith(".md")) {
+			console.log("Deleting file", `./src/${folder}/${file}`);
+			fs.unlinkSync(`./src/${folder}/${file}`);
+			console.log("Deleted file", `./src/${folder}/${file}`);
+		}
+	}
 	const result = await processTaggedPosts(562, "episodes");
-	const resultTwo = await processTaggedPosts(563, "articles");
-	console.log("Got Article Results", resultTwo);
+	// const resultTwo = await processTaggedPosts(563, "articles");
+	const resultThree = await processTaggedPosts(594, "articles");
+	// console.log("Got Article Results", resultThree);
 	return {
 		results: [result],
 	};

@@ -41,7 +41,7 @@ All assets sit in the `src/assets` which includes the `imgs` folder with all ima
 
 Updates can be done manually by running the Grab Daily Build action in GitHub. If it doesn't update an existing article the way you'd expect it can be altered in the `src/articles` folder. If it isn't auto-updated like expected, just delete the articles in there which are stored as files in that folder that end with `.md`. 
 
-You can also run these updates locally by running `npm run build-all-from-source` after `npm install`. 
+You can also run these updates locally by running `npm run build-all-from-source` after `npm install`. The articles are pulled fresh from the `Fumedpage` tag of the WordPress site. It is identified in `__build-tools/retrieve-json.js` ln 121 via the tag ID 594.
 
 ## Files and how to edit them. 
 
