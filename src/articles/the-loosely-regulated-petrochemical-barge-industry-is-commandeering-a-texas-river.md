@@ -339,7 +339,7 @@ originObject:
       - embeddable: true
         href: 'https://publichealthwatch.org/wp-json/wp/v2/comments?post=20399'
     version-history:
-      - count: 30
+      - count: 31
         href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/20399/revisions'
     predecessor-version:
       - id: 20799
