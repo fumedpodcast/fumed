@@ -383,7 +383,7 @@ originTagObject:
   taxonomy: post_tag
   meta: []
   yoast_head: >-
-    <!-- This site is optimized with the Yoast SEO plugin v26.6 -
+    <!-- This site is optimized with the Yoast SEO plugin v26.7 -
     https://yoast.com/wordpress/plugins/seo/ -->
 
     <title>Fumedpage Archives - Public Health Watch</title>
