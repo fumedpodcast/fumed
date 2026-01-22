@@ -77,6 +77,8 @@ originObject:
         font: ''
         enabled: false
       version: 2
+    jetpack_publicize_connection_overrides: []
+    _wpas_customize_per_network: false
   categories:
     - 20
     - 550
@@ -510,8 +512,6 @@ originTagObject:
     'wp:post_type':
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts?tags=594'
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/newspack_nl_cpt?tags=594'
-      - href: >-
-          https://publichealthwatch.org/wp-json/wp/v2/np_memberships_gate?tags=594
       - href: >-
           https://publichealthwatch.org/wp-json/wp/v2/newspack_popups_cpt?tags=594
       - href: >-
