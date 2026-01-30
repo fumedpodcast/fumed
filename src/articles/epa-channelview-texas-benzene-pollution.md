@@ -77,7 +77,6 @@ originObject:
         font: ''
         enabled: false
       version: 2
-    jetpack_publicize_connection_overrides: []
     _wpas_customize_per_network: false
   categories:
     - 20
