@@ -57,6 +57,7 @@ originObject:
     newspack_sponsor_underwriter_placement: inherit
     _newspack_byline_active: false
     _newspack_byline: ''
+    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: large
     newspack_post_subtitle: >-
       In 2005, Texas regulators documented startling amounts of benzene in a

@@ -185,6 +185,7 @@ originObject:
     newspack_sponsor_underwriter_placement: inherit
     _newspack_byline_active: false
     _newspack_byline: ''
+    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: ''
     newspack_post_subtitle: ''
     newspack_article_summary_title: 'Overview:'
