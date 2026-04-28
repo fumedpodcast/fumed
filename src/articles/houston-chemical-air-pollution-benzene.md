@@ -70,17 +70,6 @@ originObject:
     newspack_article_summary: ''
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
-    jetpack_publicize_message: ''
-    jetpack_publicize_feature_enabled: true
-    jetpack_social_post_already_shared: false
-    jetpack_social_options:
-      image_generator_settings:
-        template: highway
-        default_image_id: 0
-        font: ''
-        enabled: false
-      version: 2
-    _wpas_customize_per_network: false
   categories:
     - 20
     - 550
@@ -355,7 +344,6 @@ originObject:
       Cholakovska"],"publisher":{"@type":"Organization","name":"Public Health
       Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["fumedpage"],"dateCreated":"2023-12-13T12:00:00Z","datePublished":"2023-12-13T12:00:00Z","dateModified":"2026-03-04T18:41:50Z"}</script>
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
-  jetpack_publicize_connections: []
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2023/12/Channelview_KSolv_011-scaled.jpg
   jetpack_sharing_enabled: true

@@ -60,17 +60,6 @@ originObject:
     newspack_article_summary: ''
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
-    jetpack_publicize_message: ''
-    jetpack_publicize_feature_enabled: true
-    jetpack_social_post_already_shared: false
-    jetpack_social_options:
-      image_generator_settings:
-        template: highway
-        default_image_id: 0
-        font: ''
-        enabled: false
-      version: 2
-    _wpas_customize_per_network: false
   categories:
     - 550
   tags:
@@ -304,7 +293,6 @@ originObject:
       Ramos"],"publisher":{"@type":"Organization","name":"Public Health
       Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["fumedpage"],"dateCreated":"2025-05-01T20:58:46Z","datePublished":"2025-05-01T20:58:46Z","dateModified":"2025-12-31T00:22:17Z"}</script>
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
-  jetpack_publicize_connections: []
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2025/05/Ramos_Monitors_03.png
   jetpack_sharing_enabled: true
