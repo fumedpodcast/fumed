@@ -65,6 +65,7 @@ originObject:
       community's cancer risk could be higher than previously thought.
     newspack_article_summary_title: 'Overview:'
     newspack_article_summary: ''
+    _jetpack_feature_clip_id: 0
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
   categories:
@@ -381,7 +382,7 @@ originTagObject:
   taxonomy: post_tag
   meta: []
   yoast_head: >-
-    <!-- This site is optimized with the Yoast SEO plugin v27.6 -
+    <!-- This site is optimized with the Yoast SEO plugin v27.5 -
     https://yoast.com/product/yoast-seo-wordpress/ -->
 
     <title>Fumedpage Archives - Public Health Watch</title>
