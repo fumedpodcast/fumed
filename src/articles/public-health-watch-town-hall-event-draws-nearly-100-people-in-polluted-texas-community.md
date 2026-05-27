@@ -33,9 +33,8 @@ originObject:
   content:
     rendered: >
 
-      <p class="wp-block-paragraph">About 90 people gathered in Channelview,
-      Texas, last week to react to and ask questions about a Public Health Watch
-      <a
+      <p>About 90 people gathered in Channelview, Texas, last week to react to
+      and ask questions about a Public Health Watch <a
       href="https://publichealthwatch.org/2023/12/13/houston-chemical-air-pollution-benzene/">investigation</a>
       into high levels of the carcinogen benzene in the community east of
       Houston.</p>
@@ -43,109 +42,105 @@ originObject:
 
 
 
-      <p class="wp-block-paragraph">The story, published December 13, revealed
-      that the Texas Commission on Environmental Quality, or TCEQ, had known
-      about the benzene problem for nearly two decades without alerting
-      residents or taking significant enforcement action against the source, a
-      chemical-distribution company named K-Solv.</p>
+      <p>The story, published December 13, revealed that the Texas Commission on
+      Environmental Quality, or TCEQ, had known about the benzene problem for
+      nearly two decades without alerting residents or taking significant
+      enforcement action against the source, a chemical-distribution company
+      named K-Solv.</p>
 
 
 
 
-      <p class="wp-block-paragraph">On January 12, Public Health Watch hosted a
-      town-hall meeting at Channelview’s Flukinger Community Center to enable
-      residents, advocates, firefighters and other interested parties to hear
-      from a panel of experts: Dr. Loren Hopkins, a professor in Rice
-      University’s statistics department and a nationally recognized
-      environmental scientist; Juan Flores, community air monitoring program
-      manager for Air Alliance Houston, a clean-air advocacy group; and Tim
-      Doty, former head of mobile monitoring for the TCEQ.</p>
+      <p>On January 12, Public Health Watch hosted a town-hall meeting at
+      Channelview’s Flukinger Community Center to enable residents, advocates,
+      firefighters and other interested parties to hear from a panel of experts:
+      Dr. Loren Hopkins, a professor in Rice University’s statistics department
+      and a nationally recognized environmental scientist; Juan Flores,
+      community air monitoring program manager for Air Alliance Houston, a
+      clean-air advocacy group; and Tim Doty, former head of mobile monitoring
+      for the TCEQ.</p>
 
 
 
 
-      <p class="wp-block-paragraph">In a discussion moderated by Public Health
-      Watch reporter David Leffler and Ana Bueno, a correspondent for Noticias
-      45 Houston, a Univision affiliate, the panelists spoke calmly but
-      forcefully about the situation in Channelview, an unincorporated,
-      majority-Latino community in eastern Harris County that has become
-      increasingly industrialized.</p>
+      <p>In a discussion moderated by Public Health Watch reporter David Leffler
+      and Ana Bueno, a correspondent for Noticias 45 Houston, a Univision
+      affiliate, the panelists spoke calmly but forcefully about the situation
+      in Channelview, an unincorporated, majority-Latino community in eastern
+      Harris County that has become increasingly industrialized.</p>
 
 
 
 
-      <p class="wp-block-paragraph">Hopkins said that Channelview has “the
-      highest [benzene] level around here. It’s the highest of all of the
-      monitors that I look at, that I’ve looked at for decades &#8230; It’s not
-      the contest you want to win &#8230; The cancer risk here is double that of
-      the state of Texas, and it shouldn’t be &#8230; The issue is, it can be
-      controlled. It should be controlled.”</p>
+      <p>Hopkins said that Channelview has “the highest [benzene] level around
+      here. It’s the highest of all of the monitors that I look at, that I’ve
+      looked at for decades &#8230; It’s not the contest you want to win &#8230;
+      The cancer risk here is double that of the state of Texas, and it
+      shouldn’t be &#8230; The issue is, it can be controlled. It should be
+      controlled.”</p>
 
 
 
 
-      <p class="wp-block-paragraph">Doty, who discovered and began documenting
-      the elevated benzene concentrations in Channelview when he was with the
-      TCEQ in 2005, said, “The agency was, at one point, outwardly well-meaning
-      to find pollution and try to hunt down benzene sources &#8230; It’s gotten
-      less environmentally friendly, more pro-industry, as time has gone
-      on.”</p>
+      <p>Doty, who discovered and began documenting the elevated benzene
+      concentrations in Channelview when he was with the TCEQ in 2005, said,
+      “The agency was, at one point, outwardly well-meaning to find pollution
+      and try to hunt down benzene sources &#8230; It’s gotten less
+      environmentally friendly, more pro-industry, as time has gone on.”</p>
 
 
 
 
-      <p class="wp-block-paragraph">Doty said that if he were still with the
-      TCEQ, “I would be doing more intensive mobile monitoring. I would be
-      having a public meeting here to explain to y’all what the heck is going on
-      and &#8230; what they’ve done and why they’re doing it. I would have
-      denied the [state air pollution] permit to expand K-Solv because K-Solv
-      has increased in size and thus the possibility of getting exposed has
-      maybe increased rather than decreased.”</p>
+      <p>Doty said that if he were still with the TCEQ, “I would be doing more
+      intensive mobile monitoring. I would be having a public meeting here to
+      explain to y’all what the heck is going on and &#8230; what they’ve done
+      and why they’re doing it. I would have denied the [state air pollution]
+      permit to expand K-Solv because K-Solv has increased in size and thus the
+      possibility of getting exposed has maybe increased rather than
+      decreased.”</p>
 
 
 
 
-      <p class="wp-block-paragraph">Flores said he has spent all of his 46 years
-      in Galena Park, Texas, about eight miles southwest of Channelview, and was
-      diagnosed in 2022 with MGUS, a blood disorder that affects plasma cells in
-      bone marrow and diminishes kidney function. MGUS can evolve into multiple
-      myeloma, a blood cancer linked to exposure to high levels of
-      benzene.&nbsp;</p>
+      <p>Flores said he has spent all of his 46 years in Galena Park, Texas,
+      about eight miles southwest of Channelview, and was diagnosed in 2022 with
+      MGUS, a blood disorder that affects plasma cells in bone marrow and
+      diminishes kidney function. MGUS can evolve into multiple myeloma, a blood
+      cancer linked to exposure to high levels of benzene.&nbsp;</p>
 
 
 
 
-      <p class="wp-block-paragraph">“For the rest of my life, I have to see an
-      oncologist every six months,” he said. “I have to go to a kidney doctor
-      every three months &#8230; We all live [with] this industry – we have all
-      our lives. And eventually it will get to you if you’re exposed to
-      [pollution] for too long &#8230;”</p>
+      <p>“For the rest of my life, I have to see an oncologist every six
+      months,” he said. “I have to go to a kidney doctor every three months
+      &#8230; We all live [with] this industry – we have all our lives. And
+      eventually it will get to you if you’re exposed to [pollution] for too
+      long &#8230;”</p>
 
 
 
 
-      <p class="wp-block-paragraph">During the audience question-and-answer
-      period, several residents voiced their frustration and anxiety about the
-      bad air. Among them was Cynthia Benson, 69, who has endured three bouts of
-      cancer and for decades has lived in a trailer park about a quarter-mile
-      from the K-Solv plant.&nbsp;</p>
+      <p>During the audience question-and-answer period, several residents
+      voiced their frustration and anxiety about the bad air. Among them was
+      Cynthia Benson, 69, who has endured three bouts of cancer and for decades
+      has lived in a trailer park about a quarter-mile from the K-Solv
+      plant.&nbsp;</p>
 
 
 
 
-      <p class="wp-block-paragraph">“Night before last [January 10] I went out
-      on my porch at five minutes after midnight and the smell hit me so hard
-      that my eyes watered, my throat got dry, I was coughing &#8230; and it
-      took 45 minutes, which is really the normal when it happens, to
-      dissipate,” Benson said.</p>
+      <p>“Night before last [January 10] I went out on my porch at five minutes
+      after midnight and the smell hit me so hard that my eyes watered, my
+      throat got dry, I was coughing &#8230; and it took 45 minutes, which is
+      really the normal when it happens, to dissipate,” Benson said.</p>
 
 
 
 
-      <p class="wp-block-paragraph">Sarah Utley, the chief environmental lawyer
-      in the Harris County Attorney’s Office, ended the meeting by noting that
-      Texas had repeatedly thwarted the county’s attempts to bring polluters
-      into compliance through litigation. By <a
+      <p>Sarah Utley, the chief environmental lawyer in the Harris County
+      Attorney’s Office, ended the meeting by noting that Texas had repeatedly
+      thwarted the county’s attempts to bring polluters into compliance through
+      litigation. By <a
       href="https://publichealthwatch.org/2022/06/02/houston-texas-air-pollution-lyondellbasell-refinery/">law</a>,
       the state has the right of first refusal in pollution-related lawsuits and
       can block counties from taking enforcement action.&nbsp;</p>
@@ -153,19 +148,19 @@ originObject:
 
 
 
-      <p class="wp-block-paragraph">“We have had almost two dozen cases in the
-      last six, seven years that we have tried to pursue against major emitters
-      that the state has taken and basically barred our ability to pursue
-      enforcement,” Utley said. “Everybody here remembers the big [2021] fire
-      that happened at K-Solv, right? We tried to pursue that case. The state
-      settled it for $11,000. That’s kind of difficult.”</p>
+      <p>“We have had almost two dozen cases in the last six, seven years that
+      we have tried to pursue against major emitters that the state has taken
+      and basically barred our ability to pursue enforcement,” Utley said.
+      “Everybody here remembers the big [2021] fire that happened at K-Solv,
+      right? We tried to pursue that case. The state settled it for $11,000.
+      That’s kind of difficult.”</p>
 
 
 
 
-      <p class="wp-block-paragraph">Representatives of the TCEQ and the U.S.
-      Environmental Protection Agency were invited to the meeting. The TCEQ did
-      not respond to the invitations. The EPA declined to attend.</p>
+      <p>Representatives of the TCEQ and the U.S. Environmental Protection
+      Agency were invited to the meeting. The TCEQ did not respond to the
+      invitations. The EPA declined to attend.</p>
     protected: false
   excerpt:
     rendered: >
@@ -660,56 +655,56 @@ yoast_head_rendered: "<!-- This site is optimized with the Yoast SEO plugin v27.
 ---
 
 
-<p class="wp-block-paragraph">About 90 people gathered in Channelview, Texas, last week to react to and ask questions about a Public Health Watch <a href="https://publichealthwatch.org/2023/12/13/houston-chemical-air-pollution-benzene/">investigation</a> into high levels of the carcinogen benzene in the community east of Houston.</p>
+<p>About 90 people gathered in Channelview, Texas, last week to react to and ask questions about a Public Health Watch <a href="https://publichealthwatch.org/2023/12/13/houston-chemical-air-pollution-benzene/">investigation</a> into high levels of the carcinogen benzene in the community east of Houston.</p>
 
 
 
-<p class="wp-block-paragraph">The story, published December 13, revealed that the Texas Commission on Environmental Quality, or TCEQ, had known about the benzene problem for nearly two decades without alerting residents or taking significant enforcement action against the source, a chemical-distribution company named K-Solv.</p>
+<p>The story, published December 13, revealed that the Texas Commission on Environmental Quality, or TCEQ, had known about the benzene problem for nearly two decades without alerting residents or taking significant enforcement action against the source, a chemical-distribution company named K-Solv.</p>
 
 
 
-<p class="wp-block-paragraph">On January 12, Public Health Watch hosted a town-hall meeting at Channelview’s Flukinger Community Center to enable residents, advocates, firefighters and other interested parties to hear from a panel of experts: Dr. Loren Hopkins, a professor in Rice University’s statistics department and a nationally recognized environmental scientist; Juan Flores, community air monitoring program manager for Air Alliance Houston, a clean-air advocacy group; and Tim Doty, former head of mobile monitoring for the TCEQ.</p>
+<p>On January 12, Public Health Watch hosted a town-hall meeting at Channelview’s Flukinger Community Center to enable residents, advocates, firefighters and other interested parties to hear from a panel of experts: Dr. Loren Hopkins, a professor in Rice University’s statistics department and a nationally recognized environmental scientist; Juan Flores, community air monitoring program manager for Air Alliance Houston, a clean-air advocacy group; and Tim Doty, former head of mobile monitoring for the TCEQ.</p>
 
 
 
-<p class="wp-block-paragraph">In a discussion moderated by Public Health Watch reporter David Leffler and Ana Bueno, a correspondent for Noticias 45 Houston, a Univision affiliate, the panelists spoke calmly but forcefully about the situation in Channelview, an unincorporated, majority-Latino community in eastern Harris County that has become increasingly industrialized.</p>
+<p>In a discussion moderated by Public Health Watch reporter David Leffler and Ana Bueno, a correspondent for Noticias 45 Houston, a Univision affiliate, the panelists spoke calmly but forcefully about the situation in Channelview, an unincorporated, majority-Latino community in eastern Harris County that has become increasingly industrialized.</p>
 
 
 
-<p class="wp-block-paragraph">Hopkins said that Channelview has “the highest [benzene] level around here. It’s the highest of all of the monitors that I look at, that I’ve looked at for decades &#8230; It’s not the contest you want to win &#8230; The cancer risk here is double that of the state of Texas, and it shouldn’t be &#8230; The issue is, it can be controlled. It should be controlled.”</p>
+<p>Hopkins said that Channelview has “the highest [benzene] level around here. It’s the highest of all of the monitors that I look at, that I’ve looked at for decades &#8230; It’s not the contest you want to win &#8230; The cancer risk here is double that of the state of Texas, and it shouldn’t be &#8230; The issue is, it can be controlled. It should be controlled.”</p>
 
 
 
-<p class="wp-block-paragraph">Doty, who discovered and began documenting the elevated benzene concentrations in Channelview when he was with the TCEQ in 2005, said, “The agency was, at one point, outwardly well-meaning to find pollution and try to hunt down benzene sources &#8230; It’s gotten less environmentally friendly, more pro-industry, as time has gone on.”</p>
+<p>Doty, who discovered and began documenting the elevated benzene concentrations in Channelview when he was with the TCEQ in 2005, said, “The agency was, at one point, outwardly well-meaning to find pollution and try to hunt down benzene sources &#8230; It’s gotten less environmentally friendly, more pro-industry, as time has gone on.”</p>
 
 
 
-<p class="wp-block-paragraph">Doty said that if he were still with the TCEQ, “I would be doing more intensive mobile monitoring. I would be having a public meeting here to explain to y’all what the heck is going on and &#8230; what they’ve done and why they’re doing it. I would have denied the [state air pollution] permit to expand K-Solv because K-Solv has increased in size and thus the possibility of getting exposed has maybe increased rather than decreased.”</p>
+<p>Doty said that if he were still with the TCEQ, “I would be doing more intensive mobile monitoring. I would be having a public meeting here to explain to y’all what the heck is going on and &#8230; what they’ve done and why they’re doing it. I would have denied the [state air pollution] permit to expand K-Solv because K-Solv has increased in size and thus the possibility of getting exposed has maybe increased rather than decreased.”</p>
 
 
 
-<p class="wp-block-paragraph">Flores said he has spent all of his 46 years in Galena Park, Texas, about eight miles southwest of Channelview, and was diagnosed in 2022 with MGUS, a blood disorder that affects plasma cells in bone marrow and diminishes kidney function. MGUS can evolve into multiple myeloma, a blood cancer linked to exposure to high levels of benzene.&nbsp;</p>
+<p>Flores said he has spent all of his 46 years in Galena Park, Texas, about eight miles southwest of Channelview, and was diagnosed in 2022 with MGUS, a blood disorder that affects plasma cells in bone marrow and diminishes kidney function. MGUS can evolve into multiple myeloma, a blood cancer linked to exposure to high levels of benzene.&nbsp;</p>
 
 
 
-<p class="wp-block-paragraph">“For the rest of my life, I have to see an oncologist every six months,” he said. “I have to go to a kidney doctor every three months &#8230; We all live [with] this industry – we have all our lives. And eventually it will get to you if you’re exposed to [pollution] for too long &#8230;”</p>
+<p>“For the rest of my life, I have to see an oncologist every six months,” he said. “I have to go to a kidney doctor every three months &#8230; We all live [with] this industry – we have all our lives. And eventually it will get to you if you’re exposed to [pollution] for too long &#8230;”</p>
 
 
 
-<p class="wp-block-paragraph">During the audience question-and-answer period, several residents voiced their frustration and anxiety about the bad air. Among them was Cynthia Benson, 69, who has endured three bouts of cancer and for decades has lived in a trailer park about a quarter-mile from the K-Solv plant.&nbsp;</p>
+<p>During the audience question-and-answer period, several residents voiced their frustration and anxiety about the bad air. Among them was Cynthia Benson, 69, who has endured three bouts of cancer and for decades has lived in a trailer park about a quarter-mile from the K-Solv plant.&nbsp;</p>
 
 
 
-<p class="wp-block-paragraph">“Night before last [January 10] I went out on my porch at five minutes after midnight and the smell hit me so hard that my eyes watered, my throat got dry, I was coughing &#8230; and it took 45 minutes, which is really the normal when it happens, to dissipate,” Benson said.</p>
+<p>“Night before last [January 10] I went out on my porch at five minutes after midnight and the smell hit me so hard that my eyes watered, my throat got dry, I was coughing &#8230; and it took 45 minutes, which is really the normal when it happens, to dissipate,” Benson said.</p>
 
 
 
-<p class="wp-block-paragraph">Sarah Utley, the chief environmental lawyer in the Harris County Attorney’s Office, ended the meeting by noting that Texas had repeatedly thwarted the county’s attempts to bring polluters into compliance through litigation. By <a href="https://publichealthwatch.org/2022/06/02/houston-texas-air-pollution-lyondellbasell-refinery/">law</a>, the state has the right of first refusal in pollution-related lawsuits and can block counties from taking enforcement action.&nbsp;</p>
+<p>Sarah Utley, the chief environmental lawyer in the Harris County Attorney’s Office, ended the meeting by noting that Texas had repeatedly thwarted the county’s attempts to bring polluters into compliance through litigation. By <a href="https://publichealthwatch.org/2022/06/02/houston-texas-air-pollution-lyondellbasell-refinery/">law</a>, the state has the right of first refusal in pollution-related lawsuits and can block counties from taking enforcement action.&nbsp;</p>
 
 
 
-<p class="wp-block-paragraph">“We have had almost two dozen cases in the last six, seven years that we have tried to pursue against major emitters that the state has taken and basically barred our ability to pursue enforcement,” Utley said. “Everybody here remembers the big [2021] fire that happened at K-Solv, right? We tried to pursue that case. The state settled it for $11,000. That’s kind of difficult.”</p>
+<p>“We have had almost two dozen cases in the last six, seven years that we have tried to pursue against major emitters that the state has taken and basically barred our ability to pursue enforcement,” Utley said. “Everybody here remembers the big [2021] fire that happened at K-Solv, right? We tried to pursue that case. The state settled it for $11,000. That’s kind of difficult.”</p>
 
 
 
-<p class="wp-block-paragraph">Representatives of the TCEQ and the U.S. Environmental Protection Agency were invited to the meeting. The TCEQ did not respond to the invitations. The EPA declined to attend.</p>
+<p>Representatives of the TCEQ and the U.S. Environmental Protection Agency were invited to the meeting. The TCEQ did not respond to the invitations. The EPA declined to attend.</p>
