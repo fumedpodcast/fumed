@@ -68,7 +68,6 @@ originObject:
       residents for years to come.
     newspack_article_summary_title: 'Overview:'
     newspack_article_summary: ''
-    _jetpack_feature_clip_id: 0
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
   categories:
