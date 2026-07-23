@@ -52,11 +52,11 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    newspack_content_restriction_is_exempt: false
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
     newspack_show_updated_date: false
-    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: ''
     newspack_post_subtitle: ''
     newspack_article_summary_title: 'Overview:'
@@ -300,13 +300,26 @@ originObject:
       datePublished: '2025-12-29T12:00:00Z'
       dateModified: '2026-01-05T21:47:12Z'
     rendered: >-
-      <script type="application/ld+json"
-      class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"The
-      Loosely Regulated Petrochemical Barge Industry Is Commandeering a Texas
-      River","url":"http:\/\/publichealthwatch.org\/2025\/12\/29\/the-loosely-regulated-petrochemical-barge-industry-is-commandeering-a-texas-river\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/publichealthwatch.org\/2025\/12\/29\/the-loosely-regulated-petrochemical-barge-industry-is-commandeering-a-texas-river\/"},"thumbnailUrl":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2025\/12\/Channelview_Drone_08-150x150.jpg?crop=1","image":{"@type":"ImageObject","url":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2025\/12\/Channelview_Drone_08-scaled.jpg"},"articleSection":"Fumed","author":[{"@type":"Person","name":"Salina
-      Arredondo"}],"creator":["Salina
-      Arredondo"],"publisher":{"@type":"Organization","name":"Public Health
-      Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["fumedpage"],"dateCreated":"2025-12-29T12:00:00Z","datePublished":"2025-12-29T12:00:00Z","dateModified":"2026-01-05T21:47:12Z"}</script>
+      <meta name="parsely-title" content="The Loosely Regulated Petrochemical
+      Barge Industry Is Commandeering a Texas River" />
+
+      <meta name="parsely-link"
+      content="http://publichealthwatch.org/2025/12/29/the-loosely-regulated-petrochemical-barge-industry-is-commandeering-a-texas-river/"
+      />
+
+      <meta name="parsely-type" content="post" />
+
+      <meta name="parsely-image-url"
+      content="https://publichealthwatch.org/wp-content/uploads/2025/12/Channelview_Drone_08-150x150.jpg?crop=1"
+      />
+
+      <meta name="parsely-pub-date" content="2025-12-29T12:00:00Z" />
+
+      <meta name="parsely-section" content="Fumed" />
+
+      <meta name="parsely-tags" content="fumedpage" />
+
+      <meta name="parsely-author" content="Salina Arredondo" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2025/12/Channelview_Drone_08-scaled.jpg

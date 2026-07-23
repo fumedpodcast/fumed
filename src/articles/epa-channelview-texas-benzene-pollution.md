@@ -53,11 +53,11 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    newspack_content_restriction_is_exempt: false
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
     newspack_show_updated_date: false
-    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: ''
     newspack_post_subtitle: >-
       The U.S. Environmental Protection Agency has broad-ranging authority to
@@ -303,14 +303,28 @@ originObject:
       datePublished: '2024-03-25T11:00:00Z'
       dateModified: '2026-03-04T18:40:29Z'
     rendered: >-
-      <script type="application/ld+json"
-      class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"EPA
-      Gives &#8216;Minor&#8217; Polluters a Free
-      Pass","url":"http:\/\/publichealthwatch.org\/2024\/03\/25\/epa-channelview-texas-benzene-pollution\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/publichealthwatch.org\/2024\/03\/25\/epa-channelview-texas-benzene-pollution\/"},"thumbnailUrl":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2024\/03\/GeorgeGalindo_023-cropped-150x150.jpeg?crop=1","image":{"@type":"ImageObject","url":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2024\/03\/GeorgeGalindo_023-cropped-scaled.jpeg"},"articleSection":"Fumed","author":[{"@type":"Person","name":"Salina
-      Arredondo"},{"@type":"Person","name":"Molly Peterson"}],"creator":["Salina
-      Arredondo","Molly
-      Peterson"],"publisher":{"@type":"Organization","name":"Public Health
-      Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["fumedpage"],"dateCreated":"2024-03-25T11:00:00Z","datePublished":"2024-03-25T11:00:00Z","dateModified":"2026-03-04T18:40:29Z"}</script>
+      <meta name="parsely-title" content="EPA Gives &#8216;Minor&#8217;
+      Polluters a Free Pass" />
+
+      <meta name="parsely-link"
+      content="http://publichealthwatch.org/2024/03/25/epa-channelview-texas-benzene-pollution/"
+      />
+
+      <meta name="parsely-type" content="post" />
+
+      <meta name="parsely-image-url"
+      content="https://publichealthwatch.org/wp-content/uploads/2024/03/GeorgeGalindo_023-cropped-150x150.jpeg?crop=1"
+      />
+
+      <meta name="parsely-pub-date" content="2024-03-25T11:00:00Z" />
+
+      <meta name="parsely-section" content="Fumed" />
+
+      <meta name="parsely-tags" content="fumedpage" />
+
+      <meta name="parsely-author" content="Salina Arredondo" />
+
+      <meta name="parsely-author" content="Molly Peterson" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2024/03/GeorgeGalindo_023-cropped-scaled.jpeg

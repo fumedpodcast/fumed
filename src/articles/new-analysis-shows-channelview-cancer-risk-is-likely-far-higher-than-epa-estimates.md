@@ -52,11 +52,11 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    newspack_content_restriction_is_exempt: false
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
     newspack_show_updated_date: false
-    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: ''
     newspack_post_subtitle: ''
     newspack_article_summary_title: 'Overview:'
@@ -305,13 +305,26 @@ originObject:
       datePublished: '2024-12-30T13:00:00Z'
       dateModified: '2025-09-10T00:14:02Z'
     rendered: >-
-      <script type="application/ld+json"
-      class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"New
-      Analysis Shows Channelview Cancer Risk Is Likely Far Higher Than EPA
-      Estimates","url":"http:\/\/publichealthwatch.org\/2024\/12\/30\/new-analysis-shows-channelview-cancer-risk-is-likely-far-higher-than-epa-estimates\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/publichealthwatch.org\/2024\/12\/30\/new-analysis-shows-channelview-cancer-risk-is-likely-far-higher-than-epa-estimates\/"},"thumbnailUrl":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2023\/12\/Channelview_KSolv_012-150x150.jpg?crop=1","image":{"@type":"ImageObject","url":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2023\/12\/Channelview_KSolv_012-scaled.jpg"},"articleSection":"Fumed","author":[{"@type":"Person","name":"Savanna
-      Strott"}],"creator":["Savanna
-      Strott"],"publisher":{"@type":"Organization","name":"Public Health
-      Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["fumedpage"],"dateCreated":"2024-12-30T13:00:00Z","datePublished":"2024-12-30T13:00:00Z","dateModified":"2025-09-10T00:14:02Z"}</script>
+      <meta name="parsely-title" content="New Analysis Shows Channelview Cancer
+      Risk Is Likely Far Higher Than EPA Estimates" />
+
+      <meta name="parsely-link"
+      content="http://publichealthwatch.org/2024/12/30/new-analysis-shows-channelview-cancer-risk-is-likely-far-higher-than-epa-estimates/"
+      />
+
+      <meta name="parsely-type" content="post" />
+
+      <meta name="parsely-image-url"
+      content="https://publichealthwatch.org/wp-content/uploads/2023/12/Channelview_KSolv_012-150x150.jpg?crop=1"
+      />
+
+      <meta name="parsely-pub-date" content="2024-12-30T13:00:00Z" />
+
+      <meta name="parsely-section" content="Fumed" />
+
+      <meta name="parsely-tags" content="fumedpage" />
+
+      <meta name="parsely-author" content="Savanna Strott" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2023/12/Channelview_KSolv_012-scaled.jpg

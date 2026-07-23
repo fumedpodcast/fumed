@@ -53,11 +53,11 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    newspack_content_restriction_is_exempt: false
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
     newspack_show_updated_date: false
-    newspack_content_restriction_is_exempt: false
     newspack_featured_image_position: hidden
     newspack_post_subtitle: >-
       The highest levels exceed even Texas’ benzene guideline — the weakest in
@@ -313,14 +313,27 @@ originObject:
       datePublished: '2024-12-12T13:00:00Z'
       dateModified: '2025-09-10T00:13:28Z'
     rendered: >-
-      <script type="application/ld+json"
-      class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"Levels
-      of Cancer-Causing Benzene Reached New Heights in Beleaguered Channelview,
-      Texas. Regulators Never Told
-      Residents.","url":"http:\/\/publichealthwatch.org\/2024\/12\/12\/houston-air-pollution-benzene-cancer\/","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/publichealthwatch.org\/2024\/12\/12\/houston-air-pollution-benzene-cancer\/"},"thumbnailUrl":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2024\/12\/K-SOLV004-150x150.jpg?crop=1","image":{"@type":"ImageObject","url":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2024\/12\/K-SOLV004.jpg"},"articleSection":"Fumed","author":[{"@type":"Person","name":"Savanna
-      Strott"}],"creator":["Savanna
-      Strott"],"publisher":{"@type":"Organization","name":"Public Health
-      Watch","logo":"https:\/\/publichealthwatch.org\/wp-content\/uploads\/2022\/04\/PHW_Final-scaled.jpeg"},"keywords":["channelview","fumedpage"],"dateCreated":"2024-12-12T13:00:00Z","datePublished":"2024-12-12T13:00:00Z","dateModified":"2025-09-10T00:13:28Z"}</script>
+      <meta name="parsely-title" content="Levels of Cancer-Causing Benzene
+      Reached New Heights in Beleaguered Channelview, Texas. Regulators Never
+      Told Residents." />
+
+      <meta name="parsely-link"
+      content="http://publichealthwatch.org/2024/12/12/houston-air-pollution-benzene-cancer/"
+      />
+
+      <meta name="parsely-type" content="post" />
+
+      <meta name="parsely-image-url"
+      content="https://publichealthwatch.org/wp-content/uploads/2024/12/K-SOLV004-150x150.jpg?crop=1"
+      />
+
+      <meta name="parsely-pub-date" content="2024-12-12T13:00:00Z" />
+
+      <meta name="parsely-section" content="Fumed" />
+
+      <meta name="parsely-tags" content="channelview,fumedpage" />
+
+      <meta name="parsely-author" content="Savanna Strott" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
   jetpack_featured_media_url: 'https://publichealthwatch.org/wp-content/uploads/2024/12/K-SOLV004.jpg'
   jetpack_sharing_enabled: true
