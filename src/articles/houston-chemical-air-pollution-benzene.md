@@ -359,10 +359,10 @@ originObject:
 
       <meta name="parsely-author" content="Jana Cholakovska" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
-  jetpack_featured_media_url: >-
-    https://publichealthwatch.org/wp-content/uploads/2023/12/Channelview_KSolv_011-scaled.jpg
   jetpack_sharing_enabled: true
   jetpack_shortlink: 'https://wp.me/pdOhYv-2Zy'
+  jetpack_featured_media_url: >-
+    https://publichealthwatch.org/wp-content/uploads/2023/12/Channelview_KSolv_011-scaled.jpg
   _links:
     self:
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/11504'

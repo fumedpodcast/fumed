@@ -335,9 +335,9 @@ originObject:
 
       <meta name="parsely-author" content="Savanna Strott" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
-  jetpack_featured_media_url: 'https://publichealthwatch.org/wp-content/uploads/2024/12/K-SOLV004.jpg'
   jetpack_sharing_enabled: true
   jetpack_shortlink: 'https://wp.me/pdOhYv-3SU'
+  jetpack_featured_media_url: 'https://publichealthwatch.org/wp-content/uploads/2024/12/K-SOLV004.jpg'
   _links:
     self:
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/14936'

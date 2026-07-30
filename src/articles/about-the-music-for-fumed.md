@@ -305,10 +305,10 @@ originObject:
 
       <meta name="parsely-author" content="Michael Ramos" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
-  jetpack_featured_media_url: >-
-    https://publichealthwatch.org/wp-content/uploads/2025/05/Ramos_Monitors_03.png
   jetpack_sharing_enabled: true
   jetpack_shortlink: 'https://wp.me/pdOhYv-4iw'
+  jetpack_featured_media_url: >-
+    https://publichealthwatch.org/wp-content/uploads/2025/05/Ramos_Monitors_03.png
   _links:
     self:
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/16524'
