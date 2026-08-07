@@ -55,6 +55,7 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    newspack_content_restriction_is_exempt: false
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
