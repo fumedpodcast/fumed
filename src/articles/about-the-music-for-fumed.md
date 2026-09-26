@@ -49,6 +49,17 @@ originObject:
     newspack_sponsor_native_category_display: inherit
     newspack_sponsor_underwriter_style: inherit
     newspack_sponsor_underwriter_placement: inherit
+    everlit_article_id: ''
+    everlit_hide_embed: false
+    everlit_embed_size: ''
+    everlit_generation_settings: []
+    _everlit_article_id: ''
+    _everlit_hide_embed: false
+    _everlit_embed_size: ''
+    _everlit_generation_settings: []
+    _everlit_content_hash: ''
+    _everlit_metadata_hash: ''
+    _everlit_embed_html: ''
     _newspack_byline_active: false
     _newspack_byline: ''
     newspack_hide_updated_date: false
@@ -308,6 +319,7 @@ originObject:
   jetpack_shortlink: 'https://wp.me/pdOhYv-4iw'
   jetpack_featured_media_url: >-
     https://publichealthwatch.org/wp-content/uploads/2025/05/Ramos_Monitors_03.png
+  author_name: Andy Morris
   _links:
     self:
       - href: 'https://publichealthwatch.org/wp-json/wp/v2/posts/16524'
