@@ -271,10 +271,6 @@ originObject:
     version: 1.1.0
     canonical_url: >-
       https://publichealthwatch.org/2025/12/29/the-loosely-regulated-petrochemical-barge-industry-is-commandeering-a-texas-river/
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle

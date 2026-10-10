@@ -276,10 +276,6 @@ originObject:
     version: 1.1.0
     canonical_url: >-
       https://publichealthwatch.org/2024/12/30/new-analysis-shows-channelview-cancer-risk-is-likely-far-higher-than-epa-estimates/
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle

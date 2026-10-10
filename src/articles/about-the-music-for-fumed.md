@@ -257,10 +257,6 @@ originObject:
   parsely:
     version: 1.1.0
     canonical_url: 'https://publichealthwatch.org/2025/05/01/about-the-music-for-fumed/'
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle

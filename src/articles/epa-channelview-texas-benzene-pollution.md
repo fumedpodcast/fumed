@@ -273,10 +273,6 @@ originObject:
     version: 1.1.0
     canonical_url: >-
       https://publichealthwatch.org/2024/03/25/epa-channelview-texas-benzene-pollution/
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle

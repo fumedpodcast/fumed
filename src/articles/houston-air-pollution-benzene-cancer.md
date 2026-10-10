@@ -284,10 +284,6 @@ originObject:
     version: 1.1.0
     canonical_url: >-
       https://publichealthwatch.org/2024/12/12/houston-air-pollution-benzene-cancer/
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle

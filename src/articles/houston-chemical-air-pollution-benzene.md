@@ -293,10 +293,6 @@ originObject:
     version: 1.1.0
     canonical_url: >-
       https://publichealthwatch.org/2023/12/13/houston-chemical-air-pollution-benzene/
-    smart_links:
-      inbound: 0
-      outbound: 0
-    traffic_boost_suggestions_count: 0
     meta:
       '@context': 'https://schema.org'
       '@type': NewsArticle
