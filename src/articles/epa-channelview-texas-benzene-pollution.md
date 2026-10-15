@@ -76,6 +76,8 @@ originObject:
       regulatory void.
     newspack_article_summary_title: 'Overview:'
     newspack_article_summary: ''
+    _jetpack_hide_featured_image: false
+    _jetpack_featured_image_duplicate_dismissed: 0
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
   categories:
