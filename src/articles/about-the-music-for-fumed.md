@@ -72,6 +72,22 @@ originObject:
     _jetpack_featured_image_duplicate_dismissed: 0
     _jetpack_memberships_contains_paid_content: false
     footnotes: ''
+    jetpack_publicize_message: |-
+      {title}
+
+      {excerpt}
+
+      Read more at publichealthwatch.org
+    jetpack_publicize_feature_enabled: true
+    jetpack_social_post_already_shared: false
+    jetpack_social_options:
+      image_generator_settings:
+        template: fullscreen
+        default_image_id: 0
+        font: hk-grotesk
+        enabled: false
+      version: 2
+    _wpas_customize_per_network: false
   categories:
     - 550
   tags:
@@ -313,6 +329,7 @@ originObject:
 
       <meta name="parsely-author" content="Michael Ramos" />
     tracker_url: 'https://cdn.parsely.com/keys/publichealthwatch.org/p.js'
+  jetpack_publicize_connections: []
   jetpack_sharing_enabled: true
   jetpack_shortlink: 'https://wp.me/pdOhYv-4iw'
   jetpack_featured_media_url: >-
